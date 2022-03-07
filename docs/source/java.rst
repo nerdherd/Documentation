@@ -1,9 +1,12 @@
-Usage
+Java
 =====
 
 .. _installation:
 
-Installation
+Data Types
+----------------
+
+Variables
 ------------
 
 To use Lumache, first install it using pip:
@@ -12,7 +15,7 @@ To use Lumache, first install it using pip:
 
    (.venv) $ pip install lumache
 
-Creating recipes
+Conditionals
 ----------------
 
 To retrieve a list of random ingredients,
@@ -32,3 +35,11 @@ For example:
 >>> lumache.get_random_ingredients()
 ['shells', 'gorgonzola', 'parsley']
 
+Loops
+----------------
+
+Methods
+----------------
+
+Classes and Inheritance
+----------------
