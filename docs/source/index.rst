@@ -13,5 +13,5 @@ Sitemap
 
 .. toctree::
 
-   java
-   drive
+   teleop-drive
+   auto-drive
