@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
+Documentation for 687 Nerd Herd
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Here is the viewing link to the documentation website:
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+https://frcprogrammingdocumentation.readthedocs.io/en/latest/
