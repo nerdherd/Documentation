@@ -14,6 +14,6 @@ Some key points about our structure:
    - Other stuffs
 
 .. _more-structure:
-More On How to Keep The Code Structure Clean and Elegant
+More On How We Structure Our Code
 ------------
    - Other stuffs
