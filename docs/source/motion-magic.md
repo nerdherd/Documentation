@@ -28,7 +28,7 @@
 
     - Record the percent input that the motor is running at.
 
-```{warning} Safety Protocols
+```{warning}
 Remember to do the standard procedure of enabling the robot, calling clear, etc. before running the motor.
 ```
 
@@ -47,9 +47,9 @@ Remember to do the standard procedure of enabling the robot, calling clear, etc.
 
 7. Record your kF in the code as a constant in the constants class. For example:
 
-.. code-block:: java
-    :linenos:
-    
+    ```{code-block} java
+    :lineno-start: 1
+
     package frc.robot;
 
     public final class Constants {
@@ -57,9 +57,10 @@ Remember to do the standard procedure of enabling the robot, calling clear, etc.
             public static final double kMotorkF = 0.015;
         }
     }
+    ```
 
 - Record the other constants in the constants file in the same way.
-- The other constants can be tuned manually, but do not have a defining equation.
+- The other constants can be tuned manually, but cannot be directly calculated from an equation.
     - Official CTRE documentation for this can be found [here](https://docs.ctre-phoenix.com/en/stable/ch16_ClosedLoop.html#dialing-kp).
 
 ### Applying Constants
@@ -67,22 +68,23 @@ Remember to do the standard procedure of enabling the robot, calling clear, etc.
 - The constants can be applied with the methods ```motorName.config_kP(slot, kP)```, ```motorName.config_kI(slot, kI)```, etc.
     - The slot is an int that represents which PIDF configuration slot the values are saved to. Make sure to use one that is not occupied by other motors.
 
-.. code-block:: java
+    ```{code-block} java
 
     motorName.config_kP(0, Constants.kMotorkP);
     motorName.config_kI(0, Constants.kMotorkI);
     motorName.config_kD(0, Constants.kMotorkD);
     motorName.config_kF(0, Constants.kMotorkF);
-
+    ```
 
 ## Calculating positions
 
 1. Display the position (in ticks) of the motor through SmartDashboard.
     - Can also be logged, but this is easier
 
-.. code-block:: java
+    ``` {code-block} java
 
     SmartDashboard.putNumber("Motor Position", masterMotor.getSelectedSensorPosition());
+    ```
 
 1. Enable the robot and rotate the motor by hand to the starting position.
     - Record the position in ticks.
@@ -116,19 +118,23 @@ Remember to do the standard procedure of enabling the robot, calling clear, etc.
     
 - A method to move the motor using Motion Magic can also be created, such as:
 
-.. code-block:: java
+    ```{code-block} java
+    :lineno-start: 1
 
     public void motionMagicMove(double ticksToTarget) {
-        motorName.set(ControlMode.MotionMagic, motorName.getSelectedSensorPosition() + ticksToTarget);
-    } 
+        motorName.set(ControlMode.MotionMagic, 
+            motorName.getSelectedSensorPosition() + ticksToTarget);
+    }
+    ```
 
-- This method can then be used inside an InstantCommand as a lambda to run it as a command.
+- This method can then be used inside an InstantCommand as a lambda to schedule it as a command.
 
-.. code-block:: java
-    
+    ```{code-block} java
+    :lineno-start: 1
+
     InstantCommand move1000Ticks = new InstantCommand(() -> {
         subsystemName.motionMagicMove(1000)
     });
 
     move1000Ticks.schedule()
-
+    ```
