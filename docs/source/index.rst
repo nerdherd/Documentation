@@ -16,3 +16,4 @@ Sitemap
    teleop-drive
    auto-drive
    code-structure
+   motion-magic
