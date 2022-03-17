@@ -1,0 +1,7 @@
+name: frcprogdocs
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - myst-parser=0.17.0
