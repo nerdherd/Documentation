@@ -1,4 +1,4 @@
-Drive
+Teleop Drive
 =====
 
 .. _installation:
@@ -17,35 +17,46 @@ Creating a New Project
 Motor and Controller Configuration
 ------------
 
-The first thing you want to do is find out what motors controllers the robot is using. The common ones used on our team is TalonFXs(Falcon motors) and TalonSRXs. Next, find the ports using PhoenixTuner. Once you have found what CAN ports the motor controllers are, you can configure the motors as shown here:
+The first thing you want to do is find out what motor controllers the robot is using. The common ones used on our team is TalonFXs (Falcon motors) and TalonSRXs. Next, find the ports using Phoenix Tuner. Once you have found what CAN ports the motor controllers are, you can configure the motors as shown here:
 
 .. code-block:: console
+   public class Drivetrain extends SubsystemBase {
+       public TalonFX rightMaster;
+       public TalonSRX leftMaster;
+   }
 
-   private static TalonFX leftMaster = new TalonFX(1);
-   private static TalonSRX rightMaster = new TalonSRX(2);
+You also need to configure your controller(s) in RobotContainer.java. The snippet below shows how to configure XBox and PS4 controllers:
+
+.. code-block:: console
+   public static XBoxController driveController = XboxController(0);
+   public static PS4Controller operatorController = PS4Controller(0);
    
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
 .. _teleop-drivebase-code:
 Teleop Drivebase Code
 ------------
 
-.. _autonomous-drivebase-code:
-Autonomous Drivebase Code
-------------
+To get working drivebase code for teleop:
+1. Setup the drivebase in robotInit()
+.. code-block:: console
+   rightMaster = new TalonFX(0);
+   leftMaster = new TalonFX(1);
+   rightSlave = new TalonFX(2);  
+   leftSlave = new TalonFX(3);
 
+   leftSlave.follow(leftMaster);
+   rightSlave.follow(rightMaster);
+
+   // Inverted the right side
+   rightMaster.setInverted(true);
+   leftSlave.setInverted(InvertType.FollowMaster);
+   rightSlave.setInverted(InvertType.FollowMaster);
+   
+2. Retrieve joystick inputs in teleopPeriodic()
+.. code-block:: console
+   double leftInput = OI.ps4Controller.getLeftY();
+   double rightInput = OI.ps4Controller.getRightY();
+   
+3. Set power for the joystick inputs after retrieving joystick inputs in teleopPeriodic()
+.. code-block:: console
+   leftMaster.set(ControlMode.PercentOutput, leftInput);
+   rightMaster.set(ControlMode.PercentOutput, rightInput);
