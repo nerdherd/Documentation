@@ -13,6 +13,8 @@ To use be able to write Java code for our robots, first install the latest versi
 Creating a New Project
 ------------
 
+Create a new project
+
 .. _motor-and-controller-configuration:
 Motor and Controller Configuration
 ------------
