@@ -37,7 +37,7 @@ Teleop Drivebase Code
 
 To get working drivebase code for teleop:
 
-1) Setup the drivebase in robotInit()
+Setup the drivebase in robotInit()
 
 .. code-block:: console
    rightMaster = new TalonFX(0);
@@ -53,13 +53,13 @@ To get working drivebase code for teleop:
    leftSlave.setInverted(InvertType.FollowMaster);
    rightSlave.setInverted(InvertType.FollowMaster);
    
-2) Retrieve joystick inputs in teleopPeriodic()
+Retrieve joystick inputs in teleopPeriodic()
 
 .. code-block:: console
    double leftInput = OI.ps4Controller.getLeftY();
    double rightInput = OI.ps4Controller.getRightY();
-   
-3) Set power for the joystick inputs after retrieving joystick inputs in teleopPeriodic()
+
+Set power for the joystick inputs after retrieving joystick inputs in teleopPeriodic()
 
 .. code-block:: console
    leftMaster.set(ControlMode.PercentOutput, leftInput);
