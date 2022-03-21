@@ -45,7 +45,7 @@ To get working drivebase code for teleop:
 
    - Find the motor ports from Phoenix Tuner
    - Bind the previously created motors to instances of your motor type with the port number
-   - Make the slave motors follow their respective master motors with the ''follow'' method
+   - Make the slave motors follow their respective master motors with the "follow" method
    - Set one side of the robot to inverted (because of how the drivebase is built, one side needs to be inverted)
 
 .. code-block:: console
