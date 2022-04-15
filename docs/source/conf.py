@@ -3,8 +3,8 @@
 # -- Project information
 
 project = 'Nerd Herd Programming'
-copyright = '2021, Samantha Chang'
-author = 'Samantha Chang'
+copyright = '2022, Nerd Herd'
+author = 'Nerd Herd'
 
 release = '0.1'
 version = '0.1.0'
