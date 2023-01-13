@@ -6,7 +6,7 @@
 
 We finished measuring, cutting and assembling the cube shelf, middle cone ramp, and half charge station
 
-![Field Elements](images/Day3/fieldElements.png)
+![Field Elements](images/Day2/fieldElements.png)
 
 *Field Element Progress*
 
