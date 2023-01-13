@@ -24,9 +24,12 @@ We decided that we wanted to start the season strong by doing Robot in 3 Days. O
 * 7pm – 7:30: Dinner 
 
 * 7:30 pm - 10:30 pm: Manufacturing / Assembly (field elements) 
+
 ---
 
 ## Assembly
+
+placeholder
 
 ## CAD
 
@@ -83,6 +86,10 @@ We decided to make the elevator on the side. We took inspiration from [this desi
 *Crayola CAD of Lift*
 
 ### Arm
+
+placeholder
+
+---
 
 ## Manufacturing
 
