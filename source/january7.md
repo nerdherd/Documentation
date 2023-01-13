@@ -5,6 +5,7 @@
 We decided that we wanted to start the season strong by doing Robot in 3 Days. On the first day, we started out by watching the livestream and coming up with robot and gameplay strategy. Afterwards, we mainly focused on design the first iteration of our robot and building the game elements.
 
 **Schedule:**
+
 * 8:30 am - 9 am: Leads setup rooms and livestream 
 
 * 9 am - 10 am: Watch livestream 
