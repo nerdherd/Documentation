@@ -34,7 +34,9 @@ We decided that we wanted to start the season strong by doing Robot in 3 Days. O
 
 ## Assembly
 
-placeholder
+We used the field drawings and Read Me documents for the official field elements on the [FIRST website](https://www.firstinspires.org/robotics/frc/playing-field). We decided to make the middle/end cone ramps, cube shelf, and the half charge station and bought all of the materials listed on each of the Read Me documents. We split our Assembly subteam into 3 groups; the middle cone ramp, the cube shelf, and the charge station. Using the “example cut list” on the Read Me documents, we measured everything onto the sheets of plywood and pieces of lumber for each field element. Each group cut everything out with the circular saw, bandsaw, and the hacksaw.  
+
+*Note: got all materials and started measuring and cutting (no assembly)*
 
 *****
 
