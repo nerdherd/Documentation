@@ -96,7 +96,7 @@ placeholder
 
 On the first day of RI3D, the manufacturing subteam CADed the measurement jig using the CAD drawings provided on the FRC website. We printed the cube measurement jig with the same weight (563.308g) as the one used at competition using density calculations. 
 
-![Cube Jig](images/cubeJigDay1.png)
+![Cube Jig](images/Day1/cubeJigDay1.png)
 
 *3D Printed Cube Jig*
 
