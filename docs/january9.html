@@ -104,20 +104,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#programming">Programming</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#brianna-s-group">Brianna’s Group</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#vision">Vision</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#radio-configuration">Radio Configuration</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#kyle-s-group">Kyle’s Group</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#swerve-code">Swerve Code</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#ayaka-s-group">Ayaka’s Group</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#autonomous-code">Autonomous Code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#claw-code">Claw Code</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#vision">Vision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#radio-configuration">Radio Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Swerve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autonomous-code">Autonomous Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#claw">Claw</a></li>
 </ul>
 </li>
 </ul>
@@ -230,10 +221,8 @@
 <hr class="docutils" />
 <section id="programming">
 <h2>Programming<a class="headerlink" href="#programming" title="Permalink to this heading">¶</a></h2>
-<section id="brianna-s-group">
-<h3>Brianna’s Group<a class="headerlink" href="#brianna-s-group" title="Permalink to this heading">¶</a></h3>
 <section id="vision">
-<h4>Vision<a class="headerlink" href="#vision" title="Permalink to this heading">¶</a></h4>
+<h3>Vision<a class="headerlink" href="#vision" title="Permalink to this heading">¶</a></h3>
 <p>Today, our goal was to drive within range of and align to an April tag using a tank drivebase. We began with a code review with a mentor and then merged our testbench code with the main repository: ChargedUp2023. We then referred to PhotonVision documentation to implement an aim at target method. This method used a PID loop with the error being the yaw difference between the target and limelight.</p>
 <p><img alt="Vision Code Sample" src="_images/progvisonDay3.png" /></p>
 <p><em>Vision Code Sample</em></p>
@@ -242,16 +231,13 @@
 <p><em>Built-in Equation</em></p>
 </section>
 <section id="radio-configuration">
-<h4>Radio Configuration<a class="headerlink" href="#radio-configuration" title="Permalink to this heading">¶</a></h4>
+<h3>Radio Configuration<a class="headerlink" href="#radio-configuration" title="Permalink to this heading">¶</a></h3>
 <p>Additionally, we found that two radios we owned would not establish communications on driver station. This issue could also be seen on the indicator lights on our network switch, where the light corresponding to the radio would not turn on (see image below). This was likely because they were not configured, and a future goal is to ensure at least one of our laptops is reliable when configuring radios.</p>
 <p><img alt="Network Switch" src="_images/progradioDay3.png" /></p>
 <p><em>Network switch with all indicator lights off.</em></p>
 </section>
-</section>
-<section id="kyle-s-group">
-<h3>Kyle’s Group<a class="headerlink" href="#kyle-s-group" title="Permalink to this heading">¶</a></h3>
-<section id="swerve-code">
-<h4>Swerve Code<a class="headerlink" href="#swerve-code" title="Permalink to this heading">¶</a></h4>
+<section id="id1">
+<h3>Swerve<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <p>Today, our goal was to finish testing swerve drive code on 2023 and begin programming commands such as turning to an angle and automatically balancing on the charging station. We found that most of our issues from yesterday were due to the encoders becoming offset. We were able to fix this by resetting the encoders to the same position as the absolute encoders, using this method:</p>
 <p><img alt="Encoder Fix" src="_images/progencoderfixDay3.png" /></p>
 <p><em>Code sample that reset the encoders to the same position as the absolute encoders.</em></p>
@@ -262,17 +248,13 @@
 <p>While our driver tested the swerve drive, our assembly subteam set up their new mock charging station, which now has a layer of plexiglass on top to more accurately match the real charging station. This allowed our swerve drive to climb the charging station. After a bit of practice, our driver was able to regularly climb the charging station and park on top of it.</p>
 <p>Afterwards, the swerve drive was given to the assembly subteam to add handles and bumpers to it. While assembly worked on the drivebase, we continued in development, writing a new command for turning to an angle based on the NavX’s readings, adding javadoc comments and more documentation to our code, and refactoring some of the classes to be more readable. After Assembly finished, we were able to drive onto the ramp even with a bumper on the robot, showing us that swerve drive may be a feasible choice for this season. However, we still need to fix much of our code, as it lacks important functionality such as in-game autonomous routines, and some functions, such as turn to angle, either weren’t tested or don’t work. We plan to fix these soon and implement them in a swerve drive auto.</p>
 </section>
-</section>
-<section id="ayaka-s-group">
-<h3>Ayaka’s Group<a class="headerlink" href="#ayaka-s-group" title="Permalink to this heading">¶</a></h3>
 <section id="autonomous-code">
-<h4>Autonomous Code<a class="headerlink" href="#autonomous-code" title="Permalink to this heading">¶</a></h4>
+<h3>Autonomous Code<a class="headerlink" href="#autonomous-code" title="Permalink to this heading">¶</a></h3>
 <p>Today, our goal was to finish writing up the auto commands and writing a drivetrain code that extends from the differential drive train class on WPILib.  By testing on the prototype bot and Thomas (our 2020, 2021 robot), we found out that the code we wrote for the drivetrain did not work so we shifted to the code from yesterday and tested.  We discovered that there were some issues with one of the Falcon motors in the drive and wrong inversions on the right side of the drive base; however, we were able to troubleshoot by using Phoenix Tuner to check what they were inverted to and editing code as needed.</p>
 </section>
-<section id="claw-code">
-<h4>Claw Code<a class="headerlink" href="#claw-code" title="Permalink to this heading">¶</a></h4>
+<section id="claw">
+<h3>Claw<a class="headerlink" href="#claw" title="Permalink to this heading">¶</a></h3>
 <p>We also tested the claw code and found out that we were using faulty solenoids, so we switched them out and successfully controlled the claw.</p>
-</section>
 </section>
 </section>
 </section>
