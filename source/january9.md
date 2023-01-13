@@ -99,6 +99,6 @@ Afterwards, the swerve drive was given to the assembly subteam to add handles an
 
 Today, our goal was to finish writing up the auto commands and writing a drivetrain code that extends from the differential drive train class on WPILib.  By testing on the prototype bot and Thomas (our 2020, 2021 robot), we found out that the code we wrote for the drivetrain did not work so we shifted to the code from yesterday and tested.  We discovered that there were some issues with one of the Falcon motors in the drive and wrong inversions on the right side of the drive base; however, we were able to troubleshoot by using Phoenix Tuner to check what they were inverted to and editing code as needed.  
 
-### Clas
+### Claw
 
 We also tested the claw code and found out that we were using faulty solenoids, so we switched them out and successfully controlled the claw. 
