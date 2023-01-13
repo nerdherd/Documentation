@@ -100,7 +100,87 @@ We decided to make the elevator on the side. We took inspiration from [this desi
 
 ### Arm
 
-placeholder
+Day 1/3 
+
+Created crayolas of possible first iteration arm designs 
+
+Analyzed pros and cons of each design 
+
+![Crayola CAD of fixed point for arm on Day 1](images/Day1/Day1JoyceRR.png)
+
+Fixed point for arm 
+
+Telescope arm 
+
+How many stages in telescope? 
+
+Get game piece from shelf 
+
+Score in mid pole 
+
+Drop game piece into bottom row 
+
+Pros 
+
+Simple first iteration 
+
+Cons 
+
+Center of gravity 
+
+Unstable 
+
+No high 
+
+![Crayola CAD of telescope arm at an angle on Day 1](images/Day1/Day1JoyceR.png)
+
+Telescope arm at an angle 
+
+Scores in both mid and top 
+
+Storing position actuated with pneumatics 
+
+No elevator 
+
+Intakes from shelf 
+
+Pros: simple, effective 
+
+Cons: very heavy (arm is very long), center of gravity 
+
+![Crayola CAD of Telescope arm on an elevator on Day 1](images/Day1/Day1JoyceArm.png)
+
+Telescope arm on an elevator 
+
+Multiple locations where it can intake 
+
+Pros: able to quickly score in bottom, mid, and top rows 
+
+Cons: multiple telescope stages (extra material causes arm to be heavy and susceptible to possible collisions), complex 
+
+ 
+![Crayola CAD of pneumatic arm on Day 1](images/Day1/Day1JoyceArm2.png)
+
+Pros: 
+
+Extremely simple (no movement aside from one pneumatic joint to move arm in and out 
+
+Cons: 
+
+Unstable? 
+
+Mid Only 
+ 
+
+Day 2/3 
+
+![Prototype of arm on Day 1](images/Day1/Day1JoyceArm3.png) 
+
+Decided on the design with fixed point and extending arm 
+
+Built prototype with telescope climber arm without hooks 
+
+Attached electrical panels to the sides of the upright bars 
 
 *****
 
