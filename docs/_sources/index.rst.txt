@@ -9,7 +9,8 @@ Table of Contents:
    :caption: Contents:
 
    Home <./home.md>
-   January 7th Meeting <./jan7.md>
-   January 8th Meeting <./jan8.md>
+   January 7th Meeting <./january7.md>
+   January 8th Meeting <./january8.md>
+   January 8th Meeting <./january9.md>
 
 * :ref:`search`

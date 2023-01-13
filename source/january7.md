@@ -88,7 +88,7 @@ We decided to make the elevator on the side. We took inspiration from [this desi
 
 On the first day of RI3D, the manufacturing subteam CADed the measurement jig using the CAD drawings provided on the FRC website. We printed the cube measurement jig with the same weight (563.308g) as the one used at competition using density calculations. 
 
-![Cube Jig](images/cubeJigDay 1.png)
+![Cube Jig](images/cubeJigDay1.png)
 
 *3D Printed Cube Jig*
 
