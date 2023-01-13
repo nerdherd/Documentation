@@ -4,7 +4,7 @@
 
 placeholder
 
----
+*****
 
 ## CAD
 
@@ -61,13 +61,13 @@ However, while consulting with our main mentor, he mentioned that the weight lig
 
 This was the sliding gusset that we had prototyped. This captured both sides, and the bar will be touched 12 bearings.  
 
----
+*****
 
 ## Manufacturing
 
 placeholder
 
----
+*****
 
 ## Programming
 
