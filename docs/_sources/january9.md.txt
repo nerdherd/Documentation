@@ -1,5 +1,11 @@
 # January 9th Meeting
 
+## Admin
+
+All of Admin worked on pins today. We each made a number of designs and collectively decided which ones we’d use for competitions. We concluded that we’d have competition-exclusive pins and change the design for every competition we go to. We decided to have 2 standard game-focused designs and 3-4 unique ones. We handled lunch today with Raising Cane’s and were able to distribute everything with ease. After lunch, we took inventory of fronts and backs for pins in order to decide how many we’d need for the season. We set the goal of 700 per competition, totaling 2100 for the entire season. Afterwards, we began the Admin BOM for any necessary materials we needed. Media finalized editing for the second recap video and gathered footage for the third recap video. We sent out the food order forms for next Friday and Saturday and collected some money for the first day. Some Admin members worked on the parent kick off flyer, which was to be sent out to parents with the RSVP form (since there’s limited seating). A few other members started updating the website, and some others worked on tonight’s McDonald’s dinner. Though it was rainy, we were able to easily distribute food. After, we made a few pins to show Mr. Harder along with the final stand-up banner design and parent kickoff flyer. 
+
+*****
+
 ## Asssembly
 
 ### Field Elements
