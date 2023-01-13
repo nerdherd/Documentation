@@ -2,7 +2,7 @@
 
 ## Admin
 
-After kickoff, we met as a subteam to prepare for the potluck during lunch. We cleaned the tables, set up the sterno trays, and organized food as parents brought in more. After the potluck, we made food order forms for many of the upcoming meetings and started the business plan. We used Excel to organize every section we needed to rewrite, and from there, we delegated the work accordingly. The rest of Admin took inventory of the new apparel and distributed the final orders to the remaining members. Meanwhile, Media worked on gathering footage for the first video recap. Later, some of Admin worked on the business plan, while the other part discussed plans for outreach this season. Afterwards, we planned dinner and met with Mr. Harder to discuss the stand-up banner.
+Admin met with Ms. Sadhwani to finalize the January and February snack donations and parent pick-up sign-up genius. Some members worked on a follow-up for spirit wear and finished a form for propellor hats and pajama pants. We finished the majority of the business plan today, leaving out things that we could not do at the current moment in time. This included outreach and team information (we sent out a form for members to complete and are waiting for completion). Media finalized edits for the first recap video and gathered footage for the second recap video. Admin discussed potential awards we will submit for this season and potential nominations, including Dean’s List and Woodie Flower’s.  Later on that night, we prepared the pizza dinner and ended the day with more progress on the stand-up banner. 
 
 *****
 
