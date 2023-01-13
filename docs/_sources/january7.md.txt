@@ -25,13 +25,13 @@ We decided that we wanted to start the season strong by doing Robot in 3 Days. O
 
 * 7:30 pm - 10:30 pm: Manufacturing / Assembly (field elements) 
 
----
+*****
 
 ## Assembly
 
 placeholder
 
----
+*****
 
 ## CAD
 
@@ -56,8 +56,6 @@ Design Matrix:
 | Secure / strong         | Heavy        |
 | Easy to program         | Wire routing |
 | Requires less precision |              |
-
-
 
 We also created another design, a linear actuator claw.
 
@@ -91,7 +89,7 @@ We decided to make the elevator on the side. We took inspiration from [this desi
 
 placeholder
 
----
+*****
 
 ## Manufacturing
 
@@ -105,7 +103,7 @@ Some of the manufacturing members assisted assembly with the swerve drive BOM. W
 
 We also assisted with the field element assembly after completing the cube measurement jig. This included measuring the wood to cut and band sawing them for the next day. 
 
----
+*****
 
 ## Programming
 
