@@ -103,11 +103,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#elevator">Elevator</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#manufacturing">Manufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manufacturing">Manufacturing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#swerve">Swerve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#claw">Claw</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#programming">Programming</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#vision-arm-claw">Vision, Arm, Claw</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#autonomous-pathing">Autonomous Pathing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#swerve">Swerve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Swerve</a></li>
 </ul>
 </li>
 </ul>
@@ -230,17 +234,21 @@
 <hr class="docutils" />
 <section id="manufacturing">
 <h2>Manufacturing<a class="headerlink" href="#manufacturing" title="Permalink to this heading">¶</a></h2>
-<p>###Swerve</p>
+<section id="swerve">
+<h3>Swerve<a class="headerlink" href="#swerve" title="Permalink to this heading">¶</a></h3>
 <p>During pre-season, we CAMed the elevate and up bars (handles) for the swerve drive. This was made for easier transport of the swerve drive. We split into 2 groups (each group working on separate TM-1 CNC mills) and completed the manufacturing of the elevate and up bars. The gussets for these bars were completed prior to kickoff.</p>
 <p><img alt="Handles for Swerve Drive" src="_images/mfghandlesDay2.png" /></p>
 <p><em>Handles for Swerve Drive</em></p>
-<p>###Claw</p>
+</section>
+<section id="claw">
+<h3>Claw<a class="headerlink" href="#claw" title="Permalink to this heading">¶</a></h3>
 <p>We also 3d printed and laser cut parts for the claw prototypes.</p>
 <p><img alt="3D Claw Print" src="_images/mfgprintDay2.png" /></p>
 <p><em>3D-Printing for Claw Prototypes (Linear Actuator Claw)</em></p>
 <p><img alt="Lasered Claw" src="_images/mfglaserDay2a.png" /></p>
 <p><img alt="Lasered Claw" src="_images/mfglaserDay2b.png" /></p>
 <p><em>Laser cutting for claw prototype (Rotational Grip Claw)</em></p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="programming">
@@ -260,8 +268,8 @@
 <h3>Autonomous Pathing<a class="headerlink" href="#autonomous-pathing" title="Permalink to this heading">¶</a></h3>
 <p>Today, our group’s goals were to finish creating two simple auto paths (moving backwards and forwards) using tank drive. After the autos were finished programming, we did a systems check on Gigantor (our 2019 robot) so that we could ensure there were no hardware issues with the robot before testing the autos. From the systems check, we found that Gigantor’s chain was skipping. Due to this hardware issue, we were unable to test the autos.</p>
 </section>
-<section id="swerve">
-<h3>Swerve<a class="headerlink" href="#swerve" title="Permalink to this heading">¶</a></h3>
+<section id="id1">
+<h3>Swerve<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <p>Today our group’s goals were to update our swerve drive code to WPILib 2023 and be able to run it on the robot. The upgrading process itself was relatively straightforward, with the only major code change being having to convert Swerve Module states into Swerve Module Positions, as in 2023 WPILib, SwerveDriveOdometry updates using Swerve Module Positions, which contain the distance travelled and the angle of one swerve module, rather than Swerve Module States, which contain the speed and angle instead. We ran into several issues, such as there not being an official NavX library for WPILib 2023, and a strange issue where all angles were rotated by 90 degrees. We applied temporary fixes to most of these issues, as we were short on time, using an unofficial NavX library in place of the official one (which can be found here: https://github.com/rzblue/navx-frc) and manually applying a rotation to all angles. We also tested driving onto the mock charging station that our assembly team built but we were not able to drive onto it, as the frame would hit the ramp of the charging station before the wheels were able to contact it.</p>
 </section>
 </section>
