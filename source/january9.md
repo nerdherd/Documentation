@@ -53,8 +53,7 @@ All the machines (TM-1 and the Super Mini Mills) and the vises were cleaned for 
 
 ## Programming
 
-### Brianna's Group
-#### Vision
+### Vision
 
 Today, our goal was to drive within range of and align to an April tag using a tank drivebase. We began with a code review with a mentor and then merged our testbench code with the main repository: ChargedUp2023. We then referred to PhotonVision documentation to implement an aim at target method. This method used a PID loop with the error being the yaw difference between the target and limelight.  
 
@@ -68,7 +67,7 @@ Our implementation of distance finding between target and camera was similar: wh
 
 *Built-in Equation*
 
-#### Radio Configuration
+### Radio Configuration
 
 Additionally, we found that two radios we owned would not establish communications on driver station. This issue could also be seen on the indicator lights on our network switch, where the light corresponding to the radio would not turn on (see image below). This was likely because they were not configured, and a future goal is to ensure at least one of our laptops is reliable when configuring radios. 
 
@@ -76,9 +75,7 @@ Additionally, we found that two radios we owned would not establish communicatio
 
 *Network switch with all indicator lights off.*
 
-
-### Kyle's Group
-#### Swerve Code
+### Swerve
 
 Today, our goal was to finish testing swerve drive code on 2023 and begin programming commands such as turning to an angle and automatically balancing on the charging station. We found that most of our issues from yesterday were due to the encoders becoming offset. We were able to fix this by resetting the encoders to the same position as the absolute encoders, using this method: 
 
@@ -98,12 +95,10 @@ While our driver tested the swerve drive, our assembly subteam set up their new 
 
 Afterwards, the swerve drive was given to the assembly subteam to add handles and bumpers to it. While assembly worked on the drivebase, we continued in development, writing a new command for turning to an angle based on the NavX’s readings, adding javadoc comments and more documentation to our code, and refactoring some of the classes to be more readable. After Assembly finished, we were able to drive onto the ramp even with a bumper on the robot, showing us that swerve drive may be a feasible choice for this season. However, we still need to fix much of our code, as it lacks important functionality such as in-game autonomous routines, and some functions, such as turn to angle, either weren’t tested or don’t work. We plan to fix these soon and implement them in a swerve drive auto. 
 
-
-### Ayaka's Group
-#### Autonomous Code
+### Autonomous Code
 
 Today, our goal was to finish writing up the auto commands and writing a drivetrain code that extends from the differential drive train class on WPILib.  By testing on the prototype bot and Thomas (our 2020, 2021 robot), we found out that the code we wrote for the drivetrain did not work so we shifted to the code from yesterday and tested.  We discovered that there were some issues with one of the Falcon motors in the drive and wrong inversions on the right side of the drive base; however, we were able to troubleshoot by using Phoenix Tuner to check what they were inverted to and editing code as needed.  
 
-#### Claw Code
+### Clas
 
 We also tested the claw code and found out that we were using faulty solenoids, so we switched them out and successfully controlled the claw. 
