@@ -2,7 +2,35 @@
 
 ## Assembly
 
-placeholder
+### Field elements 
+
+We finished measuring, cutting and assembling the cube shelf, middle cone ramp, and half charge station
+
+![Field Elements](images/Day3/fieldElements.png)
+
+*Field Element Progress*
+
+We tested the half charge station with our swerve drive base and robot from Deep Space. After testing, we found that the drive base interfered with the ramp and the robot was not able to drive up the ramp. We were able to figure out that the angles were slightly off from the official drawings. The actual charge station is also made of polycarb so we decided to add 2 pieces of polycarb onto one of the ramps to make the structure closer to the original and see if the wood is the one that is causing the interference. 
+
+### Electrical on Prototype Bot 
+
+We made two boards that we mounted onto each side of the robot. Components on each board:  
+
+* Board 1: RSL, Radio, RoboRIO, VRM, PDP, Pressure Switch, Analog Pressure Sensor, and Pressure Gauge 
+
+* Board 2: Pressure Regulator, Pressure Gauge, 2 T-Splits, Manual Shutoff Valve, PCM, and 2 Solenoids 
+
+**Progress:**
+
+* Cut peg board to size using vertical bandsaw  
+
+* Zip tied components onto the peg board 
+
+* Made all electrical and pneumatic connections within each board  
+
+* Zip tied each board onto the metal posts 
+
+* Zip tied compressor onto battery plate 
 
 *****
 
