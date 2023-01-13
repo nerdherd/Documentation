@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'WEBSITE_NAME'
-copyright = '2022, AUTHOR_NAME'
-author = 'AUTHOR_NAME'
+project = 'Nerd Herd Documentation'
+copyright = '2023, FRC Team 687'
+author = 'FRC Team 687'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'

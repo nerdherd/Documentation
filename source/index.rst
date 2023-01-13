@@ -1,4 +1,4 @@
-Welcome to WEBSITE_NAME!
+Welcome to the Nerd Herd's Documentation!
 =========================
 
 Table of Contents:
@@ -9,20 +9,7 @@ Table of Contents:
    :caption: Contents:
 
    Home <./home.md>
-   Miscellaneous Resources <./Misc/README.md>
-
-
-.. toctree:: 
-   :maxdepth: 2
-   :caption: Section 1:
-
-   Section 1 <../Section 1/README.md>
-   
-
-.. toctree:: 
-   :maxdepth: 2
-   :caption: Section 2:
-
-   Section 2 <../Section 2/README.md>
+   January 7th Meeting <./jan7.md>
+   January 8th Meeting <./jan8.md>
 
 * :ref:`search`

@@ -34,8 +34,8 @@ jobs:
         touch ./docs/.nojekyll
     - name: Commit and push changes
       run: |
-        git config --global user.name "ORGANIZATION_NAME"
-        git config --global user.email "ORGANIZATION_NAME@users.noreply.github.com"
+        git config --global user.name "687 Autobuild"
+        git config --global user.email "nerdherd@users.noreply.github.com"
         git add ./.
         git commit -m "Autobuild latest version"
         git push
