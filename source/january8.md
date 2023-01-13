@@ -65,7 +65,23 @@ This was the sliding gusset that we had prototyped. This captured both sides, an
 
 ## Manufacturing
 
-placeholder
+During pre-season, we CAMed the elevate and up bars (handles) for the swerve drive. This was made for easier transport of the swerve drive. We split into 2 groups (each group working on separate TM-1 CNC mills) and completed the manufacturing of the elevate and up bars. The gussets for these bars were completed prior to kickoff. 
+
+![Handles for Swerve Drive](images/Day1/mfghandlesDay2.png)
+
+*Handles for Swerve Drive*
+
+We also 3d printed and laser cut parts for the claw prototypes. 
+
+![3D Claw Print](images/Day2/mfgprintDay2.png)
+
+*3D-Printing for Claw Prototypes (Linear Actuator Claw)*
+
+![Lasered Claw](images/Day2/mfglaserDay2a.png)
+
+![Lasered Claw](images/Day2/mfglaserDay2b.png)
+
+*Laser cutting for claw prototype (Rotational Grip Claw)*
 
 *****
 
