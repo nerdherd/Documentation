@@ -2,6 +2,52 @@
 
 ## Asssembly
 
+### Field Elements
+
+For the end cone ramp, we measured, cut, and finished assembling it
+
+![End Cone Ramp](images/Day3/endConeRamp.png)
+
+*End Cone Ramp*
+
+**Fixes:**
+
+* Charge station / drive base – we removed a bar on the drive base that was over the wheels, allowing for the robot to go on the ramp 
+
+* Middle cone ramp – we redid the shark fin after fixing angel measurements
+
+![Cone Ramp Shark Fin](images/Day3/coneRampSharkFin.png)
+
+*Fixed Cone Ramp Shark Fin* 
+
+### Claw Prototypes 
+
+We had assembly members help build/work on two of the claw prototypes. We taught some of our assembly members and members from other subteams about pneumatics and how to use the manual pneumatic test bench. Using the test bench, we tested two of the claw prototypes. 
+
+### Electrical on Prototype Bot  
+
+We made connections between the two boards as well as connecting our drive motors to the PDP. We also connected all our CAN wires. 
+
+Drive: 3 cim ball shifter with 3 falcon 500 motors (x2; one gearbox on each side) 
+
+![Electrical on Prototype Bot](images/Day3/electricalOnProtobot.png)
+
+*Electrical on Prototype Bot* 
+
+### Pneumatics on Prototype Bot 
+
+We ziptied the airtank down but it had a leak, so it was replaced. Made all pneumatic connections. (Pictured above) 
+
+* Storing Pressure: 120 psi 
+
+* Working Pressure: 60 psi 
+
+* Rated Tubing: ¼", 125 psi  
+
+* Drive shifting (1 solenoid) 
+
+* Claw open and close (1 solenoid) 
+
 ---
 
 ## CAD
