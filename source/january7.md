@@ -11,9 +11,13 @@ We decided that we wanted to start the season strong by doing Robot in 3 Days. O
 * 9 am - 10 am: Watch livestream 
 
 * 10 am – 12 pm: Game manual breakdown, strategy, setting goals, robot sketches 
+
   * 30 min game manual
+
   * 15 min goal setting in big group
+
   * 35 min small group brainstorm about strategy and robot 
+
   * 30 min big group brainstorm - Each group says a 60 second elevator pitch of their idea and use Pugh analysis to decide: https://sixsigmastudyguide.com/pugh-analysis/  
 
 * 12 pm - 1 pm: Lunch (Potluck) 
