@@ -2,6 +2,10 @@
 
 ## Assembly
 
+placeholder
+
+---
+
 ## CAD
 
 ### Linear Actuator Claw
@@ -60,6 +64,10 @@ This was the sliding gusset that we had prototyped. This captured both sides, an
 ---
 
 ## Manufacturing
+
+placeholder
+
+---
 
 ## Programming
 
