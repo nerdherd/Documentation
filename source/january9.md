@@ -56,7 +56,7 @@ Our implementation of distance finding between target and camera was similar: wh
 
 ![Vision Code Sample](images/Day3/progcameraDay3.png)
 
-*Built-in Equation
+*Built-in Equation*
 
 #### Radio Configuration
 
@@ -64,7 +64,7 @@ Additionally, we found that two radios we owned would not establish communicatio
 
 ![Network Switch](images/Day3/progradioDay3.png)
 
-*Network switch with all indicator lights off.
+*Network switch with all indicator lights off.*
 
 
 ### Kyle's Group
