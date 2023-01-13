@@ -43,3 +43,7 @@ We also 3D printed a cover for the Navx on the roborio.
 
 ## Programming
 
+### Brianna's Group
+
+Today, our goal was to drive within range of and align to an April tag using a tank drivebase. We began with a code review with a mentor and then merged our testbench code with the main repository: ChargedUp2023. We then referred to PhotonVision documentation to implement an aim at target method. This method used a PID loop with the error being the yaw difference between the target and limelight.  
+
