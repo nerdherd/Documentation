@@ -31,6 +31,10 @@ We also 3D printed parts for the claw/intake prototypes (Elevator and Scissor Cl
 
 *Printed Scissor Claw part.*
 
+![Linear Actuator](images/Day3/mfgclawDay3.png)
+
+*Laser cut linear actuator prototype and assisted with the assembly*
+
 ### Other
 
 We also 3D printed a cover for the Navx on the roborio.
@@ -38,6 +42,12 @@ We also 3D printed a cover for the Navx on the roborio.
 ![3D Navx Cover Print](images/Day3/mfgprintDay3c.png)
 
 *Finished print of the Navx cover.*
+
+All the machines (TM-1 and the Super Mini Mills) and the vises were cleaned for Friday.  
+
+![Cleaning](images/Day3/mfgDay3.png)
+
+*Cleaning the machines*
 
 ---
 
