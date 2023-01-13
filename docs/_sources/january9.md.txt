@@ -27,7 +27,7 @@ We also 3D printed parts for the claw/intake prototypes (Elevator and Scissor Cl
 
 *Printed elevator parts.*
 
-![3D Claw Print](images/Day2/mfgprintDay3b.png)
+![3D Claw Print](images/Day3/mfgprintDay3b.png)
 
 *Printed Scissor Claw part.*
 
