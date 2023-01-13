@@ -36,11 +36,11 @@ We wanted to incorporate four contact points with four wheels attached to four g
 
 #### Design #1
 
-![Crayola CAD of Claw Intake on Day 1](images/cadIntakeDay1a.png)
+![Crayola CAD of Claw Intake on Day 1](images/Day1/cadIntakeDay1a.png)
 
 *Crayola CAD of Claw Intake*
 
-![Prototype of Claw Intake on Day 1](images/prototypeIntakeDay1a.png)
+![Prototype of Claw Intake on Day 1](images/Day1/prototypeIntakeDay1a.png)
 
 *Prototype of Claw Intake*
 
@@ -56,11 +56,11 @@ Design Matrix:
 
 We also created another design, a linear actuator claw.
 
-![Crayola CAD of Linear Actuator Claw on Day 1](images/cadIntakeDay1b.png)
+![Crayola CAD of Linear Actuator Claw on Day 1](images/Day1/cadIntakeDay1b.png)
 
 *Crayola CAD of Linear Actuator Claw*
 
-![Prototype of Linear Actuator Intake on Day 1](images/prototypeIntakeDay1b.png)
+![Prototype of Linear Actuator Intake on Day 1](images/Day1/prototypeIntakeDay1b.png)
 
 *Prototype of Linear Actuator Claw*
 
@@ -78,7 +78,7 @@ We made a Crayola sketch of the linear and linear, elevator and telescope. We wa
 
 We decided to make the elevator on the side. We took inspiration from [this design](https://www.youtube.com/watch?v=Yp3l5F0qt8I), and I wanted to make it sideways for more point of contact in the telescope as shown below.
   
-![Crayola CAD of Lift on Day 1](images/cadLiftDay1.png)
+![Crayola CAD of Lift on Day 1](images/Day1/cadLiftDay1.png)
 
 *Crayola CAD of Lift*
 
@@ -106,13 +106,13 @@ We made a [new repository for 2023](https://lbschools-my.sharepoint.com/:v:/g/pe
 
 We specifically aimed to setup testbenches to run Limelights to detect AprilTags and reflective tape. With the help of our mentors, we based the design of our testbench off the following diagram:
   
-![Vision Testbench Diagram](images/visionTestbenchDiagram.png)
+![Vision Testbench Diagram](images/Day1/visionTestbenchDiagram.png)
 
 *Diagram of testbench setup* 
  
 Then, we made several modifications to our testbenches such as supplying power to the RoboRIO after wires were disconnected, and updating RoboRIO firmware.
 
-![RIO Reimaging](images/roboRIOReimaging.png)
+![RIO Reimaging](images/Day1/roboRIOReimaging.png)
   
 *RoboRIO re-imaging process*
  
@@ -124,7 +124,7 @@ Because we are currently split among two drive bases: swerve and west coast, we 
 
 Today, we decided to work on programming our swerve drive system to test its feasibility in competition. We were able to get our drivebase to work with the help of our mentors, and may be considering using a similar design for our competition robot this season, if we are able to find parts to repair the drivebase when necessary.
 
-![Swerve Drive](images/swerve.png)
+![Swerve Drive](images/Day1/swerve.png)
 
 *Swerve Drivebase*
   

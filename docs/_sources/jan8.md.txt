@@ -7,7 +7,7 @@
 ### Linear Actuator Claw
 The intake subgroup decided to create a 1 piston intake for simplicity and weight. Thid intake had a 100% success rate with the pneumatic test bench. 10 trails each for cone and cube.  
 
-![Linear Actuator Claw](images/linearActuatorClawDay2.png)
+![Linear Actuator Claw](images/Day2/linearActuatorClawDay2.png)
 
 *Linear Actuator Claw CAD and Assembly*
 
@@ -21,7 +21,7 @@ The intake subgroup decided to create a 1 piston intake for simplicity and weigh
 
 We decided to create a 4 point of contact on 4, 4" wheels, supports cones in many configurations, better grip, new cylinder placement will allow for less play (not tested with cylinders yet)  
 
-![Rotational Claw](images/rotationalClawDay2.png)
+![Rotational Claw](images/Day2/rotationalClawDay2.png)
 
 *Rotational Claw CAD and Assembly*
 
@@ -29,11 +29,11 @@ We decided to create a 4 point of contact on 4, 4" wheels, supports cones in man
 
 This design is designed to have the functionality to pick the cone on its side and upright as well as to  intake the cube it would get fed by the wheels and end in a diamond shape.  
 
-![Scissor Claw CAD](images/scissorClawCAD.png)
+![Scissor Claw CAD](images/Day2/scissorClawCAD.png)
 
 *Scissor Claw CAD*
 
-![Scissor Claw Assembly](images/scissorClawAssembly.png)
+![Scissor Claw Assembly](images/Day2/scissorClawAssembly.png)
 
 *Scissor Claw Assembly*
 
@@ -41,17 +41,17 @@ This design is designed to have the functionality to pick the cone on its side a
 
 We spent the day CADing the first design of the elevator. We first made a place for the elevator that doesn’t bump into anything using a crayola sketch. We then created an elevator taking inspiration from our 2019 robot, Gigantor. This was our final product.  
 
-![Elevator Crayola CAD](images/elevatorCrayolaDay2.png)
+![Elevator Crayola CAD](images/Day2/elevatorCrayolaDay2.png)
 
 *Elevator Crayola CAD*
 
-![Elevator CAD](images/elevatorCADDay2.png)
+![Elevator CAD](images/Day2/elevatorCADDay2.png)
 
 *Elevator CAD*
 
 However, while consulting with our main mentor, he mentioned that the weight lighting bars will not be accurate and will take too long to manufacture. He also mentioned that the gusset that holds the bearing will only have 1 full side of bearings and 2 sides only half with bearings, making it more inaccurate. He also mentioned that we did not need to make the carriage long. Taking that into consideration, we decided to start a new iteration that will be closer to what we will first manufacture. 
 
-![Sliding Gusset CAD](images/slidingGussetCADDay2.png)
+![Sliding Gusset CAD](images/Day2/slidingGussetCADDay2.png)
 
 *Sliding Gusset CAD*
 
@@ -73,11 +73,11 @@ After the team-wide code review, we marked refactoring changes to be implemented
 
 Our second goal of recognizing April tags using Photon vision was slightly more difficult. We were unable to open the PhotonVision dashboard and thus not letting us set a static IP address for the limelight, so we continued to use a dynamic IP address which allowed us to identify April tags and read data such as pitch and yaw. 
 
-![Testbench Setup](images/testbenchSetup.png)
+![Testbench Setup](images/Day2/testbenchSetup.png)
 
 *Image of testbench setup*
 
-![Network Switch Setup](images/networkSwitchSetup.png)
+![Network Switch Setup](images/Day2/networkSwitchSetup.png)
 
 *Image of network switch setup*
 
