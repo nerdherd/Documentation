@@ -32,6 +32,12 @@ We decided that we wanted to start the season strong by doing Robot in 3 Days. O
 
 *****
 
+## Admin
+
+After kickoff, we met as a subteam to prepare for the potluck during lunch. We cleaned the tables, set up the sterno trays, and organized food as parents brought in more. After the potluck, we made food order forms for many of the upcoming meetings and started the business plan. We used Excel to organize every section we needed to rewrite, and from there, we delegated the work accordingly. The rest of Admin took inventory of the new apparel and distributed the final orders to the remaining members. Meanwhile, Media worked on gathering footage for the first video recap. Later, some of Admin worked on the business plan, while the other part discussed plans for outreach this season. Afterwards, we planned dinner and met with Mr. Harder to discuss the stand-up banner.
+
+*****
+
 ## Assembly
 
 We used the field drawings and Read Me documents for the official field elements on the [FIRST website](https://www.firstinspires.org/robotics/frc/playing-field). We decided to make the middle/end cone ramps, cube shelf, and the half charge station and bought all of the materials listed on each of the Read Me documents. We split our Assembly subteam into 3 groups; the middle cone ramp, the cube shelf, and the charge station. Using the “example cut list” on the Read Me documents, we measured everything onto the sheets of plywood and pieces of lumber for each field element. Each group cut everything out with the circular saw, bandsaw, and the hacksaw.  
