@@ -51,10 +51,6 @@ The intake subgroup decided to create a 1 piston intake for simplicity and weigh
 
 **Links with pneumatic test bench:**
 
-* [Video of Demo for Cube](https://lbschools-my.sharepoint.com/:v:/g/personal/201196108_lbschools_net/EZ_EcZnyBDpEtSZtehS95C4BMwG3_zPayoi-lbAWh9hYQw?e=UaPZtq)
-
-* [Video of Demo for Cone](https://drive.google.com/file/d/1VSm65yeaJ_1Ksp8jqj-Sp_O3lRGFJe8G/view?usp=share_link)
-
 ### Rotational Claw CAD/Assembly
 
 We decided to create a 4 point of contact on 4, 4" wheels, supports cones in many configurations, better grip, new cylinder placement will allow for less play (not tested with cylinders yet)  
@@ -74,6 +70,7 @@ This design is designed to have the functionality to pick the cone on its side a
 ![Scissor Claw Assembly](images/Day2/scissorClawAssembly.png)
 
 *Scissor Claw Assembly*
+
 
 ### Elevator
 
