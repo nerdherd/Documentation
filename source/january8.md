@@ -57,6 +57,9 @@ We decided to create a 4 point of contact on 4, 4" wheels, supports cones in man
 
 ![Rotational Claw](images/Day2/rotationalClawDay2.png)
 
+Iteration 2: cone hits the base wheel and wood arms hit first before the compliant wheels so less grip, and turning mechanism has too much play. 
+Iteration 3: 4 points of contacts on 4, 4" wheels, supports cones in many configurations, better grip, new cylinder placement will allow for less play. 
+
 *Rotational Claw CAD and Assembly*
 
 ### Scissor Claw CAD/Assembly
