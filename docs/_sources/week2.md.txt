@@ -16,6 +16,11 @@ Taught Pneumatics
 - How to use the manual test bench 
 - Layout and components of prototype bot pneumatics
 
+Soldering
+
+Chain Tensioning 
+- Practicing chain tensioning by using Allen wrenches to tie and loosen snail gears 
+
 ### Claw
 
 Once the assembly of the double piston claw was done, we attached it to the prototype bot.  
@@ -33,6 +38,24 @@ Connected the cube shelf divider beam to cone ramp horizontal beam using wood sc
 
 *Image of the completed Cone Ramp.*
 
+Made a substation height simulator (Double Substation Stand) 
+- Cut wood and assembled 
+
+![Stand](images/Week2/asmStand.png)
+
+*New double substation stand*
+
+### Robot Repairs/Maintenance
+
+We did several repairs on our prototype bots such as: 
+- Fixed CAN on prototype bot 
+- Fixed gearboxes on prototype bot 
+- We finished attaching handles onto our swerve bot. 
+
+![Swerve Handles](images/Week2/asmHandles.png)
+
+*Handles on Swerve*
+
 ### Other
 
 We repaired the Wooden Dolley our team uses to push around large materials. 
@@ -49,6 +72,10 @@ We started working on our new robot cart and driver’s station.
 - brainstorming updated designs 
 - design constraints 
 - additional features
+
+We recorded inventory for the following components: 
+- Cone Runner 
+- Motor 
 
 ## CAD
 
