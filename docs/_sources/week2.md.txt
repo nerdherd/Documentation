@@ -40,11 +40,43 @@ We tested a claw prototype
 
 ![Claw](images/Week2/asmclaw3.png)
 
+We finished the assembly of the claw prototype. Upon completion, it was tested and successfully picked up and scored a cone on the node about 4 times until the wood snapped while testing.  
+
+![Claw](images/Week2/asmClaw4.png)
+
+*Broken wood on claw prototype*
+
 ### Arm
 
 Installed the piston on arm 
 - Tubing  
 - Wires
+
+*Piston attatched to claw prototype*
+
+![Arm](images/Week2/asmArm.png)
+
+### Elevator
+
+We also worked on the elevator prototype: 
+- Worked with CAD in assembly of the elevator 
+- Took inventory for elevator parts 
+- Riveted U shape 
+
+![Elevator](images/Week2/asmElev.png)
+
+*The start of our elevator prototype*
+
+### Cone Runner
+
+We worked on the assembly of the cone runner intake prototype. 
+- Once assembled, we tested it.
+
+![Cone Runner](images/Week2/asmConeRunner.png)
+
+*Assembled cone runner intake prototype*
+
+Video of the intake working: https://drive.google.com/file/d/1Y-SxlztuHSmEjaizDpQcaamlR35QkoNe/view?usp=sharing
 
 ### Field Elements
 
@@ -84,6 +116,25 @@ After the brainstorming on Friday, we made the 1st iteration design and reviewed
 ![Robot Cart CAD](images/Week2/asmRoboCart1.png)
 
 *CAD design of new robot cart*
+
+We continued to work on Robot Cart.  
+- Got feedback from advisor 
+- Created a 2nd iteration 
+- Started Bill of Materials (BOM) 
+
+![Robot Cart](images/Week2/asmRoboCart2.png)
+
+*Two possible designs for the robot cart*
+
+### Driver Station
+
+We began work on a new driver station.  
+- Assembled the base of the driver station. 
+- Used the bandsaw to cut bars for the base and polycarb. 
+
+![Driver Station](images/Week2/asmDriveStation.png)
+
+*Finished driver station base*
 
 ### Other
 
