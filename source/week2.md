@@ -1,4 +1,4 @@
-# January 13
+# Week 2 (1/13 to 1/20)
 
 ## Assembly
 
@@ -20,7 +20,7 @@ Taught Pneumatics
 
 Once the assembly of the double piston claw was done, we attached it to the prototype bot.  
 
-![Claw](images/jan13/asmclaw.png)
+![Claw](images/Week2/asmclaw.png)
 
 *Image of the completed claw assembly*
 
@@ -29,7 +29,7 @@ Once the assembly of the double piston claw was done, we attached it to the prot
 We finished assembling the end cone ramp. 
 Connected the cube shelf divider beam to cone ramp horizontal beam using wood screws and spacer plywood 
 
-![Cone Ramp](images/jan13/asmConeRamp.png)
+![Cone Ramp](images/Week2/asmConeRamp.png)
 
 *Image of the completed Cone Ramp.*
 
@@ -39,7 +39,7 @@ We repaired the Wooden Dolley our team uses to push around large materials.
 - Replace broken plywood 
 - Stapled fabric using staple gun 
 
-![Wooden Dolley](images/jan13/asmDolley.png)
+![Wooden Dolley](images/Week2/asmDolley.png)
 
 *Fixed Wooden Dolley*
 
@@ -56,7 +56,7 @@ We started working on our new robot cart and driver’s station.
 
 First cad of two stage telescope arm. Each tube is 27 inches long. Received feedback. Need to find a way to move the arm. Thinking of attaching motor to elevator carriage. 
 
-![Arm](images/jan13/cadArm.png)
+![Arm](images/Week2/cadArm.png)
 
 *Screenshot of arm CAD*
 
@@ -64,7 +64,7 @@ First cad of two stage telescope arm. Each tube is 27 inches long. Received feed
 
 We finished updating the elevator. Some of the updates included making the bars into 29 inches to make it easier for manufacturing. We created drawings of all the parts, and created a BOM that we must order to make the elevator.  
 
-![Elevator](images/jan13/cadElev.png)
+![Elevator](images/Week2/cadElev.png)
 
 *Screenshot of elevator CAD*
 
@@ -72,9 +72,9 @@ We finished updating the elevator. Some of the updates included making the bars 
 
 After testing dimensions with a current swerve drive base docking and engaging we completed the swerve bumper design with technical drawings from those dimensions. We wanted to make the process of taking off bumpers and putting them back on as easy as possible. We went with a pin design with 4 c-channel mounts with two on opposite sides. 
 
-![Drawings](images/jan13/cadBumper1.png)
+![Drawings](images/Week2/cadBumper1.png)
 
-![Drawings](images/jan13/cadBumper2.png)
+![Drawings](images/Week2/cadBumper2.png)
 
 *Screenshots of the drawings for our swerve bumpers*
 
@@ -82,7 +82,7 @@ After testing dimensions with a current swerve drive base docking and engaging w
 
 We then tested the rotational claw with the pneumatic piston test bench and had 100% success rate out of 10 trials with cone and cube.
 
-![Claw](images/jan13/cadClaw.png)
+![Claw](images/Week2/cadClaw.png)
 
 *Screenshot of the claw cad.*
 
@@ -90,19 +90,19 @@ We then tested the rotational claw with the pneumatic piston test bench and had 
 
 The manufacturing subteam set up a 3D printer with TPU filament and another with Nylon X to test the usability of the various materials. We printed a test belt with the TPU, which proved to be successful. We also reorganized and lowered our stock rack so that we could add more shelves and create a more efficient storage area for manufacturing. Furthermore, the side guards on the TM-1 were removed in preparation for the elevator bar. The TM-1 vises and work surface, as well as the side guards, were vacuumed and cleaned with oil. 
 
-![TM-1](images/jan13/mfg1.png)
+![TM-1](images/Week2/mfg1.png)
 
 *A close-up of the tidied bare TM-1 work surface. *
 
-![TM-1](images/jan13/mfg2.png)
+![TM-1](images/Week2/mfg2.png)
 
 *A full shot of the TM-1 with its guard railing removed.*
 
-![MFG](images/jan13/mfg3.png)
+![MFG](images/Week2/mfg3.png)
 
 *A selfie shot of the people who busted their butts and worked through approx. 10 machine cloths to get this baby nice and shiny.*
 
-![TM-1 part](images/jan13/mfg4.png)
+![TM-1 part](images/Week2/mfg4.png)
 
 *A full shot of our cleaned guard railing with its screws and washers (for connection to the TM-1) taped on to ease reattachment + the tips of my feet (how scandalous). *
 
@@ -118,3 +118,4 @@ First, we continued testing the drive and claw functionalities of the prototype 
 
 #### Swerve Group
 
+This week, we worked on adding smaller features to our codebase. First, we transferred some of the swerve commands we had written, such as turn to angle using the gyroscope and charge station balancing, to be compatible with a west coast drivetrain, as at this point, we were not sure which drivebase we would be committing to. After that, we worked on adding logging to the robot, first testing using the WPILib DataLog framework (https://docs.wpilib.org/en/stable/docs/software/telemetry/datalog.html) on a testbench, and then writing code to implement it into our subsystems. We hope that this will solve some of our slowdown issues from last year, when we used BadLog (https://github.com/dominikWin/badlog) for logging, as DataLog does I/O operations on a separate thread, which should reduce slowdown. 
