@@ -29,6 +29,23 @@ Once the assembly of the double piston claw was done, we attached it to the prot
 
 *Image of the completed claw assembly*
 
+We fixed a claw prototype’s cone compression.
+
+![Claw](images/Week2/asmclaw2.png)
+
+*Demo of claw holding cone*
+
+We tested a claw prototype 
+- Set up pneumatic test bench and tested the two-piston claw design. It was successful for both the cone and the cube. 
+
+![Claw](images/Week2/asmclaw3.png)
+
+### Arm
+
+Installed the piston on arm 
+- Tubing  
+- Wires
+
 ### Field Elements
 
 We finished assembling the end cone ramp. 
@@ -56,6 +73,18 @@ We did several repairs on our prototype bots such as:
 
 *Handles on Swerve*
 
+We fixed a Pneumatic Leak in our Prototype Bot: 
+We found slanted tubing, so we cut a new tube and reconnected it 
+
+### Robot Cart
+
+We continued brainstorming and designing a new robot cart. We completed the following:  
+After the brainstorming on Friday, we made the 1st iteration design and reviewed those designs with our advisor 
+
+![Robot Cart CAD](images/Week2/asmRoboCart1.png)
+
+*CAD design of new robot cart*
+
 ### Other
 
 We repaired the Wooden Dolley our team uses to push around large materials. 
@@ -76,6 +105,39 @@ We started working on our new robot cart and driver’s station.
 We recorded inventory for the following components: 
 - Cone Runner 
 - Motor 
+
+Did basic battery maintenance: 
+- Battery Leads: take off and replace battery leads. Use heat gun to secure heatshrink.
+- Tested 2 batteries with a computerized battery analyzer
+
+Made changes to encoder connection (NEOs): 
+- Spliced 24AWG onto 28AWG onto neo motor encoder wires 
+
+We Disassembled telescope climb to get more parts needed for other claw prototypes:  
+- Bearings 
+- stock 
+
+We recorded inventory for versaplanetary gearboxes.  
+
+Some assembly members had Manufacturing Training on: 
+- Work offsets 
+- Helping MFG with parts list 
+- Facing, probing 
+
+We performed the following electrical work: 
+- Prepared CANcoders for 2nd swerve 
+
+![Encoder](images/Week2/asmEncoder.png)
+
+*Completed encoder preparation*
+
+We helped the ADMIN sub team with the following: 
+- Created FRC sponsors Stickers 
+- Started design for sponsorship panels 
+
+![Sponsor Panel](images/Week2/asmSponsors.png)
+
+*Image of our sponsor panel layout*
 
 ## CAD
 
