@@ -208,6 +208,38 @@ We finished updating the elevator. Some of the updates included making the bars 
 
 *Screenshot of elevator CAD*
 
+### Rotational Claw
+
+We then tested the rotational claw with the pneumatic piston test bench and had 100% success rate out of 10 trials with cone and cube.
+
+![Claw](images/Week2/cadClaw.png)
+
+*Screenshot of the claw cad.*
+
+### Buddy Climb
+
+We started on the first buddy climber prototype design using pieces of plywood. Functionalities wise we wanted the swerve drive base to drive on to the structure and the T shape to hook underneath the swerve drive base wheels. We chose a T shape to accommodate the locations of the wheels of varying drive bases. 
+
+![Buddy Climb](images/Week2/cadBuddy1.png)
+
+*CAD and prototype of buddy climb*
+
+Polycarbonate was also added to the buddy climber prototype for stability and better testing results. 
+
+![Buddy Climb](images/Week2/cadBuddy2.png)
+
+*2nd itteration of buddy climb*
+
+Video: https://drive.google.com/file/d/1M8oEwEvdnluFsA1Wh9ukeqFCu9yDInEV/view?usp=sharing
+
+### Cone Runner
+
+We wanted to focus on ground intake and created a cone runner design and a single angular ground intake design.  
+
+![Cone Runner](images/Week2/cadConeRunner.png)
+
+*CAD model of cone runner design*
+
 ### Swerve Bumpers
 
 After testing dimensions with a current swerve drive base docking and engaging we completed the swerve bumper design with technical drawings from those dimensions. We wanted to make the process of taking off bumpers and putting them back on as easy as possible. We went with a pin design with 4 c-channel mounts with two on opposite sides. 
@@ -218,13 +250,21 @@ After testing dimensions with a current swerve drive base docking and engaging w
 
 *Screenshots of the drawings for our swerve bumpers*
 
-### Rotational Claw
+This swerve drive was previously used during the off season of 2022-2023 and now with season we had to make a few changes with the handlebar placement and crossbar placement for the future design this is to model potential configurations but is not final.  
 
-We then tested the rotational claw with the pneumatic piston test bench and had 100% success rate out of 10 trials with cone and cube.
+![Swerve Handles](images/Week2/cadHandles1.png)
 
-![Claw](images/Week2/cadClaw.png)
+Then we created a structure for the cone runner to mount on that is 4 inches tall and 11 inches wide.  
 
-*Screenshot of the claw cad.*
+![Swerve Handles](images/Week2/cadHandles2.png)
+
+### West Coast Bumpers
+
+Moving on to west coast drive base bumpers, we completed the first design and started on technical drawings. Again, using c-channel for a pin attachment like the swerve bumpers design. Changed the c-channel placement and the wood lengths.  
+
+![Drawings](images/Week2/cadWC.png)
+
+*CAD model of West Coast bumpers*
 
 ## Manufacturing
 
