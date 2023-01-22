@@ -31,18 +31,18 @@ Once the assembly of the double piston claw was done, we attached it to the prot
 
 We fixed a claw prototype’s cone compression.
 
-![Claw](images/Week2/asmclaw2.png)
+![Claw2](images/Week2/asmClaw2.png)
 
 *Demo of claw holding cone*
 
 We tested a claw prototype 
 - Set up pneumatic test bench and tested the two-piston claw design. It was successful for both the cone and the cube. 
 
-![Claw](images/Week2/asmclaw3.png)
+![Claw3](images/Week2/asmClaw3.png)
 
 We finished the assembly of the claw prototype. Upon completion, it was tested and successfully picked up and scored a cone on the node about 4 times until the wood snapped while testing.  
 
-![Claw](images/Week2/asmClaw4.png)
+![Claw4](images/Week2/asmClaw4.png)
 
 *Broken wood on claw prototype*
 
