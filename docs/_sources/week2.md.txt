@@ -268,6 +268,8 @@ Moving on to west coast drive base bumpers, we completed the first design and st
 
 ## Manufacturing
 
+### TM-1 Cleaning
+
 The manufacturing subteam set up a 3D printer with TPU filament and another with Nylon X to test the usability of the various materials. We printed a test belt with the TPU, which proved to be successful. We also reorganized and lowered our stock rack so that we could add more shelves and create a more efficient storage area for manufacturing. Furthermore, the side guards on the TM-1 were removed in preparation for the elevator bar. The TM-1 vises and work surface, as well as the side guards, were vacuumed and cleaned with oil. 
 
 ![TM-1](images/Week2/mfg1.png)
@@ -285,6 +287,51 @@ The manufacturing subteam set up a 3D printer with TPU filament and another with
 ![TM-1 part](images/Week2/mfg4.png)
 
 *A full shot of our cleaned guard railing with its screws and washers (for connection to the TM-1) taped on to ease reattachment + the tips of my feet (how scandalous). *
+
+#### Gussets & Bars
+
+At the beginning of the day, half of the manufacturing subteam helped disassemble the hangar from last year’s game while the other half reviewed the completed elevator CAD drawings. After some modifications in the gussets, the drawings were approved for manufacturing. The parts were first divided into which CNC mills they would be manufactured on and then divided into groups regarding their plate thickness (gussets). We completed all of the bar CAMs and are almost done with the gusset CAMs. The stock was also cut in preparation for facing (bar length + .25 in). 
+
+![Gusset CAM](images/Week2/mfgGussetCAM.png)
+
+*Picture of the completed CAM for the .125 gussets*
+
+On January 16th, the manufacturing subteam began facing the remaining bar stock and finalizing the CAM for the gussets. However, there was some miscommunication regarding the thickness of the gusset plates, so the gussets were reCAMed. However, the original .0625in plate gussets (P407 – qt8, P408 – qt4, P414 – qt2) were completed by the end of the meeting and bandsawed off the plate. 4 bars were completed by the end of the meeting (P401 – qt2, P406 – qt1, P409 – qt1). 
+
+![Gusset CAM](images/Week2/mfgGussets.png)
+
+*Completed plate with corner gussets - P407, bot motor gusset - P408, and backrest gusset - P414*
+
+![Bars](images/Week2/mfgBars.png)
+
+*Completed bars (base up bar - P401 , carriage beam - P406 , bot rail – P409)*
+
+On Thursday, all the bars for elevator (except for top support rail) were completed and the mini mill was set up to run the remaining .0625 parts. 
+
+During a worktime of approximately 90 minutes, manufacturing sanded and buffered the previously manufactured gussets. They were then chamfered on both sides, but the team then found that the reaming program for the gussets were too shallow and did not allow for some holes to fit a rivet. To ensure that all holes could be riveted, we deburred the faulty holes. However, we discovered our error in the CAM when the bottom height of the reamer was due to the program not acknowledging the reamer tip in “drill tip through”. Thus, in future parts, we have fixed this issue and the reamers fit. 
+
+![Gusset](images/Week2/mfgGussets2.png)
+
+*Our completed sanded, buffered, and chamfered gussets.*
+
+One sheet of .0625 gussets were manufactured with the intent to be doubled to .125 gussets (as we had run out of 1/8 alum sheets). Members learned how to bandsaw round edges of the gussets through relief cuts. However, due to the change in CAD design, manufacturing gussets was put on hold. Instead, we CAMed a program to drill shoulder screw holes into new 1/16 sheets of aluminum so that they could be manufactured on our tooling plate. 
+
+![Gusset](images/Week2/mfgGussets3.png)
+
+*Our plate of .0625 gussets in progress.*
+
+![Mebers](images/Week2/mfgMembers.png)
+
+*MFG members hard at work*
+
+Gussets for another swerve drive were CAMed and dry run on the mini mills, but not manufactured due to a shortened meeting time. 
+
+#### Organization of Stock Rack
+
+![Stock Rack](images/Week2/mfgStockRack.png)
+
+*Reorganized stock rack*
+
 
 ## Programming
 
