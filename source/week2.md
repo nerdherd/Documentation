@@ -11,6 +11,7 @@ Motor testing
 
 Comp maintenance 
 - Pit checklist  
+Link: https://lbschools-my.sharepoint.com/:b:/g/personal/201201945_lbschools_net/Eb3gELJu2eNGo1NLQGC-yPgB1-WDYtj2kkwUBgqRs_jMvQ?e=GpNg6z
 
 Taught Pneumatics 
 - How to use the manual test bench 
@@ -19,7 +20,7 @@ Taught Pneumatics
 Soldering
 
 Chain Tensioning 
-- Practicing chain tensioning by using Allen wrenches to tie and loosen snail gears 
+- Practicing chain tensioning by using wrenches to tie and loosen snail gears 
 
 ### Claw
 
