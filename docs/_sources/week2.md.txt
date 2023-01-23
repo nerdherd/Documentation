@@ -317,10 +317,6 @@ During a worktime of approximately 90 minutes, manufacturing sanded and buffered
 
 One sheet of .0625 gussets were manufactured with the intent to be doubled to .125 gussets (as we had run out of 1/8 alum sheets). Members learned how to bandsaw round edges of the gussets through relief cuts. However, due to the change in CAD design, manufacturing gussets was put on hold. Instead, we CAMed a program to drill shoulder screw holes into new 1/16 sheets of aluminum so that they could be manufactured on our tooling plate. 
 
-![Gusset](images/Week2/mfgGussets3.png)
-
-*Our plate of .0625 gussets in progress.*
-
 ![Mebers](images/Week2/mfgMembers.png)
 
 *MFG members hard at work*
