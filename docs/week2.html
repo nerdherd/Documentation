@@ -43,7 +43,8 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="January 9th Meeting" href="january9.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,11 +90,51 @@
             
             
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="home.html">Home</a></li>
 <li class="toctree-l1"><a class="reference internal" href="january7.html">January 7th Meeting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="january8.html">January 8th Meeting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="january9.html">January 9th Meeting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Week 2 (1/13 - 1/20)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#assembly">Assembly</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#training">Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#claw">Claw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arm">Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elevator">Elevator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cone-runner">Cone Runner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#field-elements">Field Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-repairs-maintenance">Robot Repairs/Maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-cart">Robot Cart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#driver-station">Driver Station</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cad">CAD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#telescope-arm">Telescope Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Elevator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rotational-claw">Rotational Claw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#buddy-climb">Buddy Climb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Cone Runner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#swerve-bumpers">Swerve Bumpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#west-coast-bumpers">West Coast Bumpers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manufacturing">Manufacturing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tm-1-cleaning">TM-1 Cleaning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gussets-bars">Gussets &amp; Bars</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#organization-of-stock-rack">Organization of Stock Rack</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#programming">Programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vision-group">Vision Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#auto-group">Auto Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#swerve-group">Swerve Group</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
@@ -450,7 +491,7 @@ After the brainstorming on Friday, we made the 1st iteration design and reviewed
 </section>
 <section id="swerve-group">
 <h3>Swerve Group<a class="headerlink" href="#swerve-group" title="Permalink to this heading">¶</a></h3>
-<p>This week, we worked on adding smaller features to our codebase. First, we transferred some of the swerve commands we had written, such as turn to angle using the gyroscope and charge station balancing, to be compatible with a west coast drivetrain, as at this point, we were not sure which drivebase we would be committing to. After that, we worked on adding logging to the robot, first testing using the WPILib DataLog framework (https://docs.wpilib.org/en/stable/docs/software/telemetry/datalog.html) on a testbench, and then writing code to implement it into our subsystems. We hope that this will solve some of our slowdown issues from last year, when we used BadLog (https://github.com/dominikWin/badlog) for logging, as DataLog does I/O operations on a separate thread, which should reduce slowdown.</p>
+<p>This week, we worked on adding smaller features to our codebase. First, we transferred some of the swerve commands we had written, such as turn to angle using the gyroscope and charge station balancing, to be compatible with a west coast drivetrain, as at this point, we were not sure which drivebase we would be committing to. After that, we worked on adding logging to the robot, first testing using the <a class="reference external" href="https://docs.wpilib.org/en/stable/docs/software/telemetry/datalog.html">WPILib DataLog framework</a> on a testbench, and then writing code to implement it into our subsystems. We hope that this will solve some of our slowdown issues from last year, when we used <a class="reference external" href="https://github.com/dominikWin/badlog">BadLog</a> for logging, as DataLog does I/O operations on a separate thread, which should reduce slowdown.</p>
 </section>
 </section>
 </section>
@@ -460,6 +501,9 @@ After the brainstorming on Friday, we made the 1st iteration design and reviewed
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="january9.html" class="btn btn-neutral float-left" title="January 9th Meeting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

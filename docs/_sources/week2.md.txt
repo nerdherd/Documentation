@@ -332,14 +332,14 @@ Gussets for another swerve drive were CAMed and dry run on the mini mills, but n
 
 ## Programming
 
-#### Vision Group
+### Vision Group
 
 This week, we learned that there are two methods of determining the robot’s distance from the april tags using the Limelight. The first method uses the angle and the height of the camera along with the angle and height of the april tag to determine the distance from the camera to the target. It also uses the angle from the Limelight to the target which is the value that is changed to help determine the distance between the Limelight and april tag. However, if the numbers were slightly off, then the distance would be changed exponentially. That is why we decided to go with the second method that uses the area of the Limelight which the target takes up. To do so, we had to find an equation to determine how the area of the target relates to the distance between the Limelight and the april tag. We tested the turning using the pitch received from the Limelight, and it was successful 
 
-#### Auto Group
+### Auto Group
 
 First, we continued testing the drive and claw functionalities of the prototype bot. For the sides of the drive base that had an unused motor, the motor current ramped up to around 178 amps.  The removal of the motor resulted in the motor current ramping up to only around 30-40 amps, which is a safe amount.  Next, we tested autos that drove straight and faced a certain angle using a NavX, but they need further PID tuning. We have also tested several buddy climb iterations.  There were some successful trials; however, the swerve drivetrain was unable to stay on the buddy climb for most trials. 
 
-#### Swerve Group
+### Swerve Group
 
-This week, we worked on adding smaller features to our codebase. First, we transferred some of the swerve commands we had written, such as turn to angle using the gyroscope and charge station balancing, to be compatible with a west coast drivetrain, as at this point, we were not sure which drivebase we would be committing to. After that, we worked on adding logging to the robot, first testing using the WPILib DataLog framework (https://docs.wpilib.org/en/stable/docs/software/telemetry/datalog.html) on a testbench, and then writing code to implement it into our subsystems. We hope that this will solve some of our slowdown issues from last year, when we used BadLog (https://github.com/dominikWin/badlog) for logging, as DataLog does I/O operations on a separate thread, which should reduce slowdown. 
+This week, we worked on adding smaller features to our codebase. First, we transferred some of the swerve commands we had written, such as turn to angle using the gyroscope and charge station balancing, to be compatible with a west coast drivetrain, as at this point, we were not sure which drivebase we would be committing to. After that, we worked on adding logging to the robot, first testing using the [WPILib DataLog framework](https://docs.wpilib.org/en/stable/docs/software/telemetry/datalog.html) on a testbench, and then writing code to implement it into our subsystems. We hope that this will solve some of our slowdown issues from last year, when we used [BadLog](https://github.com/dominikWin/badlog) for logging, as DataLog does I/O operations on a separate thread, which should reduce slowdown. 
