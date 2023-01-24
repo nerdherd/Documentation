@@ -7,27 +7,16 @@ We decided that we wanted to start the season strong by doing Robot in 3 Days. O
 **Schedule:**
 
 * 8:30 am - 9 am: Leads setup rooms and livestream 
-
 * 9 am - 10 am: Watch livestream 
-
 * 10 am – 12 pm: Game manual breakdown, strategy, setting goals, robot sketches 
-
   * 30 min game manual
-
   * 15 min goal setting in big group
-
   * 35 min small group brainstorm about strategy and robot 
-
   * 30 min big group brainstorm - Each group says a 60 second elevator pitch of their idea and use Pugh analysis to decide: https://sixsigmastudyguide.com/pugh-analysis/  
-
 * 12 pm - 1 pm: Lunch (Potluck) 
-
 * 1 pm - 3:30 pm: CAD / Assembly (field elements)  
-
 * 4pm - 7 pm: CAD / Assembly (field elements) 
-
 * 7pm – 7:30: Dinner 
-
 * 7:30 pm - 10:30 pm: Manufacturing / Assembly (field elements) 
 
 *****
@@ -200,7 +189,7 @@ We also assisted with the field element assembly after completing the cube measu
 
 ## Programming
 
-We made a [new repository for 2023](https://lbschools-my.sharepoint.com/:v:/g/personal/201208373_lbschools_net/EaC1TMrnCDlEpV02tHjvrBQBVoQQI92frhdzuIT3KPlBxw) and began writing the Drivetrain subsystem, as well as the auto using tank drive. 
+We made a [new repository for 2023](https://github.com/nerdherd/ChargedUp2023) and began writing the Drivetrain subsystem, as well as the auto using tank drive. 
 
 ### Vision, Arm, and Elevator
 
