@@ -12,7 +12,9 @@ We decided that we wanted to start the season strong by doing Robot in 3 Days. O
   * 30 min game manual
   * 15 min goal setting in big group
   * 35 min small group brainstorm about strategy and robot 
-  * 30 min big group brainstorm - Each group says a 60 second elevator pitch of their idea and use Pugh analysis to decide: https://sixsigmastudyguide.com/pugh-analysis/  
+  * 30 min big group brainstorm
+    * Each group says a 60 second elevator pitch of their idea and 
+    * Use [Pugh analysis](https://sixsigmastudyguide.com/pugh-analysis/) to decide 
 * 12 pm - 1 pm: Lunch (Potluck) 
 * 1 pm - 3:30 pm: CAD / Assembly (field elements)  
 * 4pm - 7 pm: CAD / Assembly (field elements) 
@@ -89,87 +91,61 @@ We decided to make the elevator on the side. We took inspiration from [this desi
 
 ### Arm
 
-Day 1/3 
-
 Created crayolas of possible first iteration arm designs 
 
 Analyzed pros and cons of each design 
 
+#### Fixed point for arm 
+
 ![Crayola CAD of fixed point for arm on Day 1](images/Day1/Day1JoyceRR.png)
 
-Fixed point for arm 
+- Telescope arm 
+- How many stages in telescope? 
+- Get game piece from shelf 
+- Score in mid pole 
+- Drop game piece into bottom row 
 
-Telescope arm 
+| Pros                   | Cons               |
+| ---------------------- | ------------------ |
+| Simple first iteration | Center of gravity  |
+|                        | Unstable           |
+|                        | No high scoring    |
 
-How many stages in telescope? 
 
-Get game piece from shelf 
-
-Score in mid pole 
-
-Drop game piece into bottom row 
-
-Pros 
-
-Simple first iteration 
-
-Cons 
-
-Center of gravity 
-
-Unstable 
-
-No high 
+#### Telescope arm at an angle
 
 ![Crayola CAD of telescope arm at an angle on Day 1](images/Day1/Day1JoyceR.png)
 
-Telescope arm at an angle 
+- Scores in both mid and top 
+- Storing position actuated with pneumatics 
+- No elevator 
+- Intakes from shelf 
 
-Scores in both mid and top 
+| Pros                   | Cons                          |
+| ---------------------- | ----------------------------- |
+| Simple and effective   | Very Heavy (arm is very long) |
+|                        | Center of gravity             |
 
-Storing position actuated with pneumatics 
-
-No elevator 
-
-Intakes from shelf 
-
-Pros: simple, effective 
-
-Cons: very heavy (arm is very long), center of gravity 
+#### Telescope arm on an elevator 
 
 ![Crayola CAD of Telescope arm on an elevator on Day 1](images/Day1/Day1JoyceArm.png)
 
-Telescope arm on an elevator 
+- Multiple locations where it can intake 
 
-Multiple locations where it can intake 
+| Pros                                | Cons                                          |
+| ----------------------------------- | --------------------------------------------- |
+| able to quickly score in all rows   | Multiple telescope stages                     |
+|                                     | Arm is heavy and suceptible to collisions     |
+|                                     | Complex                                       |
 
-Pros: able to quickly score in bottom, mid, and top rows 
-
-Cons: multiple telescope stages (extra material causes arm to be heavy and susceptible to possible collisions), complex 
-
+#### Pneumatic Arm
  
 ![Crayola CAD of pneumatic arm on Day 1](images/Day1/Day1JoyceArm2.png)
 
-Pros: 
-
-Extremely simple (no movement aside from one pneumatic joint to move arm in and out 
-
-Cons: 
-
-Unstable? 
-
-Mid Only 
- 
-
-Day 2/3 
-
-![Prototype of arm on Day 1](images/Day1/Day1JoyceArm3.png) 
-
-Decided on the design with fixed point and extending arm 
-
-Built prototype with telescope climber arm without hooks 
-
-Attached electrical panels to the sides of the upright bars 
+| Pros               | Cons              |
+| ------------------ | ----------------- |
+| Extremely simple   | Unstable          |
+|                    | Mid scoring only  |
 
 *****
 

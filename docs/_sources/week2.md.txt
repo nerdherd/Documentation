@@ -4,23 +4,19 @@
 
 ### Training
 
-We conducted training for new members (Rotations):  
-Motor testing 
-- Used phoenix tuner and driver's station 
-- Recorded motor data in a spreadsheet and labeled motors 
+We conducted training for new members (Rotations):
 
-Comp maintenance 
-- Pit checklist  
-Link: https://lbschools-my.sharepoint.com/:b:/g/personal/201201945_lbschools_net/Eb3gELJu2eNGo1NLQGC-yPgB1-WDYtj2kkwUBgqRs_jMvQ?e=GpNg6z
-
-Taught Pneumatics 
-- How to use the manual test bench 
-- Layout and components of prototype bot pneumatics
-
-Soldering
-
-Chain Tensioning 
-- Practicing chain tensioning by using wrenches to tie and loosen snail gears 
+- Motor testing 
+    - Used phoenix tuner and driver's station 
+    - Recorded motor data in a spreadsheet and labeled motors 
+- Comp maintenance 
+    - Created a [Pit checklist](./_static/Comp%20Pit%20Checklist.pdf)  
+- Pneumatics 
+    - How to use the manual test bench 
+    - Layout and components of prototype bot pneumatics
+- Soldering
+- Chain Tensioning 
+    - Practicing chain tensioning by using wrenches to tie and loosen snail gears 
 
 ### Claw
 
@@ -342,4 +338,35 @@ First, we continued testing the drive and claw functionalities of the prototype 
 
 ### Swerve Group
 
-This week, we worked on adding smaller features to our codebase. First, we transferred some of the swerve commands we had written, such as turn to angle using the gyroscope and charge station balancing, to be compatible with a west coast drivetrain, as at this point, we were not sure which drivebase we would be committing to. After that, we worked on adding logging to the robot, first testing using the [WPILib DataLog framework](https://docs.wpilib.org/en/stable/docs/software/telemetry/datalog.html) on a testbench, and then writing code to implement it into our subsystems. We hope that this will solve some of our slowdown issues from last year, when we used [BadLog](https://github.com/dominikWin/badlog) for logging, as DataLog does I/O operations on a separate thread, which should reduce slowdown. 
+This week, we worked on adding smaller features to our codebase. 
+
+First, we transferred some of the swerve commands we had written, such as turn to angle using the gyroscope and charge station balancing, to be compatible with a west coast drivetrain, as at this point, we were not sure which drivebase we would be committing to. 
+
+After that, we worked on adding logging to the robot, first testing using the [WPILib DataLog framework](https://docs.wpilib.org/en/stable/docs/software/telemetry/datalog.html) on a testbench, and then writing code to implement it into our subsystems. We hope that this will solve some of our slowdown issues from last year, when we used [BadLog](https://github.com/dominikWin/badlog) for logging, as DataLog does I/O operations on a separate thread, which should reduce slowdown. 
+
+```java
+public static void init() {
+    // Old logging code
+    createTopic("LeftMaster" + "/Voltage", () -> robotContainer.drivetrain.leftMaster.getMotorOutputVoltage());
+    createTopic("RightMaster" + "/Voltage", () -> robotContainer.drivetrain.leftMaster.getMotorOutputVoltage());
+    createTopic("RightFollower" + "/Voltage", () -> robotContainer.drivetrain.rightSlave.getMotorOutputVoltage());
+    createTopic("LeftFollower" + "/Voltage", () -> robotContainer.drivetrain.leftSlave.getMotorOutputVoltage());
+
+    createTopic("LeftMaster" + "/Current", () -> robotContainer.drivetrain.leftMaster.getMotorOutputVoltage());
+    createTopic("RightMaster" + "/Current", () -> robotContainer.drivetrain.leftMaster.getMotorOutputVoltage());
+    createTopic("RightFollower" + "/Current", () -> robotContainer.drivetrain.rightSlave.getMotorOutputVoltage());
+    createTopic("LeftFollower" + "/Current", () -> robotContainer.drivetrain.leftSlave.getMotorOutputVoltage());
+
+    ...
+}
+
+@Override
+public void robotInit() {
+    // New logging code (logs everything from networktables)
+    DataLogManager.start("/lvuser/logs/");
+    DataLogManager.logNetworkTables(true);
+
+    ...
+}
+
+```

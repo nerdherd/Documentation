@@ -20,7 +20,9 @@ We tested the half charge station with our swerve drive base and robot from Deep
 
 ### Electrical on Prototype Bot 
 
-We made two boards that we mounted onto each side of the robot. Components on each board:  
+We made two boards that we mounted onto each side of the robot. 
+
+Components on each board:  
 
 * Board 1: RSL, Radio, RoboRIO, VRM, PDP, Pressure Switch, Analog Pressure Sensor, and Pressure Gauge 
 
@@ -57,8 +59,9 @@ We decided to create a 4 point of contact on 4, 4" wheels, supports cones in man
 
 ![Rotational Claw](images/Day2/rotationalClawDay2.png)
 
-Iteration 2: cone hits the base wheel and wood arms hit first before the compliant wheels so less grip, and turning mechanism has too much play. 
-Iteration 3: 4 points of contacts on 4, 4" wheels, supports cones in many configurations, better grip, new cylinder placement will allow for less play. 
+**Iteration 2**: cone hits the base wheel and wood arms hit first before the compliant wheels so less grip, and turning mechanism has too much play. 
+
+**Iteration 3**: 4 points of contacts on 4, 4" wheels, supports cones in many configurations, better grip, new cylinder placement will allow for less play. 
 
 *Rotational Claw CAD and Assembly*
 
@@ -94,6 +97,16 @@ However, while consulting with our main mentor, he mentioned that the weight lig
 *Sliding Gusset CAD*
 
 This was the sliding gusset that we had prototyped. This captured both sides, and the bar will be touched 12 bearings.  
+
+### Arm
+
+![Prototype of arm on Day 1](images/Day1/Day1JoyceArm3.png) 
+
+Decided on the design with fixed point and extending arm 
+
+Built prototype with telescope climber arm without hooks 
+
+Attached electrical panels to the sides of the upright bars 
 
 *****
 
@@ -149,4 +162,18 @@ Today, our group’s goals were to finish creating two simple auto paths (moving
 
 ### Swerve
 
-Today our group’s goals were to update our swerve drive code to WPILib 2023 and be able to run it on the robot. The upgrading process itself was relatively straightforward, with the only major code change being having to convert Swerve Module states into Swerve Module Positions, as in 2023 WPILib, SwerveDriveOdometry updates using Swerve Module Positions, which contain the distance travelled and the angle of one swerve module, rather than Swerve Module States, which contain the speed and angle instead. We ran into several issues, such as there not being an official NavX library for WPILib 2023, and a strange issue where all angles were rotated by 90 degrees. We applied temporary fixes to most of these issues, as we were short on time, using an unofficial NavX library in place of the official one (which can be found here: https://github.com/rzblue/navx-frc) and manually applying a rotation to all angles. We also tested driving onto the mock charging station that our assembly team built but we were not able to drive onto it, as the frame would hit the ramp of the charging station before the wheels were able to contact it. 
+Today our group’s goals were to update our swerve drive code to WPILib 2023 and be able to run it on the robot. The upgrading process itself was relatively straightforward, with the only major code change being having to convert Swerve Module states into Swerve Module Positions, as in 2023 WPILib, [SwerveDriveOdometry](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/kinematics/SwerveDriveKinematics.html) updates using [Swerve Module Positions](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/kinematics/SwerveModulePosition.html), which contain the distance travelled and the angle of one swerve module, rather than [Swerve Module States](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/kinematics/SwerveModuleState.html), which contain the speed and angle instead. 
+
+```java
+// Old 2022 code
+public SwerveModuleState getState() {
+    return new SwerveModuleState(getDriveVelocity(), new Rotation2d(getTurningPosition()));
+}
+
+// New 2023 code
+public SwerveModulePosition getPosition() {
+    return new SwerveModulePosition(getDrivePosition(), new Rotation2d(getTurningPosition()));
+}
+```
+
+We ran into several issues, such as there not being an official NavX library for WPILib 2023, and a strange issue where all angles were rotated by 90 degrees. We applied temporary fixes to most of these issues, as we were short on time, using an (unofficial NavX library)[https://github.com/rzblue/navx-frc] in place of the official one and manually applying a rotation to all angles. We also tested driving onto the mock charging station that our assembly team built but we were not able to drive onto it, as the frame would hit the ramp of the charging station before the wheels were able to contact it. 

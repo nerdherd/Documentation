@@ -58,6 +58,11 @@ We ziptied the airtank down but it had a leak, so it was replaced. Made all pneu
 
 ## CAD
 
+```{admonition} Note
+
+This section is being updated. Please return later for more information.
+```
+
 ## Manufacturing
 
 ### Swerve
