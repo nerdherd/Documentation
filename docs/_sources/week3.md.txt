@@ -18,4 +18,9 @@ This page is currently under construction. Please return later for more updates.
 
 ## Programming
 
+### Vision Group
+
+#### 1/23
+
+We got the April Tag and Object Detection to work on a single limelight. The 4 objects being the cones, cubes, tape, and April Tags. Our code allows us to have the robot drive toward a target object while also making any angle corrections along the way. 
 
