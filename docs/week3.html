@@ -55,6 +55,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#programming">Programming</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#vision-group">Vision Group</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id1">1/23</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1/27</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1/28</a></li>
 </ul>
 </li>
 </ul>
@@ -109,6 +111,31 @@
 <div class="section" id="id1">
 <h4>1/23<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
 <p>We got the April Tag and Object Detection to work on a single limelight. The 4 objects being the cones, cubes, tape, and April Tags. Our code allows us to have the robot drive toward a target object while also making any angle corrections along the way.</p>
+<p><img alt="Tank drive in front of target" src="images%5CWeek3%5CprgVision1.png" /></p>
+<p>Later in the day, we refactored the aimAt_Object_() methods into one aimAt() method which allows the code to choose to target any of the 4 object types in one line only by entering in an enum: “CONE”, “CUBE”, “TAPE”, “TAG”.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">TargetType</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">CONE</span><span class="p">,</span>
+<span class="w">   </span><span class="n">CUBE</span><span class="p">,</span>
+<span class="w">   </span><span class="n">TAPE</span><span class="p">,</span>
+<span class="w">   </span><span class="n">TAG</span><span class="w"> </span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The object detection works so well that we can tape an object to a moving person and have the robot chase them around completely autonomously. As an extra feature, we implemented a move back algorithm which has the robot drive backwards if the object were to get too close.</p>
+</div>
+<div class="section" id="id2">
+<h4>1/27<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<p>We worked on implementing vision with the swerve drive. We did this by creating a command that combined the turnToAngle command and the driveToTarget command. We were able to test our code on the actual swerve drive, but it didn’t work. One of the possible errors was that the PID values needed to be tuned a little bit.</p>
+<p><img alt="Swerve in front of target" src="_images/prgVision2.png" /></p>
+<p><em>DriveToTarget testing, robot oscillated in place</em></p>
+</div>
+<div class="section" id="id3">
+<h4>1/28<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<p>We refactored our code for vision with the swerve drive. We switched the xSpeed and ySpeed values because the y and x axes are switched.</p>
+<p>Tested the previously broken limelight and it works now. Also reflashed the limelight with photonvision firmware to have limelight firmware.</p>
+<p>Tested our refactored code. The code seems to work but the values were flickering because the limelight was wavering between not detecting the apriltag and detecting the apriltag. So, we need to tune the limelight more.</p>
+<p><img alt="Limelight" src="_images/prgVision3.png" /></p>
+<p><em>Previously broken but now functional limelight</em></p>
 </div>
 </div>
 </div>
