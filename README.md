@@ -1,4 +1,5 @@
 # Nerd Herd Documentation
+[![pages-build-deployment](https://github.com/nerdherd/Documentation/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/nerdherd/Documentation/actions/workflows/pages/pages-build-deployment)
 
 Welcome to FRC Team 687's documentation website!
 
