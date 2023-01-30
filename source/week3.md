@@ -59,4 +59,34 @@ Tested our refactored code. The code seems to work but the values were flickerin
 
 *Previously broken but now functional limelight*
 
+### Swerve Drive Group
 
+This week, we worked on writing and testing auto paths. 
+
+First, we tested a simple auto path that moved in a 1-by-1 meter square. While testing, we found that our odometry calculations were incorrect and were missing compensation for the swerve modules’ gear ratio. After adding the gear ratio into the calculation, we found that the auto path worked relatively well, although it was not accurate over long distances on concrete. 
+
+Afterwards, we tested a longer auto that started on the right side of the field, “scored,” picked up a game piece, “scored,” picked up another game piece, “scored,” and then went to the charging station. We found that this auto worked relatively reliably on carpet but took too long to run. Even after increasing our max velocity and acceleration for the auto, we found that we could not score the third game piece in time.  
+
+During driver testing of the swerve drive, they suggested adding a stow command, which turns all wheels to a 45-degree angle to make the swerve drive impossible to move, as well as adding turn to 0- and 180-degree commands to the driver controls, as this gave them easier maneuverability. After implementing these commands, we tuned the PID values on our swerve modules’ turning motors, as they were overshooting before. We used the live graphs from AdvantageScope in order to tune the PID. 
+
+Lastly, we then tested integrating our balancing command into the auto. We created a new auto that directly went to the charging station, and then tested it on our charging station mockup. We found that, although it worked, the charging was slow due to us not having a separate P-gain value for initially climbing up the ramp.  
+
+![Swerve](images/Week3/prgSwerve1.gif)
+
+Because of this, we modified our auto to have two stages for the charging: one with a higher P-gain for going up the ramp, and one with the original P-gain for balancing once on the charging station. We then tested stowing the wheels at the end of the command but found that it was unreliable and sometimes would even cause the swerve drive to slowly slide off the ramp. 
+
+```java
+public class TimedBalancingAct extends SequentialCommandGroup {
+    public TimedBalancingAct(SwerveDrivetrain swerveDrive, double period1, double kP1, double kP2) {
+        super(
+            new ParallelRaceGroup(
+                new WaitCommand(period1),
+                new TheGreatBalancingAct(swerveDrive, kP1)
+            ),
+            new TheGreatBalancingAct(swerveDrive, kP2)
+        );
+    }
+}
+```
+
+*Our timed balancing command*
