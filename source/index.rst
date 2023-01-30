@@ -10,7 +10,7 @@ Welcome to the Nerd Herd's Documentation!
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Charged Up 2023:
 
    January 7th Meeting <./january7.md>
    January 8th Meeting <./january8.md>
