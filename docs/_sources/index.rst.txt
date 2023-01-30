@@ -16,5 +16,6 @@ Welcome to the Nerd Herd's Documentation!
    January 8th Meeting <./january8.md>
    January 9th Meeting <./january9.md>
    Week 2 (1/13 - 1/20) <./week2.md>
+   Week 3 (1/21 - 1/28) <./week3.md>
 
 * :ref:`search`
