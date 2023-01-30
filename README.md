@@ -1,5 +1,6 @@
 # Nerd Herd Documentation
 [![pages-build-deployment](https://github.com/nerdherd/Documentation/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/nerdherd/Documentation/actions/workflows/pages/pages-build-deployment)
+[![Sphinx build and deploy](https://github.com/nerdherd/Documentation/actions/workflows/sphinx-build.yml/badge.svg)](https://github.com/nerdherd/Documentation/actions/workflows/sphinx-build.yml)
 
 Welcome to FRC Team 687's documentation website!
 
