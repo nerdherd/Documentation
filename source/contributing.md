@@ -1,10 +1,5 @@
 # Contributing
 
-```{admonition} Under Construction
-This page is currently under construction.
-Please return later for more information.
-```
-
 ## Navigating the Repository
 
 First, open the [github repository](https://github.com/nerdherd/documentation) in a web browser.
