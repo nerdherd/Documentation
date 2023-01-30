@@ -5,7 +5,7 @@ This page is currently under construction.
 Please return later for more information.
 ```
 
-## Editing a page
+## Navigating the Repository
 
 First, open the [github repository](https://github.com/nerdherd/documentation) in a web browser.
 
@@ -17,7 +17,7 @@ To be invited, please contact a programming subteam member.
 
 *Checking your login on the top right of the page*
 
-Then, click on the `source` folder to see the markdown files for each page.
+Then, click on the [`source` folder](https://github.com/nerdherd/Documentation/tree/main/source) to see the markdown files for each page.
 
 ![Source](./images/Contributing/Github1.png)
 
