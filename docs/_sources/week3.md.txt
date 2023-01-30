@@ -95,4 +95,18 @@ public class TimedBalancingAct extends SequentialCommandGroup {
 
 On Saturday, 1/21, we made naming conventions for certain positions and components on the field to make identifying auto paths easier. We also made code names for each of our auto paths.  
 
+![Hard Carry Auto](images/Week3/prgTank1.png)
 
+*Hard Carry Auto Path*
+
+![Auto](images/Week3/prgTank2.png)
+
+*Diet Coke Auto*
+
+![Auto](images/Week3/prgTank3.png)
+
+*Overpriced Vending Machine Auto*
+
+We debugged the autonomous code to make the robot accurately turn to the degree input in the code and made the robot move backwards and forwards a specific distance with accuracy. 
+
+We also wrote code for the cone runner and the rotating arm. 
