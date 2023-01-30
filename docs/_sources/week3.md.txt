@@ -90,3 +90,9 @@ public class TimedBalancingAct extends SequentialCommandGroup {
 ```
 
 *Our timed balancing command*
+
+### Tank Drive Group
+
+On Saturday, 1/21, we made naming conventions for certain positions and components on the field to make identifying auto paths easier. We also made code names for each of our auto paths.  
+
+
