@@ -42,11 +42,45 @@ We cadded new:
 
 ![Drive Station Prototype 1](images/Week3/asmDrivestationCAD1.png)
 
-*Possible design # 1 *
+*Possible design # 1*
 
 ![Drive Station Prototype 2](images/Week3/asmDrivestationCAD2.png)
 
-*Possible design # 2 *
+*Possible design # 2*
+
+Robot Cart 
+
+A new design for the robot cart was Cadded. Once it is done, it will be checked with the advisor for approval.
+
+![Robot Cart CAD](images/Week3/asmRoboCart1.png)
+
+*New Robot Cart Design*
+
+Sponsorship Panels 
+We completed the new sponsorship panel design and got it approved by Mr. Harder. 
+- Reoriented from vertical to horizontal 
+
+
+*New Sponsorship Panel Design*
+
+We fully assembled all the new swerve modules 
+
+
+*Completed Swerve Modules*
+
+We tested all our falcon motors. 
+- We documented all of the data 
+- Made a guide on how to test falcons for future reference 
+
+Links: 
+How to test falcons:
+Spreadsheet Falcon Data:
+
+We also helped CAD with drilling and assembling the linear claw iteration. 
+
+We finished assembling swerve bumpers.  
+
+*Finished frame for the swerve bumpers.*
 
 
 
