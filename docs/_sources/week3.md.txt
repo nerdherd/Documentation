@@ -60,11 +60,13 @@ Sponsorship Panels
 We completed the new sponsorship panel design and got it approved by Mr. Harder. 
 - Reoriented from vertical to horizontal 
 
+(add image)
 
 *New Sponsorship Panel Design*
 
 We fully assembled all the new swerve modules 
 
+(add image)
 
 *Completed Swerve Modules*
 
@@ -79,6 +81,8 @@ Spreadsheet Falcon Data:
 We also helped CAD with drilling and assembling the linear claw iteration. 
 
 We finished assembling swerve bumpers.  
+
+(add image)
 
 *Finished frame for the swerve bumpers.*
 
