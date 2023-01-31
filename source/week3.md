@@ -6,6 +6,48 @@ This page is currently under construction. Please return later for more updates.
 
 ## Assembly
 
+### 1/21 - Saturday 
+
+Driver station 
+- Added 2 1x1 handlebars onto the base for the Velcro 
+
+![Driver Station](images/Week3/asmDriveStation1.png)
+
+![Driver Station](images/Week3/asmDriveStation2.png)
+
+*Images of Driver Station assembly progress*
+
+We reinforced the claw prototype by doubling the wood pieces and adding gussets in between the wood to have more support.  
+
+![Claw Prototype](images/Week3/asmClaw1.png)
+
+*Finished Reinforced Claw Prototype*
+
+We did maintenance checks on screws and falcon motors.  
+
+We started working on swerve bumpers. 
+
+We continued work on the Robot Cart and Sponsorship panels.  
+- Continued to design and finalize the sponsorship panel 
+- Continued iterating CAD for the robot cart  
+
+### 1/23 - Monday 
+
+Driver station 
+Changes were made to the Driver station after receiving input from drivers and technician. 
+We cadded new: 
+- Frame 
+- Cable management 
+- Laptop and controller placements 
+
+![Drive Station Prototype 1](images/Week3/asmDrivestationCAD1.png)
+
+*Possible design # 1 *
+
+![Drive Station Prototype 2](images/Week3/asmDrivestationCAD2.png)
+
+*Possible design # 2 *
+
 
 
 ## CAD
