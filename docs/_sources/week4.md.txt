@@ -23,6 +23,7 @@ We continued to work on the new bumpers.
 - We attached the pool noodles to the wooden base 
 - Laid out the fabric and began to staple it in place
 
+![Bumpers](./images/Week4/bumpers.png)
 
 *Bumpers with fabric set up.*
 
@@ -46,10 +47,15 @@ Bumpers
 - We readjusted the holes for C-channels and reattached the C-channels, pool noodles, and fabric 
 - We finished the swerve bumpers and tested them on the actual swerve 
 
+![Bumpers](./images/Week4/bumpers2.png)
+
 *Bumpers on the actual swerve.*
 
+![Bumpers](./images/Week4/bumpers3.png)
 
 *Members using the staple gun to attach fabric to bumpers.*
+
+![Bumpers](./images/Week4/bumpers4.png)
 
 *Members working on the bumpers.* 
 
@@ -84,7 +90,7 @@ Repacking
 
 We Continued to work on the write up/ procedures for the Elevator assembly. This guide serves as a manual for assembly and a way to increase the ease of Assembly and speed up the overall assembly process.  
 
-[Elevator Assembly Guide](https://docs.google.com/document/d/1JKmhKDxU9w1vLRHEd46WNqGY6whL9tgXgYAvNKS7ZFc/edit)
+![Elevator Assembly Guide](https://docs.google.com/document/d/1JKmhKDxU9w1vLRHEd46WNqGY6whL9tgXgYAvNKS7ZFc/edit)
 
 We realized that we might not have enough spacers for the elevator. After getting the number of spacers we need for the elevator, we counted the ones we have. We decided to 3D print the spacers necessary. 
 
@@ -92,16 +98,31 @@ We realized that we might not have enough spacers for the elevator. After gettin
 
 We finalized and printed the NavX Covers.
 
+![NavX Print](./images/Week4/navXPrint.jpg)
+
+*Printing the NavX Cover*
+
+![NavX Cover](./images/Week4/navXCover.png)
+
 *Picture of the NavX Cover*
 
 ### Buddy Climb
 
 We worked on finalizing the Buddy climb CAD and drawings. The Buddy climber drawings got checked during this meeting by Kloe and James Cozatt.  
 
+![Buddy Climb Drawing](./images/Week4/buddyclimbcad.png)
 
-*Buddy climb drawings*
+*Buddy climb drawing*
+
+![Gusset Drawing](./images/Week4/gussetcad.png)
+
+![Center Bar Drawing](./images/Week4/centerbarcad.png)
+
+![Mounting Bar Drawing](./images/Week4/mountingbarcad.png)
 
 We added accessibility windows to the horizontal bar that allows us to screw in the polycarbonate onto the bar from the side. 
+
+![Horizontal Bar Cad Render](./images/Week4/centerbarcadrender.png)
 
 *CAD of the horizontal bar*
 
@@ -112,6 +133,9 @@ We realized we needed to CAD a new battery plate because the side did not fit as
 The CAD of battery plate has been finalized. 
 Drawings of Battery Plate have been finished and are ready for approval. 
 
+![Battery Plate](./images/Week4/batteryplaterender.png)
+
+*CAD of the Battery Plate*
 
 ### Side Notes 
 
@@ -148,17 +172,29 @@ Worked on motor mount placement, cad, and drawings. Helped assembly with electri
 
 Our mini mill was prepped to manufacture gussets, but it was decided that the CADs would be redone. Instead, we bandsawed polycarbonate parts for CAD prototypes. 
 
+![Polycarbonate Parts](./images/Week4/polycarbonateparts.png)
+
 *The polycarbonate parts*
 
 ### 2/2 
 
 On Friday, we finished facing all the stock for the bars, and manufactured the bud gussets. 
 
+![Bud Gusset](./images/Week4/budgusset.png)
+
 *The bud gussets*
 
 ### 2/3 
 
 A gusset plate that was previously manufactured for RL elevator was band sawed, sanded, buffered, and deburred due to the reaming program being too shallow. Afterwards, another plate of gussets (1.5x1 gusset and top gusset) for pivoter were made, bandsawed, and sanded, but not yet buffered or chamfered. Furthermore, the studs, crossbeam (swerve drive), and crossbar for the pivoter frame was completed. For the remainder of the meeting, we cleaned up the machine shop and cleaned the chips from the machines. 
+
+![Bud Gussets](./images/Week4/budgussets.png)
+
+*The bud gussets*
+
+![Milling Machine](./images/Week4/millingmachine.png)
+
+*The milling machine*
 
 <!-- (insert pics of 1.5x1 and top guss pics)  -->
 
@@ -260,7 +296,7 @@ public void moveArmMotionMagic(int position) {
 
 For the motion magic method, it was necessary for us to figure out how to find the current angle.  
 
-[Motion Magic Diagram](./images/Week4/ArmMotionMagic.jpg)
+![Motion Magic Diagram](./images/Week4/ArmMotionMagic.jpg)
 
 ### Swerve Group
 
@@ -297,7 +333,7 @@ public void reportAllToSmartDashboard() {
 
 We also created diagrams on how our implementation of Swerve Drive works, in order to document it for the rest of our subteam. 
 
-[Swerve Diagram 1](./images/Week4/SwerveDiagram1.png)
-[Swerve Diagram 2](./images/Week4/SwerveDiagram2.png)
-[Swerve Diagram 3](./images/Week4/SwerveDiagram3.png)
+![Swerve Diagram 1](./images/Week4/SwerveDiagram1.png)
+![Swerve Diagram 2](./images/Week4/SwerveDiagram2.png)
+![Swerve Diagram 3](./images/Week4/SwerveDiagram3.png)
 
