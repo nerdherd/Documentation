@@ -157,20 +157,21 @@ and click on the edit button to start editing.</p>
 <div class="section" id="code-blocks">
 <h3>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this heading"></a></h3>
 <p>To format text as <code class="docutils literal notranslate"><span class="pre">monospace</span></code> (code, filenames, etc.) do:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`code text`
-</pre></div>
+<div class="docutils">
+<p><code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">text</span></code></p>
 </div>
 <p>To format an entire section as code, do:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```language name
-```
+<div class="docutils">
+<div class="highlight-language notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
+</div>
 </div>
 <p>If you want the code to be highlighted, replace <code class="docutils literal notranslate"><span class="pre">language</span> <span class="pre">name</span></code> with the language name.</p>
 <p>For example, this code block</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```java
-System.out.println(&quot;Hello world!&quot;);
-```
+<div class="docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello world!&quot;</span><span class="p">);</span>
 </pre></div>
+</div>
 </div>
 <p>outputs</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello world!&quot;</span><span class="p">);</span>
@@ -198,20 +199,13 @@ System.out.println(&quot;Hello world!&quot;);
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{image} ./images/IMAGE_NAME
-
-```
-
-<span class="ge">*Add a caption here*</span>
-</pre></div>
+<div class="md docutils">
+<img alt="images/IMAGE_NAME" src="images/IMAGE_NAME" />
+<p><em>Add a caption here</em></p>
 </div>
 <p>You can change the image’s size and other properties by doing:</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{image} ./images/IMAGE_NAME
-:alt: ALTERNATE IMAGE TEXT
-:width: 200px
-:align: left
-```
-</pre></div>
+<div class="md docutils">
+<a class="reference internal image-reference" href="images/IMAGE_NAME"><img alt="ALTERNATE IMAGE TEXT" class="align-left" src="images/IMAGE_NAME" style="width: 200px;" /></a>
 </div>
 <p>For more information, see the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#html-images">MyST Parser</a> documentation.</p>
 </div>
