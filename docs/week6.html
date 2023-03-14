@@ -109,7 +109,54 @@
 </div>
 <div class="section" id="programming">
 <h2>Programming<a class="headerlink" href="#programming" title="Permalink to this heading"></a></h2>
-<p>-We added code for the elevator to the Constants, RobotContainer, Arm, and elevator folder. We updated the CANSwerveModule by switching to directly reading from CANCdoer for angles. We set up the CANCoder offset by adding code to the Constants, CANSwerveModule, and SwerveDriveTrain folders. We made minor changes to the CANSwerveModule and MagSwerveModule folders. We updated the arm feed forward by adding code to the Constants, RobotContainer, SwerveAutos, Arm, and Elevator folders. STILL NEED TO DO “Merge Branch ‘newSwerve’….” from February 13 up to Github things that go up to February 18</p>
+<p>-We added code for the elevator to the Constants, RobotContainer, Arm, and elevator folder. We updated the CANSwerveModule by switching to directly reading from CANCdoer for angles. We also tuned the encoder offsets for our CAN Swerve Modules.</p>
+<p>For our superstructure, we separated our arm and elevator into separate classes to make programming them easier. We also updated our feed forward values and calculations. We also added code for testing limit switches, allowing us to reliably set our stow position.</p>
+<p>For our swerve drive, we created simulations to test our dodge mode and allow our drivers to experiment with our drive filters.</p>
+<p><img alt="Swerve Simulations" src="_images/swerveSimulations.png" /></p>
+<p><em>Swerve simulations for driver input tuning</em></p>
+<p>We also abstracted our filters into separate Filter classes sharing an interface, making it easier to apply different filters. This allowed us to create a more complex filter pipeline without adding a lot of extra code to our SwerveJoystickCommand class. We then separated out this code into a new repository, <a class="reference external" href="https://github.com/nerdherd/NerdyFilters">NerdyFilters</a>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Filter</span><span class="w"> </span><span class="n">driveFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FilterSeries</span><span class="p">(</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">DeadbandFilter</span><span class="p">(</span><span class="n">deadband</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">WrapperFilter</span><span class="p">(</span>
+<span class="w">        </span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">belowDeadband</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">belowDeadband</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">deadband</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">belowDeadband</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">deadband</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">ExponentialSmoothingFilter</span><span class="p">(</span><span class="n">alpha</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">PowerFilter</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">WrapperFilter</span><span class="p">(</span>
+<span class="w">        </span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">belowDeadband</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">signum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">((</span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">deadbandScaler</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">motorDeadband</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">WrapperFilter</span><span class="p">(</span>
+<span class="w">        </span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">signum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span>
+<span class="w">                </span><span class="o">*</span><span class="w"> </span><span class="n">slewRateLimiter</span><span class="p">.</span><span class="na">calculate</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">ScaleFilter</span><span class="p">(</span><span class="n">scale</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">ClampFilter</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p><em>Our filter pipeline</em></p>
+<p>For vision, we measured optimal mounting heights and angles for our limelights. Additionally we tried out using PhotonVision, as it makes cone detection less noisy, when in combination with a rolling average filter.</p>
+<p><img alt="Vision Tuning using Glass" src="_images/visionGlass.png" /></p>
+<p><em>Reading vision values in Glass</em></p>
 </div>
 </div>
 
