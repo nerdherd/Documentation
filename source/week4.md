@@ -1,9 +1,5 @@
 # Week 4 (1/30 to 2/4)
 
-```{admonition} Under Construction
-This page is currently under construction. Please return later for more updates.
-```
-
 ## Assembly
 
 ### 1/30 - Monday 
