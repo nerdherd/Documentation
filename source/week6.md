@@ -14,7 +14,7 @@ This page is currently under construction. Please return later for more updates.
 
 -We added code for the elevator to the Constants, RobotContainer, Arm, and elevator folder. We updated the CANSwerveModule by switching to directly reading from CANCdoer for angles. We also tuned the encoder offsets for our CAN Swerve Modules.
 
-For our superstructure, we separated our arm and elevator into separate classes to make programming them easier. We also updated our feed forward values and calculations. We also added code for testing limit switches, allowing us to reliably set our stow position.
+For our superstructure, we separated our arm and elevator into separate classes to make programming them easier. We also updated our feed forward values and calculations. We also added code for limit switches, allowing us to reliably set our stow position. This stops our pivoter from overshooting. We also added buttons for resetting the encoders of both subsystems in the superstructure to make testing simpler.
 
 For our swerve drive, we created simulations to test our dodge mode and allow our drivers to experiment with our drive filters. 
 
