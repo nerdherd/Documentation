@@ -101,6 +101,27 @@
 </div>
 <div class="section" id="programming">
 <h2>Programming<a class="headerlink" href="#programming" title="Permalink to this heading"></a></h2>
+<div class="section" id="vision-group">
+<h3>Vision Group<a class="headerlink" href="#vision-group" title="Permalink to this heading"></a></h3>
+<p>We changed our code structure for vision autos so that they were split up into smaller parts. We also changed the deadband for vision which uses speed.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">NerdyMath</span><span class="p">.</span><span class="na">inRange</span><span class="p">(</span><span class="n">xSpeed</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">.1</span><span class="p">,</span><span class="w"> </span><span class="mf">.1</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="n">NerdyMath</span><span class="p">.</span><span class="na">inRange</span><span class="p">(</span><span class="n">ySpeed</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">.1</span><span class="p">,</span><span class="w"> </span><span class="mf">.1</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">    </span><span class="n">NerdyMath</span><span class="p">.</span><span class="na">inRange</span><span class="p">(</span><span class="n">rotationSpeed</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">.1</span><span class="p">,</span><span class="w"> </span><span class="mf">.1</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">chassisSpeeds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChassisSpeeds</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">SwerveModuleState</span><span class="o">[]</span><span class="w"> </span><span class="n">moduleStates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SwerveDriveConstants</span><span class="p">.</span><span class="na">kDriveKinematics</span><span class="p">.</span><span class="na">toSwerveModuleStates</span><span class="p">(</span><span class="n">chassisSpeeds</span><span class="p">);</span>
+<span class="w">        </span><span class="n">drivetrain</span><span class="p">.</span><span class="na">setModuleStates</span><span class="p">(</span><span class="n">moduleStates</span><span class="p">);</span>
+<span class="w">        </span><span class="n">currentCameraMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CAMERA_MODE</span><span class="p">.</span><span class="na">ARRIVED</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">chassisSpeeds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChassisSpeeds</span><span class="p">(</span><span class="n">xSpeed</span><span class="p">,</span><span class="w"> </span><span class="n">ySpeed</span><span class="p">,</span><span class="w"> </span><span class="n">rotationSpeed</span><span class="p">);</span>
+<span class="w">        </span><span class="n">SwerveModuleState</span><span class="o">[]</span><span class="w"> </span><span class="n">moduleStates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SwerveDriveConstants</span><span class="p">.</span><span class="na">kDriveKinematics</span><span class="p">.</span><span class="na">toSwerveModuleStates</span><span class="p">(</span><span class="n">chassisSpeeds</span><span class="p">);</span>
+<span class="w">        </span><span class="n">drivetrain</span><span class="p">.</span><span class="na">setModuleStates</span><span class="p">(</span><span class="n">moduleStates</span><span class="p">);</span>
+<span class="w">        </span><span class="n">currentCameraMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CAMERA_MODE</span><span class="p">.</span><span class="na">ACTION</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
