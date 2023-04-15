@@ -2,7 +2,78 @@
 
 ## Assembly
 
-N/A
+### 2/6/23 - Monday
+
+#### Assembly meeting with CAD 
+
+* CAD explained Elevator assembly, motor placement, and electrical 
+
+##### Cone runner electrical connections 
+
+##### Falcon motor preparation 
+
+#### Swerve pneumatics 
+
+* Separate arm and claw PSI 
+
+#### Robot Cart 
+
+* Approving new design 
+
+* Create new ASM drawings 
+
+* Approve BOM 
+
+#### Gussets 
+
+* Deburring/Polishing 
+
+### 2/10 - Friday 
+
+#### Electrical and Pneumatics: Second Swerve 
+
+* Pneumatic Pannels finished 
+
+* Connection within boards 
+
+* Mounted boards to robot 
+
+* Connections between all boards 
+
+#### Elevator Assembled 
+
+* Discussed and reviewed the elevator 
+
+* Shaft, sprocket, and chain added 
+
+* Motor and motor mount mounted 
+
+* Spectra Rope added 
+
+ 
+#### Electrical and Pneumatics: Second Swerve 
+
+* Pneumatic Pannels finished 
+
+* Connection within boards 
+
+* Mounted boards to robot 
+
+* Connections between all boards 
+
+#### Elevator Assembled 
+
+* Discussed and reviewed the elevator 
+
+* Shaft, sprocket, and chain added 
+
+* Motor and motor mount mounted 
+
+* Spectra Rope added 
+
+ 
+
+ 
 
 ## CAD
 2/5/23: 
@@ -14,7 +85,7 @@ Week 5: CAD Elevator Drawing Image
 
 2/6/23:
 
--Heeseung: Assembled Elevator
+-Heesung: Assembled Elevator
 
 -Kloe: Worked on modified L brackets for bumper, swerve module covers began printing  
 
