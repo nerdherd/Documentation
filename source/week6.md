@@ -8,7 +8,56 @@ This page is currently under construction. Please return later for more updates.
 
 ## CAD
 
+### 2/13/2023
+
+Worked with assembly on electrical components
+
+- Mounted compressor
+- Remounted back electrical channel
+
+### 2/17/2023
+
+Made scouting form for real comp
+
+![TDP](./images/Week6/tdp.png)
+
+*Our Technical Data Package*
+
+Much 3d printing happened today. We printed a spacer for the third stage of the elevator and 3d printed another spacer for the battery. We also installed a limit switch for the rotation part of the elevator and started a CAD for the limelight mount. Also, we started working on the technical data package. We redid some swerve drive drawings in order to do this.
+
+### 2/18/2023
+
+Worked with assembly on robot cart
+
 ## Manufacturing
+
+### 2/13 
+
+The drilling and tapping operations were tested on a steel brick. These operations will be used for the steel weights on the robot. 
+
+![Steel Brick](./images/Week6/steelbrick.png)
+
+### 2/15 
+
+We were in the process of cutting steel stock for manufacturing steel bricks that would help balance the weight of our robot, but after cutting 5 pieces, the horizontal bandsaw experienced problems with the blade falling off the pulley. Ways to fix this were brainstormed, and we decided to experiment with changing the speed of our vertical bandsaw to cut the steel. Although one blick was cut this way, we decided to return to the horizontal bandsaw with different speeds the next meeting. 
+
+![Stock](./images/Week6/stock.png)
+
+### 2/17 
+
+The horizontal bandsaw was readjusted for speed and tension, and once its changes were shown to be effective, it was documented. 4 more steel bars were then made, and two were drilled and tapped for installation. 
+
+### 2/18 
+
+After trimming some steel bricks down to the necessary size and sanding, we finished one more brick. However, while machining, our chamfer spot drill became chipped. After this occurred for the third time, we decided to put steel bricks on hold, which proved to be a good decision as there were issues with installing the steel bricks with enough clearance to avoid hitting our bumper pins when they were removed. There were also some technical difficulties with our work probe on the TM-1, which resulted in some delay. 
+
+![Cutting Steel](./images/Week6/horizontalbandsaw.png)
+
+*Our horizontal bandsaw cutting steel, featuring our recently Woodie Flower nominated manufacturing mentor!*
+
+![Sanding Steel](./images/Week6/sandingsteel.png)
+
+*Our MFG lead bravely sanding steel (sparks are not that fun, guys)*
 
 ## Programming
 

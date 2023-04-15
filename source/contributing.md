@@ -133,21 +133,25 @@ Then, to embed the image in a document, add:
 or
 
 :::md
+
 ```{image} ./images/IMAGE_NAME
 
 ```
 
 *Add a caption here*
+
 :::
 
 You can change the image's size and other properties by doing:
 
 :::md
+
 ```{image} ./images/IMAGE_NAME
 :alt: ALTERNATE IMAGE TEXT
 :width: 200px
 :align: left
 ```
+
 :::
 
 For more information, see the [MyST Parser](https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#html-images) documentation.
