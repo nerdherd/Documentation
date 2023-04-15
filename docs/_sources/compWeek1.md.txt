@@ -1,4 +1,5 @@
-# Week 8 (2/26 - 3/4)
+# Competition Week 1
+(Week 8 (2/26 - 3/4))
 
 ```{admonition} Under Construction
 This page is currently under construction. Please return later for more updates.
@@ -17,7 +18,7 @@ We also tuned our arm and elevator motion magic code, refining our substation in
 
 At the competition, we branched off our codebase into a separate branch. We discovered several issues at the competition, such as unreliability with our limit switch and charge auto. After the competition, we released our code as [version 1.0.0](https://github.com/nerdherd/ChargedUp2023/releases/tag/v1.0.0).
 
-![Github Release](./images/Week8/GithubRelease.png)
+![Github Release](./images/Comp1/GithubRelease.png)
 
 ### Vision
 
