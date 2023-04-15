@@ -9,6 +9,22 @@ This page is currently under construction. Please return later for more updates.
 
 ## CAD
 
+### 2/27 
+
+![Swerve Cover CAD](./images/Comp1/SwerveCover.png)
+
+*CAD of the swerve cover v4.5*
+
+Introducing... swerve cover version 4.5! Featuring zip tie holes for wire management, this design is sure to win the day! 
+
+![Swerve Cover Print](./images/Comp1/SwerveCoverPrint.png)
+
+*Printed swerve cover v4.5*
+
+The print failed though... Guess we’ll have to redesign to accommodate this! 
+
+In addition, today we decided we wanted to improve our design for the robot cart. We successfully finished our CAD for our newly designed robot cart. 
+
 ## Manufacturing
 
 ## Programming

@@ -9,6 +9,14 @@ This page is currently under construction. Please return later for more updates.
 
 ## CAD
 
+### 3/7 
+
+Since we finalized our robot design for Is Me, we have started designing a new robot: Is Me Too. As we are approaching worlds, we have also placed our focus on strengthening our strategies.  
+
+### 3/10  
+
+We started working on our tech binder and technical drawing package.  
+
 ## Manufacturing
 
 ## Programming

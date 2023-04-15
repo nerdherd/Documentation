@@ -9,6 +9,10 @@ This page is currently under construction. Please return later for more updates.
 
 ## CAD
 
+### 3/13 
+
+In order to improve our strategy and help scout teams for alliances, we held a strategy meeting and created a strategy cheat sheet to help our members efficiently scout during our regionals.  
+
 ## Manufacturing
 
 ## Programming
