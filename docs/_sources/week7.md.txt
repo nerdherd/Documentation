@@ -6,6 +6,66 @@ This page is currently under construction. Please return later for more updates.
 
 ## Assembly
 
+### 2/20 Monday 
+
+Pneumatics 
+- Organized new pneumatics 
+
+Battery 
+- Attempted to fix portable battery charger 
+
+Electrical 
+- Checked on the robot’s electrical components 
+- Tested the navX 
+
+Mechanical 
+- Installed hardstops for rotation 
+
+Swerve  
+- Checked swerve modules 
+- Created documentation for swerve module checkup 
+
+Bumpers 
+- Fixed the bumper numbers 
+
+![Bumpers](./images/Week7/bumpernumbers.png)
+
+Robot Cart 
+- Worked on assembling robot cart 
+
+Gearbox 
+- Fixed gearbox on the prototype robot 
+
+Packing 
+- Packed for DaVinci 
+
+### 2/24 Friday 
+
+Check proto connections 
+Electrical for Limelight 
+
+![Limelights](./images/Week7/limelightconnections.png)
+
+- Enabled limelights on robot shown at Port Hueneme Regional 
+
+Proto swerve 
+- Attach tread onto swerve 
+- Replace screws  
+
+Robot Cart 
+- Testing with robot 
+- Continued assembling  
+
+Bumpers 
+
+![Bumper Fabric](./images/Week7/bumperfabric.png)
+
+- Finish stapling fabric 
+- Assembling Bumpers 
+
+Packing 
+- Packed for 4201 scrimmage: 4201 packing list 
+
 ## CAD
 
 ### 2/20
