@@ -7,6 +7,54 @@ This page is currently under construction. Please return later for more updates.
 
 ## Assembly
 
+### 3/13 Monday
+
+Pack for LAR  
+* Explained packing lists & BOMs 
+
+Batteries  
+* Members finished battery leads 
+* Testing in progress 
+
+Sensors electrical 
+
+Allen Wrenches Sizes Review 
+
+Vp gearbox review  
+
+Fixed bumpers  
+
+Laser cutting procedure 
+
+### 3/20 Monday
+
+Cleaning 
+* Cleaned electrical benches 
+
+Packing 
+* Check the packing 
+* Made a list of missing items 
+
+Reflections on Competition 
+* Reflect on pluses and deltas from the Los Angeles Regional competition 
+
+Bumpers 
+* Fixed the red bumpers 
+
+### 3/24 Friday
+
+Packing 
+
+LAR Reflection 
+
+Cleaning 
+
+Chain tensioning system for spool idle sprocket, freespin, ziptie to tension 
+
+Fix bumpers 
+* Replace pool noodles 
+* Double check for other issues 
+
 ## CAD
 
 ### 3/13 
