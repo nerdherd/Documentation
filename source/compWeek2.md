@@ -1,11 +1,64 @@
 # Competition Week 2
 *Week 9 (3/5 - 3/11)*
 
-```{admonition} Under Construction
-This page is currently under construction. Please return later for more updates.
-```
-
 ## Assembly
+
+### 03/07 Tuesday
+
+Batteries
+- Worked on battery leads
+- Did battery testing
+
+Port Hueneme Reflection
+- Reflected on Port Hueneme strengths and weaknesses
+
+Pit Layout
+- Worked on pit layout
+
+![Hueneme Pit](./images/Comp2/huenemepit.png)
+
+*Pit Layout from Port Hueneme Regional*
+
+![Pit Layout](./images/Comp2/pitlayout.png)
+
+*Pit Layout Diagram from Port Hueneme*
+
+BOM
+- Worked on new Bill of Materials
+
+Packing
+- Checked packing
+- Edited packing list
+
+### 03/10 Friday
+
+Robot Cart
+- Fix broken wheel on robot cart, replace with new one
+
+![Robot Cart](./images/Comp2/robotcart.png)
+
+Proto swerve
+- Continue assembling, electrical, etc. 
+
+![Swerve](./images/Comp2/protoswerve.png)
+
+Pit layout
+- Design and finalize layout
+
+![Pit Layout](./images/Comp2/pitlayout2.png)
+
+*New Pit Layout Diagram Draft*
+
+BOM
+- Finalize Bill of Materials
+
+Packing
+- Created a new packing list for Los Angeles Regional
+
+### 03/11 Saturday
+
+- Worked on “Is Me Too” proto bot
+
 
 ## CAD
 
