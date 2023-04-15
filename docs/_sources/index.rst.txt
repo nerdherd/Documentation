@@ -25,8 +25,5 @@ Welcome to the Nerd Herd's Documentation!
    Competition Week 2 (3/5 - 3/11) <./compWeek2.md>
    Competition Week 3 (3/12 - 3/18) <./compWeek3.md>
    Competition Week 4 (3/19 - 3/25) <./compWeek4.md>
-   .. Competition Week 5 (3/26 - 4/1) <./compWeek5.md>
-   .. Competition Week 6 (4/2 - 4/8) <./compWeek6.md>
-   .. Competition Week 7 (4/9 - 4/15) <./compWeek7.md>
 
 * :ref:`search`
