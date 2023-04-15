@@ -1,10 +1,53 @@
 # Week 6 (2/12-2/18)
 
-```{admonition} Under Construction
-This page is currently under construction. Please return later for more updates.
-```
-
 ## Assembly
+
+### 2/11 Saturday 
+
+Da Vinci Preparation 
+- Packing 
+
+Cleaning machine shop 
+- Swerve Drive 
+- Continued electrical for swerve drive 
+- Continued making bumpers for swerve drive 
+
+### 2/13 Monday 
+
+Swerve Drive 
+- Extensions for encoder and compressor 
+- Connector for battery 
+
+Robot 
+- Finish pivoter mounting 
+- Add elevator hardstop 
+- Take out bars for manufacturing to make holes 
+- Change string tensioning system 
+- De-rivet top gussets on pivoter frame 
+- Change battery post 
+- Flip screws 
+
+Misc. 
+- Falcon motor testing 
+- Ask CAD about bumper progress 
+- Make hard stop for rotation of elevator 
+
+### 2/17 Friday 
+
+Swerve Bumpers 
+- Attached pool noodles 
+- Attached fabric and numbers 
+
+Robot 
+- Attached battery mount  
+- 3D printed parts for battery mount 
+- Electrical 
+- Battery Leads 
+- CAN and power connections for claw 
+
+Robot Cart 
+- Assembly drawings  
+- Measure and cut wood 
 
 ## CAD
 
