@@ -36,6 +36,9 @@ This page is currently under construction. Please return later for more updates.
 
 - Finished assembling new bumpers for IS ME 
 
+![Red Bumper](./images/Comp4/ASMRedBumper.png)
+![Blue Bumper](./images/Comp4/ASMBlueBumper.png)
+
 - New bumpers (red and blue)			 
 
 - Finished electrical for proto bot 
@@ -50,7 +53,7 @@ This page is currently under construction. Please return later for more updates.
 
 - Made and assembled smaller foldable cone nodes to fit shipping requirements 
 
- 
+![Drilling Wood](./images/Comp4/ASMDrillingWood.png)
 
  
 
