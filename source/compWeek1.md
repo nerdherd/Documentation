@@ -40,7 +40,7 @@ Packing
 
 ### 2/27 
 
-![Swerve Cover CAD](./images/Comp1/SwerveCover.png)
+![Swerve Cover CAD](./images/Comp1/SwerveCover4.png)
 
 *CAD of the swerve cover v4.5*
 
