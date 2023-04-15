@@ -1,5 +1,5 @@
 # Competition Week 6
-(Week 13 (4/2 - 4/8))
+*Week 13 (4/2 - 4/8)*
 
 ```{admonition} Under Construction
 This page is currently under construction. Please return later for more updates.

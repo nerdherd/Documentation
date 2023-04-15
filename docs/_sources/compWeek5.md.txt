@@ -1,5 +1,5 @@
 # Competition Week 5
-(Week 12 (3/26 - 4/1))
+*Week 12 (3/26 - 4/1)*
 
 ```{admonition} Under Construction
 This page is currently under construction. Please return later for more updates.
