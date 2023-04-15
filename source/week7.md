@@ -8,6 +8,22 @@ This page is currently under construction. Please return later for more updates.
 
 ## CAD
 
+### 2/20
+
+![Swerve Cover](./images/Week7/swervecover.png)
+
+*CAD of swerve cover v3.5*
+
+We approved the CAD for the limelight mount and sent it off to manufacturing to be made. We also created an electrical spacer for the second stage of the elevator and 3d printed more spacers for the rotation mechanism. Also, we discussed claw designs with Mr. Harder and redesigned the swerve module covers again (version three!).
+
+### 2/24 
+
+Things we did today:
+
+- Continue scouting training rotations 
+- Help assembly with robo-cart 
+- Attached Velcro 
+
 ## Manufacturing
 
 ### 2/20
@@ -17,36 +33,30 @@ We performed a shoulder screw operation on 4 alum sheets for future gusset manuf
 ### 2/21
 
 Tuesday was a shorter meeting, but we managed to manufacture and sign off on limelight gussets, as well as some studs made of stock for the robot’s structure. The battery plate was also completed, and the CAM for the tread was started.
- 
-Our second battery plate.
+
+![Battery Plate 2](./images/Week7/batteryplate2.png)
+
+*Our second battery plate.*
 
 ### 2/24
 
 On Friday, we completed all of the steel bricks and the Ubar. Furthermore, we manufactured more plates with shoulder screws for future uses. 
- 
-Tapped Steel Bricks
- 
-Completed U-Bar for Elevator
 
-### 2/27
+![Tapped Steel Bricks](./images/Week7/tappedsteelbricks.png)
 
-Worked on treads. 
+*Tapped Steel Bricks*
 
-### 2/28
+![U-bar](./images/Week7/ubar.png)
+
+*Completed U-Bar for Elevator*
+
+### 2/27 - 2/28
 
 Worked on treads. 
 
 ### 3/1
 
 The first polycarbonate claw was manufactured, bandsawed, sanded, and buffered. Our reaming program had alo ended up shallow, so those holes were deburred. 
-
-### 3/3
-
-At comp!! Slay
-
-3/10
-Manufactured 1x1 stud and adjusted treads. 
-
 
 ## Programming
 This week, the swerve drive group adjusted the auto code to accommodate for the alliance.  Motion magic was tuned for the arm and elevator, allowing for consistent game piece pickup and scoring. Soft limits were also added to protect the elevator and arm from breaking. The vision group switched both limelights to have limelight firmware and added code for object detection and approach.
