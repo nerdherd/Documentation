@@ -35,7 +35,7 @@ Packing
 Robot Cart
 - Fix broken wheel on robot cart, replace with new one
 
-![Robot Cart](./images/Comp2/robotcart.png)
+![Robot Cart](./images/Comp2/robotcartweek9.png)
 
 Proto swerve
 - Continue assembling, electrical, etc. 
