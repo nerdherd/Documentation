@@ -1,13 +1,40 @@
 # Competition Week 1
 *Week 8 (2/26 - 3/4)*
 
-```{admonition} Under Construction
-This page is currently under construction. Please return later for more updates.
-```
-
 ## Assembly
 
+### 2/27 Monday
 
+Pneumatics
+- Remove pneumatics from the robot
+
+Electrical
+- Added a limit switch for the stowed position
+- Switched the navX to V2
+- Worked on CAN resistor
+
+Robot Cart
+
+![Robot Cart](./images/Comp1/RobotCart.png)
+
+- Continued assembling the new robot cart
+- Completed Robot Cart Shown at Port Hueneme Regional
+
+Motors
+- Figured out the problem with the V3 Falcons
+
+Driver Station
+- Discussed driver station laptop and controller placement
+
+Bumpers
+- Took measurements of the bumper fabric for embroidery
+
+Packing
+- Worked on creating a new packing list for Port Hueneme Regional
+
+![Milwaukees](./images/Comp1/Milwaukees.jpg)
+
+*Packed Milwaukees at Port Hueneme Regional*
 
 ## CAD
 
