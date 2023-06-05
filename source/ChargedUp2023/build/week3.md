@@ -7,15 +7,15 @@
 Driver station 
 - Added 2 1x1 handlebars onto the base for the Velcro 
 
-![Driver Station](images/Week3/asmDriveStation1.png)
+![Driver Station](./../../images/2023/Week3/asmDriveStation1.png)
 
-![Driver Station](images/Week3/asmDriveStation2.png)
+![Driver Station](../../images/2023/Week3/asmDriveStation2.png)
 
 *Images of Driver Station assembly progress*
 
 We reinforced the claw prototype by doubling the wood pieces and adding gussets in between the wood to have more support.  
 
-![Claw Prototype](images/Week3/asmClaw1.png)
+![Claw Prototype](../../images/2023/Week3/asmClaw1.png)
 
 *Finished Reinforced Claw Prototype*
 
@@ -36,11 +36,11 @@ We cadded new:
 - Cable management 
 - Laptop and controller placements 
 
-![Drive Station Prototype 1](images/Week3/asmDrivestationCAD1.png)
+![Drive Station Prototype 1](../../images/2023/Week3/asmDrivestationCAD1.png)
 
 *Possible design # 1*
 
-![Drive Station Prototype 2](images/Week3/asmDrivestationCAD2.png)
+![Drive Station Prototype 2](../../images/2023/Week3/asmDrivestationCAD2.png)
 
 *Possible design # 2*
 
@@ -48,7 +48,7 @@ Robot Cart
 
 A new design for the robot cart was Cadded. Once it is done, it will be checked with the advisor for approval.
 
-![Robot Cart CAD](images/Week3/asmRoboCart1.png)
+![Robot Cart CAD](../../images/2023/Week3/asmRoboCart1.png)
 
 *New Robot Cart Design*
 
@@ -100,7 +100,7 @@ We finished assembling swerve bumpers.
 
 We got the April Tag and Object Detection to work on a single limelight. The 4 objects being the cones, cubes, tape, and April Tags. Our code allows us to have the robot drive toward a target object while also making any angle corrections along the way. 
 
-![Tank drive in front of target](images\Week3\prgVision1.png)
+![Tank drive in front of target](../../images/2023/Week3/prgVision1.png)
 
 Later in the day, we refactored the aimAt_Object_() methods into one aimAt() method which allows the code to choose to target any of the 4 object types in one line only by entering in an enum: “CONE”, “CUBE”, “TAPE”, “TAG”. 
 
@@ -119,7 +119,7 @@ The object detection works so well that we can tape an object to a moving person
 
 We worked on implementing vision with the swerve drive. We did this by creating a command that combined the turnToAngle command and the driveToTarget command. We were able to test our code on the actual swerve drive, but it didn’t work. One of the possible errors was that the PID values needed to be tuned a little bit. 
 
-![Swerve in front of target](images/Week3/prgVision2.png)
+![Swerve in front of target](../../images/2023/Week3/prgVision2.png)
 
 *DriveToTarget testing, robot oscillated in place*
 
@@ -131,7 +131,7 @@ Tested the previously broken limelight and it works now. Also reflashed the lime
 
 Tested our refactored code. The code seems to work but the values were flickering because the limelight was wavering between not detecting the apriltag and detecting the apriltag. So, we need to tune the limelight more. 
 
-![Limelight](images/Week3/prgVision3.png)
+![Limelight](../../images/2023/Week3/prgVision3.png)
 
 *Previously broken but now functional limelight*
 
@@ -147,7 +147,7 @@ During driver testing of the swerve drive, they suggested adding a stow command,
 
 Lastly, we then tested integrating our balancing command into the auto. We created a new auto that directly went to the charging station, and then tested it on our charging station mockup. We found that, although it worked, the charging was slow due to us not having a separate P-gain value for initially climbing up the ramp.  
 
-![Swerve](images/Week3/prgSwerve1.gif)
+![Swerve](../../images/2023/Week3/prgSwerve1.gif)
 
 Because of this, we modified our auto to have two stages for the charging: one with a higher P-gain for going up the ramp, and one with the original P-gain for balancing once on the charging station. We then tested stowing the wheels at the end of the command but found that it was unreliable and sometimes would even cause the swerve drive to slowly slide off the ramp. 
 
@@ -171,15 +171,15 @@ public class TimedBalancingAct extends SequentialCommandGroup {
 
 On Saturday, 1/21, we made naming conventions for certain positions and components on the field to make identifying auto paths easier. We also made code names for each of our auto paths.  
 
-![Hard Carry Auto](images/Week3/prgTank1.png)
+![Hard Carry Auto](../../images/2023/Week3/prgTank1.png)
 
 *Hard Carry Auto Path*
 
-![Auto](images/Week3/prgTank2.png)
+![Auto](../../images/2023/Week3/prgTank2.png)
 
 *Diet Coke Auto*
 
-![Auto](images/Week3/prgTank3.png)
+![Auto](../../images/2023/Week3/prgTank3.png)
 
 *Overpriced Vending Machine Auto*
 

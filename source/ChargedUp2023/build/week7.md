@@ -24,7 +24,7 @@ Swerve
 Bumpers 
 - Fixed the bumper numbers 
 
-![Bumpers](./images/Week7/bumpernumbers.png)
+![Bumpers](../../images/2023/Week7/bumpernumbers.png)
 
 Robot Cart 
 - Worked on assembling robot cart 
@@ -40,7 +40,7 @@ Packing
 Check proto connections 
 Electrical for Limelight 
 
-![Limelights](./images/Week7/limelightconnections.png)
+![Limelights](../../images/2023/Week7/limelightconnections.png)
 
 - Enabled limelights on robot shown at Port Hueneme Regional 
 
@@ -54,7 +54,7 @@ Robot Cart
 
 Bumpers 
 
-![Bumper Fabric](./images/Week7/bumperfabric.png)
+![Bumper Fabric](./../../images/2023/Week7/bumperfabric.png)
 
 - Finish stapling fabric 
 - Assembling Bumpers 
@@ -66,7 +66,7 @@ Packing
 
 ### 2/20
 
-![Swerve Cover](./images/Week7/swervecover.png)
+![Swerve Cover](./../../images/2023/Week7/swervecover.png)
 
 *CAD of swerve cover v3.5*
 
@@ -90,7 +90,7 @@ We performed a shoulder screw operation on 4 alum sheets for future gusset manuf
 
 Tuesday was a shorter meeting, but we managed to manufacture and sign off on limelight gussets, as well as some studs made of stock for the robot’s structure. The battery plate was also completed, and the CAM for the tread was started.
 
-![Battery Plate 2](./images/Week7/batteryplate2.png)
+![Battery Plate 2](./../../images/2023/Week7/batteryplate2.png)
 
 *Our second battery plate.*
 
@@ -98,11 +98,11 @@ Tuesday was a shorter meeting, but we managed to manufacture and sign off on lim
 
 On Friday, we completed all of the steel bricks and the Ubar. Furthermore, we manufactured more plates with shoulder screws for future uses. 
 
-![Tapped Steel Bricks](./images/Week7/tappedsteelbricks.png)
+![Tapped Steel Bricks](./../../images/2023/Week7/tappedsteelbricks.png)
 
 *Tapped Steel Bricks*
 
-![U-bar](./images/Week7/ubar.png)
+![U-bar](./../../images/2023/Week7/ubar.png)
 
 *Completed U-Bar for Elevator*
 
@@ -121,4 +121,4 @@ This week, the swerve drive group adjusted the auto code to accommodate for the 
 
 This week, the vision group participated in a code review. We also refactored our vision code so we would have a pickup and score command. These would either pickup/score high, mid, or low, and pickup/score a cone or cube based on buttons pressed by the operator (see image below). We also helped assembly connect the limelight.
 
-![Vision Flowchart](./images/Week7/visionflowchart.png)
+![Vision Flowchart](./../../images/2023/Week7/visionflowchart.png)

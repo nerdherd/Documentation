@@ -1,4 +1,4 @@
-# January 8th Meeting
+# Robot in 3 Days (Day 2 - 1/8)
 
 ## Admin
 
@@ -12,7 +12,7 @@ Admin met with Ms. Sadhwani to finalize the January and February snack donations
 
 We finished measuring, cutting and assembling the cube shelf, middle cone ramp, and half charge station
 
-![Field Elements](images/Day2/fieldElements.png)
+![Field Elements](../../images/2023//Day2/fieldElements.png)
 
 *Field Element Progress*
 
@@ -47,7 +47,7 @@ Components on each board:
 ### Linear Actuator Claw
 The intake subgroup decided to create a 1 piston intake for simplicity and weight. Thid intake had a 100% success rate with the pneumatic test bench. 10 trails each for cone and cube.  
 
-![Linear Actuator Claw](images/Day2/linearActuatorClawDay2.png)
+![Linear Actuator Claw](../../images/2023//Day2/linearActuatorClawDay2.png)
 
 *Linear Actuator Claw CAD and Assembly*
 
@@ -57,7 +57,7 @@ The intake subgroup decided to create a 1 piston intake for simplicity and weigh
 
 We decided to create a 4 point of contact on 4, 4" wheels, supports cones in many configurations, better grip, new cylinder placement will allow for less play (not tested with cylinders yet)  
 
-![Rotational Claw](images/Day2/rotationalClawDay2.png)
+![Rotational Claw](../../images/2023//Day2/rotationalClawDay2.png)
 
 **Iteration 2**: cone hits the base wheel and wood arms hit first before the compliant wheels so less grip, and turning mechanism has too much play. 
 
@@ -69,11 +69,11 @@ We decided to create a 4 point of contact on 4, 4" wheels, supports cones in man
 
 This design is designed to have the functionality to pick the cone on its side and upright as well as to  intake the cube it would get fed by the wheels and end in a diamond shape.  
 
-![Scissor Claw CAD](images/Day2/scissorClawCAD.png)
+![Scissor Claw CAD](../../images/2023//Day2/scissorClawCAD.png)
 
 *Scissor Claw CAD*
 
-![Scissor Claw Assembly](images/Day2/scissorClawAssembly.png)
+![Scissor Claw Assembly](../../images/2023//Day2/scissorClawAssembly.png)
 
 *Scissor Claw Assembly*
 
@@ -82,17 +82,17 @@ This design is designed to have the functionality to pick the cone on its side a
 
 We spent the day CADing the first design of the elevator. We first made a place for the elevator that doesn’t bump into anything using a crayola sketch. We then created an elevator taking inspiration from our 2019 robot, Gigantor. This was our final product.  
 
-![Elevator Crayola CAD](images/Day2/elevatorCrayolaDay2.png)
+![Elevator Crayola CAD](../../images/2023//Day2/elevatorCrayolaDay2.png)
 
 *Elevator Crayola CAD*
 
-![Elevator CAD](images/Day2/elevatorCADDay2.png)
+![Elevator CAD](../../images/2023//Day2/elevatorCADDay2.png)
 
 *Elevator CAD*
 
 However, while consulting with our main mentor, he mentioned that the weight lighting bars will not be accurate and will take too long to manufacture. He also mentioned that the gusset that holds the bearing will only have 1 full side of bearings and 2 sides only half with bearings, making it more inaccurate. He also mentioned that we did not need to make the carriage long. Taking that into consideration, we decided to start a new iteration that will be closer to what we will first manufacture. 
 
-![Sliding Gusset CAD](images/Day2/slidingGussetCADDay2.png)
+![Sliding Gusset CAD](../../images/2023//Day2/slidingGussetCADDay2.png)
 
 *Sliding Gusset CAD*
 
@@ -100,7 +100,7 @@ This was the sliding gusset that we had prototyped. This captured both sides, an
 
 ### Arm
 
-![Prototype of arm on Day 1](images/Day1/Day1JoyceArm3.png) 
+![Prototype of arm on Day 1](../../images/2023//Day1/Day1JoyceArm3.png) 
 
 Decided on the design with fixed point and extending arm 
 
@@ -116,7 +116,7 @@ Attached electrical panels to the sides of the upright bars
 
 During pre-season, we CAMed the elevate and up bars (handles) for the swerve drive. This was made for easier transport of the swerve drive. We split into 2 groups (each group working on separate TM-1 CNC mills) and completed the manufacturing of the elevate and up bars. The gussets for these bars were completed prior to kickoff. 
 
-![Handles for Swerve Drive](images/Day1/mfghandlesDay2.png)
+![Handles for Swerve Drive](../../images/2023//Day1/mfghandlesDay2.png)
 
 *Handles for Swerve Drive*
 
@@ -124,13 +124,13 @@ During pre-season, we CAMed the elevate and up bars (handles) for the swerve dri
 
 We also 3d printed and laser cut parts for the claw prototypes. 
 
-![3D Claw Print](images/Day2/mfgprintDay2.png)
+![3D Claw Print](../../images/2023//Day2/mfgprintDay2.png)
 
 *3D-Printing for Claw Prototypes (Linear Actuator Claw)*
 
-![Lasered Claw](images/Day2/mfglaserDay2a.png)
+![Lasered Claw](../../images/2023//Day2/mfglaserDay2a.png)
 
-![Lasered Claw](images/Day2/mfglaserDay2b.png)
+![Lasered Claw](../../images/2023//Day2/mfglaserDay2b.png)
 
 *Laser cutting for claw prototype (Rotational Grip Claw)*
 
@@ -148,11 +148,11 @@ After the team-wide code review, we marked refactoring changes to be implemented
 
 Our second goal of recognizing April tags using Photon vision was slightly more difficult. We were unable to open the PhotonVision dashboard and thus not letting us set a static IP address for the limelight, so we continued to use a dynamic IP address which allowed us to identify April tags and read data such as pitch and yaw. 
 
-![Testbench Setup](images/Day2/testbenchSetup.png)
+![Testbench Setup](../../images/2023//Day2/testbenchSetup.png)
 
 *Image of testbench setup*
 
-![Network Switch Setup](images/Day2/networkSwitchSetup.png)
+![Network Switch Setup](../../images/2023//Day2/networkSwitchSetup.png)
 
 *Image of network switch setup*
 

@@ -1,4 +1,4 @@
-# January 9th Meeting
+# Robot in 3 Days (Day 3 - 1/9)
 
 ## Admin
 
@@ -12,7 +12,7 @@ All of Admin worked on pins today. We each made a number of designs and collecti
 
 For the end cone ramp, we measured, cut, and finished assembling it
 
-![End Cone Ramp](images/Day3/endConeRamp.png)
+![End Cone Ramp](../../images/2023//Day3/endConeRamp.png)
 
 *End Cone Ramp*
 
@@ -22,7 +22,7 @@ For the end cone ramp, we measured, cut, and finished assembling it
 
 * Middle cone ramp – we redid the shark fin after fixing angel measurements
 
-![Cone Ramp Shark Fin](images/Day3/coneRampSharkFin.png)
+![Cone Ramp Shark Fin](../../images/2023//Day3/coneRampSharkFin.png)
 
 *Fixed Cone Ramp Shark Fin* 
 
@@ -36,7 +36,7 @@ We made connections between the two boards as well as connecting our drive motor
 
 Drive: 3 cim ball shifter with 3 falcon 500 motors (x2; one gearbox on each side) 
 
-![Electrical on Prototype Bot](images/Day3/electricalOnProtobot.png)
+![Electrical on Prototype Bot](../../images/2023//Day3/electricalOnProtobot.png)
 
 *Electrical on Prototype Bot* 
 
@@ -69,7 +69,7 @@ This section is being updated. Please return later for more information.
 
 With the completed Up and Elevate bar and the gussets, we assembled the handles on the swerve drive. 
 
-![Swerve Handles ASM](images/Day3/mfghandlesDay3.png)
+![Swerve Handles ASM](../../images/2023//Day3/mfghandlesDay3.png)
 
 *Completed assembly of the handles for swerve drive.*
 
@@ -77,15 +77,15 @@ With the completed Up and Elevate bar and the gussets, we assembled the handles 
 
 We also 3D printed parts for the claw/intake prototypes (Elevator and Scissor Claw; respectively) 
 
-![3D Elevator Print](images/Day3/mfgprintDay3a.png)
+![3D Elevator Print](../../images/2023//Day3/mfgprintDay3a.png)
 
 *Printed elevator parts.*
 
-![3D Claw Print](images/Day3/mfgprintDay3b.png)
+![3D Claw Print](../../images/2023//Day3/mfgprintDay3b.png)
 
 *Printed Scissor Claw part.*
 
-![Linear Actuator](images/Day3/mfgclawDay3.png)
+![Linear Actuator](../../images/2023//Day3/mfgclawDay3.png)
 
 *Laser cut linear actuator prototype and assisted with the assembly*
 
@@ -93,13 +93,13 @@ We also 3D printed parts for the claw/intake prototypes (Elevator and Scissor Cl
 
 We also 3D printed a cover for the Navx on the roborio.
 
-![3D Navx Cover Print](images/Day3/mfgprintDay3c.png)
+![3D Navx Cover Print](../../images/2023//Day3/mfgprintDay3c.png)
 
 *Finished print of the Navx cover.*
 
 All the machines (TM-1 and the Super Mini Mills) and the vises were cleaned for Friday.  
 
-![Cleaning](images/Day3/mfgDay3.png)
+![Cleaning](../../images/2023//Day3/mfgDay3.png)
 
 *Cleaning the machines*
 
@@ -111,13 +111,13 @@ All the machines (TM-1 and the Super Mini Mills) and the vises were cleaned for 
 
 Today, our goal was to drive within range of and align to an April tag using a tank drivebase. We began with a code review with a mentor and then merged our testbench code with the main repository: ChargedUp2023. We then referred to PhotonVision documentation to implement an aim at target method. This method used a PID loop with the error being the yaw difference between the target and limelight.  
 
-![Vision Code Sample](images/Day3/progvisonDay3.png)
+![Vision Code Sample](../../images/2023//Day3/progvisonDay3.png)
 
 *Vision Code Sample*
 
 Our implementation of distance finding between target and camera was similar: where distance was used as the error for a PID loop. After implementing this functionality using documentation, however, we found there was a high error (anywhere from 10 to 90 meters of error) when printing the distance. After manually calculating distances and ensuring the built-in equation (see below) was correct for our use case, we realized the high error was because of our low accuracy when measuring the height of the camera and the height of the limelight. 
 
-![Vision Code Sample](images/Day3/progcameraDay3.png)
+![Vision Code Sample](../../images/2023//Day3/progcameraDay3.png)
 
 *Built-in Equation*
 
@@ -125,7 +125,7 @@ Our implementation of distance finding between target and camera was similar: wh
 
 Additionally, we found that two radios we owned would not establish communications on driver station. This issue could also be seen on the indicator lights on our network switch, where the light corresponding to the radio would not turn on (see image below). This was likely because they were not configured, and a future goal is to ensure at least one of our laptops is reliable when configuring radios. 
 
-![Network Switch](images/Day3/progradioDay3.png)
+![Network Switch](../../images/2023//Day3/progradioDay3.png)
 
 *Network switch with all indicator lights off.*
 
@@ -133,13 +133,13 @@ Additionally, we found that two radios we owned would not establish communicatio
 
 Today, our goal was to finish testing swerve drive code on 2023 and begin programming commands such as turning to an angle and automatically balancing on the charging station. We found that most of our issues from yesterday were due to the encoders becoming offset. We were able to fix this by resetting the encoders to the same position as the absolute encoders, using this method: 
 
-![Encoder Fix](images/Day3/progencoderfixDay3.png)
+![Encoder Fix](../../images/2023//Day3/progencoderfixDay3.png)
 
 *Code sample that reset the encoders to the same position as the absolute encoders.*
 
 After fixing the program, we were able to have our driver test driving the swerve drive. We then added a low pass filter and scaled the input quadratically to make the driving more comfortable for them, using these lines of code: 
 
-![Drive Code](images/Day3/progdrivecodeDay3.png)
+![Drive Code](../../images/2023//Day3/progdrivecodeDay3.png)
 
 *Code sample for the low pass filter and scaled the input quadratically*
 

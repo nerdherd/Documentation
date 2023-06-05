@@ -10,7 +10,7 @@ We conducted training for new members (Rotations):
     - Used phoenix tuner and driver's station 
     - Recorded motor data in a spreadsheet and labeled motors 
 - Comp maintenance 
-    - Created a [Pit checklist](./_static/Comp%20Pit%20Checklist.pdf)  
+    - Created a [Pit checklist](../../_static/Comp%20Pit%20Checklist.pdf)  
 - Pneumatics 
     - How to use the manual test bench 
     - Layout and components of prototype bot pneumatics
@@ -22,24 +22,24 @@ We conducted training for new members (Rotations):
 
 Once the assembly of the double piston claw was done, we attached it to the prototype bot.  
 
-![Claw](images/Week2/asmclaw.png)
+![Claw](../../images/2023/Week2/asmclaw.png)
 
 *Image of the completed claw assembly*
 
 We fixed a claw prototype’s cone compression.
 
-![Claw2](images/Week2/asmClaw2.png)
+![Claw2](../../images/2023/Week2/asmClaw2.png)
 
 *Demo of claw holding cone*
 
 We tested a claw prototype 
 - Set up pneumatic test bench and tested the two-piston claw design. It was successful for both the cone and the cube. 
 
-![Claw3](images/Week2/asmClaw3.png)
+![Claw3](../../images/2023/Week2/asmClaw3.png)
 
 We finished the assembly of the claw prototype. Upon completion, it was tested and successfully picked up and scored a cone on the node about 4 times until the wood snapped while testing.  
 
-![Claw4](images/Week2/asmClaw4.png)
+![Claw4](../../images/2023/Week2/asmClaw4.png)
 
 *Broken wood on claw prototype*
 
@@ -51,7 +51,7 @@ Installed the piston on arm
 
 *Piston attatched to claw prototype*
 
-![Arm](images/Week2/asmArm.png)
+![Arm](../../images/2023/Week2/asmArm.png)
 
 ### Elevator
 
@@ -60,7 +60,7 @@ We also worked on the elevator prototype:
 - Took inventory for elevator parts 
 - Riveted U shape 
 
-![Elevator](images/Week2/asmElev.png)
+![Elevator](../../images/2023/Week2/asmElev.png)
 
 *The start of our elevator prototype*
 
@@ -69,7 +69,7 @@ We also worked on the elevator prototype:
 We worked on the assembly of the cone runner intake prototype. 
 - Once assembled, we tested it.
 
-![Cone Runner](images/Week2/asmConeRunner.png)
+![Cone Runner](../../images/2023/Week2/asmConeRunner.png)
 
 *Assembled cone runner intake prototype*
 
@@ -80,14 +80,14 @@ Video of the intake working: https://drive.google.com/file/d/1Y-SxlztuHSmEjaizDp
 We finished assembling the end cone ramp. 
 Connected the cube shelf divider beam to cone ramp horizontal beam using wood screws and spacer plywood 
 
-![Cone Ramp](images/Week2/asmConeRamp.png)
+![Cone Ramp](../../images/2023/Week2/asmConeRamp.png)
 
 *Image of the completed Cone Ramp.*
 
 Made a substation height simulator (Double Substation Stand) 
 - Cut wood and assembled 
 
-![Stand](images/Week2/asmStand.png)
+![Stand](../../images/2023/Week2/asmStand.png)
 
 *New double substation stand*
 
@@ -98,7 +98,7 @@ We did several repairs on our prototype bots such as:
 - Fixed gearboxes on prototype bot 
 - We finished attaching handles onto our swerve bot. 
 
-![Swerve Handles](images/Week2/asmHandles.png)
+![Swerve Handles](../../images/2023/Week2/asmHandles.png)
 
 *Handles on Swerve*
 
@@ -110,7 +110,7 @@ We found slanted tubing, so we cut a new tube and reconnected it
 We continued brainstorming and designing a new robot cart. We completed the following:  
 After the brainstorming on Friday, we made the 1st iteration design and reviewed those designs with our advisor 
 
-![Robot Cart CAD](images/Week2/asmRoboCart1.png)
+![Robot Cart CAD](../../images/2023/Week2/asmRoboCart1.png)
 
 *CAD design of new robot cart*
 
@@ -119,7 +119,7 @@ We continued to work on Robot Cart.
 - Created a 2nd iteration 
 - Started Bill of Materials (BOM) 
 
-![Robot Cart](images/Week2/asmRoboCart2.png)
+![Robot Cart](../../images/2023/Week2/asmRoboCart2.png)
 
 *Two possible designs for the robot cart*
 
@@ -129,7 +129,7 @@ We began work on a new driver station.
 - Assembled the base of the driver station. 
 - Used the bandsaw to cut bars for the base and polycarb. 
 
-![Driver Station](images/Week2/asmDriveStation.png)
+![Driver Station](../../images/2023/Week2/asmDriveStation.png)
 
 *Finished driver station base*
 
@@ -139,7 +139,7 @@ We repaired the Wooden Dolley our team uses to push around large materials.
 - Replace broken plywood 
 - Stapled fabric using staple gun 
 
-![Wooden Dolley](images/Week2/asmDolley.png)
+![Wooden Dolley](../../images/2023/Week2/asmDolley.png)
 
 *Fixed Wooden Dolley*
 
@@ -175,7 +175,7 @@ Some assembly members had Manufacturing Training on:
 We performed the following electrical work: 
 - Prepared CANcoders for 2nd swerve 
 
-![Encoder](images/Week2/asmEncoder.png)
+![Encoder](../../images/2023/Week2/asmEncoder.png)
 
 *Completed encoder preparation*
 
@@ -183,7 +183,7 @@ We helped the ADMIN sub team with the following:
 - Created FRC sponsors Stickers 
 - Started design for sponsorship panels 
 
-![Sponsor Panel](images/Week2/asmSponsors.png)
+![Sponsor Panel](../../images/2023/Week2/asmSponsors.png)
 
 *Image of our sponsor panel layout*
 
@@ -193,7 +193,7 @@ We helped the ADMIN sub team with the following:
 
 First cad of two stage telescope arm. Each tube is 27 inches long. Received feedback. Need to find a way to move the arm. Thinking of attaching motor to elevator carriage. 
 
-![Arm](images/Week2/cadArm.png)
+![Arm](../../images/2023/Week2/cadArm.png)
 
 *Screenshot of arm CAD*
 
@@ -201,7 +201,7 @@ First cad of two stage telescope arm. Each tube is 27 inches long. Received feed
 
 We finished updating the elevator. Some of the updates included making the bars into 29 inches to make it easier for manufacturing. We created drawings of all the parts, and created a BOM that we must order to make the elevator.  
 
-![Elevator](images/Week2/cadElev.png)
+![Elevator](../../images/2023/Week2/cadElev.png)
 
 *Screenshot of elevator CAD*
 
@@ -209,7 +209,7 @@ We finished updating the elevator. Some of the updates included making the bars 
 
 We then tested the rotational claw with the pneumatic piston test bench and had 100% success rate out of 10 trials with cone and cube.
 
-![Claw](images/Week2/cadClaw.png)
+![Claw](../../images/2023/Week2/cadClaw.png)
 
 *Screenshot of the claw cad.*
 
@@ -217,13 +217,13 @@ We then tested the rotational claw with the pneumatic piston test bench and had 
 
 We started on the first buddy climber prototype design using pieces of plywood. Functionalities wise we wanted the swerve drive base to drive on to the structure and the T shape to hook underneath the swerve drive base wheels. We chose a T shape to accommodate the locations of the wheels of varying drive bases. 
 
-![Buddy Climb](images/Week2/cadBuddy1.png)
+![Buddy Climb](../../images/2023/Week2/cadBuddy1.png)
 
 *CAD and prototype of buddy climb*
 
 Polycarbonate was also added to the buddy climber prototype for stability and better testing results. 
 
-![Buddy Climb](images/Week2/cadBuddy2.png)
+![Buddy Climb](../../images/2023/Week2/cadBuddy2.png)
 
 *2nd itteration of buddy climb*
 
@@ -233,7 +233,7 @@ Video: https://drive.google.com/file/d/1M8oEwEvdnluFsA1Wh9ukeqFCu9yDInEV/view?us
 
 We wanted to focus on ground intake and created a cone runner design and a single angular ground intake design.  
 
-![Cone Runner](images/Week2/cadConeRunner.png)
+![Cone Runner](../../images/2023/Week2/cadConeRunner.png)
 
 *CAD model of cone runner design*
 
@@ -241,25 +241,25 @@ We wanted to focus on ground intake and created a cone runner design and a singl
 
 After testing dimensions with a current swerve drive base docking and engaging we completed the swerve bumper design with technical drawings from those dimensions. We wanted to make the process of taking off bumpers and putting them back on as easy as possible. We went with a pin design with 4 c-channel mounts with two on opposite sides. 
 
-![Drawings](images/Week2/cadBumper1.png)
+![Drawings](../../images/2023/Week2/cadBumper1.png)
 
-![Drawings](images/Week2/cadBumper2.png)
+![Drawings](../../images/2023/Week2/cadBumper2.png)
 
 *Screenshots of the drawings for our swerve bumpers*
 
 This swerve drive was previously used during the off season of 2022-2023 and now with season we had to make a few changes with the handlebar placement and crossbar placement for the future design this is to model potential configurations but is not final.  
 
-![Swerve Handles](images/Week2/cadHandles1.png)
+![Swerve Handles](../../images/2023/Week2/cadHandles1.png)
 
 Then we created a structure for the cone runner to mount on that is 4 inches tall and 11 inches wide.  
 
-![Swerve Handles](images/Week2/cadHandles2.png)
+![Swerve Handles](../../images/2023/Week2/cadHandles2.png)
 
 ### West Coast Bumpers
 
 Moving on to west coast drive base bumpers, we completed the first design and started on technical drawings. Again, using c-channel for a pin attachment like the swerve bumpers design. Changed the c-channel placement and the wood lengths.  
 
-![Drawings](images/Week2/cadWC.png)
+![Drawings](../../images/2023/Week2/cadWC.png)
 
 *CAD model of West Coast bumpers*
 
@@ -269,19 +269,19 @@ Moving on to west coast drive base bumpers, we completed the first design and st
 
 The manufacturing subteam set up a 3D printer with TPU filament and another with Nylon X to test the usability of the various materials. We printed a test belt with the TPU, which proved to be successful. We also reorganized and lowered our stock rack so that we could add more shelves and create a more efficient storage area for manufacturing. Furthermore, the side guards on the TM-1 were removed in preparation for the elevator bar. The TM-1 vises and work surface, as well as the side guards, were vacuumed and cleaned with oil. 
 
-![TM-1](images/Week2/mfg1.png)
+![TM-1](../../images/2023/Week2/mfg1.png)
 
 *A close-up of the tidied bare TM-1 work surface. *
 
-![TM-1](images/Week2/mfg2.png)
+![TM-1](../../images/2023/Week2/mfg2.png)
 
 *A full shot of the TM-1 with its guard railing removed.*
 
-![MFG](images/Week2/mfg3.png)
+![MFG](../../images/2023/Week2/mfg3.png)
 
 *A selfie shot of the people who busted their butts and worked through approx. 10 machine cloths to get this baby nice and shiny.*
 
-![TM-1 part](images/Week2/mfg4.png)
+![TM-1 part](../../images/2023/Week2/mfg4.png)
 
 *A full shot of our cleaned guard railing with its screws and washers (for connection to the TM-1) taped on to ease reattachment + the tips of my feet (how scandalous). *
 
@@ -289,17 +289,17 @@ The manufacturing subteam set up a 3D printer with TPU filament and another with
 
 At the beginning of the day, half of the manufacturing subteam helped disassemble the hangar from last year’s game while the other half reviewed the completed elevator CAD drawings. After some modifications in the gussets, the drawings were approved for manufacturing. The parts were first divided into which CNC mills they would be manufactured on and then divided into groups regarding their plate thickness (gussets). We completed all of the bar CAMs and are almost done with the gusset CAMs. The stock was also cut in preparation for facing (bar length + .25 in). 
 
-![Gusset CAM](images/Week2/mfgGussetCAM.png)
+![Gusset CAM](../../images/2023/Week2/mfgGussetCAM.png)
 
 *Picture of the completed CAM for the .125 gussets*
 
 On January 16th, the manufacturing subteam began facing the remaining bar stock and finalizing the CAM for the gussets. However, there was some miscommunication regarding the thickness of the gusset plates, so the gussets were reCAMed. However, the original .0625in plate gussets (P407 – qt8, P408 – qt4, P414 – qt2) were completed by the end of the meeting and bandsawed off the plate. 4 bars were completed by the end of the meeting (P401 – qt2, P406 – qt1, P409 – qt1). 
 
-![Gusset CAM](images/Week2/mfgGussets.png)
+![Gusset CAM](../../images/2023/Week2/mfgGussets.png)
 
 *Completed plate with corner gussets - P407, bot motor gusset - P408, and backrest gusset - P414*
 
-![Bars](images/Week2/mfgBars.png)
+![Bars](../../images/2023/Week2/mfgBars.png)
 
 *Completed bars (base up bar - P401 , carriage beam - P406 , bot rail – P409)*
 
@@ -307,13 +307,13 @@ On Thursday, all the bars for elevator (except for top support rail) were comple
 
 During a worktime of approximately 90 minutes, manufacturing sanded and buffered the previously manufactured gussets. They were then chamfered on both sides, but the team then found that the reaming program for the gussets were too shallow and did not allow for some holes to fit a rivet. To ensure that all holes could be riveted, we deburred the faulty holes. However, we discovered our error in the CAM when the bottom height of the reamer was due to the program not acknowledging the reamer tip in “drill tip through”. Thus, in future parts, we have fixed this issue and the reamers fit. 
 
-![Gusset](images/Week2/mfgGussets2.png)
+![Gusset](../../images/2023/Week2/mfgGussets2.png)
 
 *Our completed sanded, buffered, and chamfered gussets.*
 
 One sheet of .0625 gussets were manufactured with the intent to be doubled to .125 gussets (as we had run out of 1/8 alum sheets). Members learned how to bandsaw round edges of the gussets through relief cuts. However, due to the change in CAD design, manufacturing gussets was put on hold. Instead, we CAMed a program to drill shoulder screw holes into new 1/16 sheets of aluminum so that they could be manufactured on our tooling plate. 
 
-![Members](images/Week2/mfgMembers.png)
+![Members](../../images/2023/Week2/mfgMembers.png)
 
 *MFG members hard at work*
 
@@ -321,7 +321,7 @@ Gussets for another swerve drive were CAMed and dry run on the mini mills, but n
 
 #### Organization of Stock Rack
 
-![Stock Rack](images/Week2/mfgStockRack.png)
+![Stock Rack](../../images/2023/Week2/mfgStockRack.png)
 
 *Reorganized stock rack*
 

@@ -1,4 +1,4 @@
-# January 7th Meeting
+# Robot in 3 Days (Day 1 - 1/7)
 
 ## Kickoff
 
@@ -45,11 +45,11 @@ We wanted to incorporate four contact points with four wheels attached to four g
 
 #### Design #1
 
-![Crayola CAD of Claw Intake on Day 1](images/Day1/cadIntakeDay1a.png)
+![Crayola CAD of Claw Intake on Day 1](../../images/2023//Day1/cadIntakeDay1a.png)
 
 *Crayola CAD of Claw Intake*
 
-![Prototype of Claw Intake on Day 1](images/Day1/prototypeIntakeDay1a.png)
+![Prototype of Claw Intake on Day 1](../../images/2023//Day1/prototypeIntakeDay1a.png)
 
 *Prototype of Claw Intake*
 
@@ -63,11 +63,11 @@ Design Matrix:
 
 We also created another design, a linear actuator claw.
 
-![Crayola CAD of Linear Actuator Claw on Day 1](images/Day1/cadIntakeDay1b.png)
+![Crayola CAD of Linear Actuator Claw on Day 1](../../images/2023//Day1/cadIntakeDay1b.png)
 
 *Crayola CAD of Linear Actuator Claw*
 
-![Prototype of Linear Actuator Intake on Day 1](images/Day1/prototypeIntakeDay1b.png)
+![Prototype of Linear Actuator Intake on Day 1](../../images/2023//Day1/prototypeIntakeDay1b.png)
 
 *Prototype of Linear Actuator Claw*
 
@@ -85,7 +85,7 @@ We made a Crayola sketch of the linear and linear, elevator and telescope. We wa
 
 We decided to make the elevator on the side. We took inspiration from [this design](https://www.youtube.com/watch?v=Yp3l5F0qt8I), and I wanted to make it sideways for more point of contact in the telescope as shown below.
   
-![Crayola CAD of Lift on Day 1](images/Day1/cadLiftDay1.png)
+![Crayola CAD of Lift on Day 1](../../images/2023//Day1/cadLiftDay1.png)
 
 *Crayola CAD of Lift*
 
@@ -97,7 +97,7 @@ Analyzed pros and cons of each design
 
 #### Fixed point for arm 
 
-![Crayola CAD of fixed point for arm on Day 1](images/Day1/Day1JoyceRR.png)
+![Crayola CAD of fixed point for arm on Day 1](../../images/2023//Day1/Day1JoyceRR.png)
 
 - Telescope arm 
 - How many stages in telescope? 
@@ -114,7 +114,7 @@ Analyzed pros and cons of each design
 
 #### Telescope arm at an angle
 
-![Crayola CAD of telescope arm at an angle on Day 1](images/Day1/Day1JoyceR.png)
+![Crayola CAD of telescope arm at an angle on Day 1](../../images/2023//Day1/Day1JoyceR.png)
 
 - Scores in both mid and top 
 - Storing position actuated with pneumatics 
@@ -128,7 +128,7 @@ Analyzed pros and cons of each design
 
 #### Telescope arm on an elevator 
 
-![Crayola CAD of Telescope arm on an elevator on Day 1](images/Day1/Day1JoyceArm.png)
+![Crayola CAD of Telescope arm on an elevator on Day 1](../../images/2023//Day1/Day1JoyceArm.png)
 
 - Multiple locations where it can intake 
 
@@ -140,7 +140,7 @@ Analyzed pros and cons of each design
 
 #### Pneumatic Arm
  
-![Crayola CAD of pneumatic arm on Day 1](images/Day1/Day1JoyceArm2.png)
+![Crayola CAD of pneumatic arm on Day 1](../../images/2023//Day1/Day1JoyceArm2.png)
 
 | Pros               | Cons              |
 | ------------------ | ----------------- |
@@ -153,7 +153,7 @@ Analyzed pros and cons of each design
 
 On the first day of RI3D, the manufacturing subteam CADed the measurement jig using the CAD drawings provided on the FRC website. We printed the cube measurement jig with the same weight (563.308g) as the one used at competition using density calculations. 
 
-![Cube Jig](images/Day1/cubeJigDay1.png)
+![Cube Jig](../../images/2023//Day1/cubeJigDay1.png)
 
 *3D Printed Cube Jig*
 
@@ -171,13 +171,13 @@ We made a [new repository for 2023](https://github.com/nerdherd/ChargedUp2023) a
 
 We specifically aimed to setup testbenches to run Limelights to detect AprilTags and reflective tape. With the help of our mentors, we based the design of our testbench off the following diagram:
   
-![Vision Testbench Diagram](images/Day1/visionTestbenchDiagram.png)
+![Vision Testbench Diagram](../../images/2023//Day1/visionTestbenchDiagram.png)
 
 *Diagram of testbench setup* 
  
 Then, we made several modifications to our testbenches such as supplying power to the RoboRIO after wires were disconnected, and updating RoboRIO firmware.
 
-![RIO Reimaging](images/Day1/roboRIOReimaging.png)
+![RIO Reimaging](../../images/2023//Day1/roboRIOReimaging.png)
   
 *RoboRIO re-imaging process*
  
@@ -189,7 +189,7 @@ Because we are currently split among two drive bases: swerve and west coast, we 
 
 Today, we decided to work on programming our swerve drive system to test its feasibility in competition. We were able to get our drivebase to work with the help of our mentors, and may be considering using a similar design for our competition robot this season, if we are able to find parts to repair the drivebase when necessary.
 
-![Swerve Drive](images/Day1/swerve.png)
+![Swerve Drive](../../images/2023//Day1/swerve.png)
 
 *Swerve Drivebase*
   

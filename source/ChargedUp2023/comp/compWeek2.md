@@ -15,11 +15,11 @@ Port Hueneme Reflection
 Pit Layout
 - Worked on pit layout
 
-![Hueneme Pit](./images/Comp2/huenemepit.png)
+![Hueneme Pit](../../images/2023/Comp2/huenemepit.png)
 
 *Pit Layout from Port Hueneme Regional*
 
-![Pit Layout](./images/Comp2/pitlayout.png)
+![Pit Layout](../../images/2023/Comp2/pitlayout.png)
 
 *Pit Layout Diagram from Port Hueneme*
 
@@ -35,17 +35,17 @@ Packing
 Robot Cart
 - Fix broken wheel on robot cart, replace with new one
 
-![Robot Cart](./images/Comp2/robotcartweek9.png)
+![Robot Cart](../../images/2023/Comp2/robotcartweek9.png)
 
 Proto swerve
 - Continue assembling, electrical, etc. 
 
-![Swerve](./images/Comp2/protoswerve.png)
+![Swerve](../../images/2023/Comp2/protoswerve.png)
 
 Pit layout
 - Design and finalize layout
 
-![Pit Layout](./images/Comp2/pitlayout2.png)
+![Pit Layout](../../images/2023/Comp2/pitlayout2.png)
 
 *New Pit Layout Diagram Draft*
 
@@ -74,7 +74,7 @@ We started working on our tech binder and technical drawing package.
 
 ## Programming
 This week, we tested our charging auto that goes out of the community and created auto diagrams.  
-![Auto Paths](./images/Comp2/auto.png)<br>
+![Auto Paths](../../images/2023/Comp2/auto.png)<br>
 Vision pickup was also tested and tuned to work.  Talon tachs and hall effect sensors were tested in order to be mounted on the robot to limit movement.
 
 ### Vision Group
@@ -82,4 +82,4 @@ Vision pickup was also tested and tuned to work.  Talon tachs and hall effect se
 We tuned PID for vision following​, more specifically, the sequence for scoring gameobjects on the grid.
 For auto and teleop​, updated the calibration procedure​ for limelight dashboard and added specific images of contours.
 
-![Auto Paths](./images/Comp2/ezgif.com-video-to-gif.gif)<br>
+![Auto Paths](../../images/2023/Comp2/ezgif.com-video-to-gif.gif)<br>

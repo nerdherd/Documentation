@@ -1,5 +1,5 @@
-# Competition Week 4
-*Week 11 (3/19 - 3/25)*
+# Competition Week 6
+*Week 13 (4/2 - 4/8)*
 
 ```{admonition} Under Construction
 This page is currently under construction. Please return later for more updates.
@@ -36,8 +36,8 @@ This page is currently under construction. Please return later for more updates.
 
 - Finished assembling new bumpers for IS ME 
 
-![Red Bumper](./images/Comp4/ASMRedBumper.png)
-![Blue Bumper](./images/Comp4/ASMBlueBumper.png)
+![Red Bumper](../../images/2023/Comp4/ASMRedBumper.png)
+![Blue Bumper](../../images/2023/Comp4/ASMBlueBumper.png)
 
 - New bumpers (red and blue)			 
 
@@ -53,20 +53,18 @@ This page is currently under construction. Please return later for more updates.
 
 - Made and assembled smaller foldable cone nodes to fit shipping requirements 
 
-![Drilling Wood](./images/Comp4/ASMDrillingWood.png)
-
- 
+![Drilling Wood](../../images/2023/Comp4/ASMDrillingWood.png)
 
 ## CAD
 
-### 3/20 
+### 4/3 
 
-Today, we updated our drawings for Is Me Too and had a scouting meeting. 
+Since we have finished Cadding our robot, we have focused on meching the robot (new bumpers, fixing flaws, adding new 3D prints, etc). 
+
+### 4/8 
+
+After finishing the updates to our robot, we went to a practice field in order to test our robot with other teams. 
 
 ## Manufacturing
 
 ## Programming
-
-The Los Angeles Regional helped us to learn a lot about which autos we needed, and which ones we should prioritize. We held a meeting to determine our main autos, settling upon three different autos:
-
-![Auto Paths](./images/Comp4/MicrosoftTeams-image.png)<br>

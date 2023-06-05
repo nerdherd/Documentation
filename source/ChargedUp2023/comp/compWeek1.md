@@ -15,7 +15,7 @@ Electrical
 
 Robot Cart
 
-![Robot Cart](./images/Comp1/RobotCart.png)
+![Robot Cart](../../images/2023/Comp1/RobotCart.png)
 
 - Continued assembling the new robot cart
 - Completed Robot Cart Shown at Port Hueneme Regional
@@ -32,7 +32,7 @@ Bumpers
 Packing
 - Worked on creating a new packing list for Port Hueneme Regional
 
-![Milwaukees](./images/Comp1/Milwaukees.jpg)
+![Milwaukees](../../images/2023/Comp1/Milwaukees.jpg)
 
 *Packed Milwaukees at Port Hueneme Regional*
 
@@ -40,13 +40,13 @@ Packing
 
 ### 2/27 
 
-![Swerve Cover CAD](./images/Comp1/SwerveCover4.png)
+![Swerve Cover CAD](../../images/2023/Comp1/SwerveCover4.png)
 
 *CAD of the swerve cover v4.5*
 
 Introducing... swerve cover version 4.5! Featuring zip tie holes for wire management, this design is sure to win the day! 
 
-![Swerve Cover Print](./images/Comp1/SwerveCoverPrint.png)
+![Swerve Cover Print](../../images/2023/Comp1/SwerveCoverPrint.png)
 
 *Printed swerve cover v4.5*
 
@@ -63,7 +63,7 @@ We also tuned our arm and elevator motion magic code, refining our substation in
 
 At the competition, we branched off our codebase into a separate branch. We discovered several issues at the competition, such as unreliability with our limit switch and charge auto. After the competition, we released our code as [version 1.0.0](https://github.com/nerdherd/ChargedUp2023/releases/tag/v1.0.0).
 
-![Github Release](./images/Comp1/GithubRelease.png)
+![Github Release](../../images/2023/Comp1/GithubRelease.png)
 
 ### Vision
 
