@@ -17,5 +17,5 @@ Meeting logs, photos, and recaps from each subteam during the 2023 Competition S
     Aerospace Valley Regional (3/29 - 4/1) <./comp/aerospaceValley.md>
     Week 13 (4/2 - 4/8) <./comp/compWeek6.md>
     Week 14 (4/9 - 4/15) <./comp/compWeek7.md>
-    World Championship <./comp/worldsRecap.md>
+    World Championship (4/19 - 4/22) <./comp/worldsRecap.md>
 
