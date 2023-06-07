@@ -15,5 +15,6 @@ Welcome to the Nerd Herd's Documentation!
    Robot in 3 Days <./ChargedUp2023/ri3d.rst>
    Build Season <./ChargedUp2023/build.rst>
    Competition Season <./ChargedUp2023/comp.rst>
+   Offseason <./ChargedUp2023/offseason.rst>
 
 * :ref:`search`

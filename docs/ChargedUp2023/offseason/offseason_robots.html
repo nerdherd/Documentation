@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offseason Robots &mdash; Nerd Herd Documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Rotational-Linear Robot" href="robot_groups/rl.html" />
+    <link rel="prev" title="FTC" href="subteams/ftc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Nerd Herd Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">About:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#navigating-the-repository">Navigating the Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#editing-pages">Editing pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#basic-syntax">Basic Syntax</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing.html#headings">Headings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing.html#text-formatting">Text formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing.html#code-blocks">Code Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing.html#adding-links">Adding links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing.html#adding-images">Adding Images</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#saving-changes">Saving Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#adding-new-pages">Adding New Pages</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Charged Up 2023:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ri3d.html">Robot in 3 Days</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ri3d/january7.html">Day 1 (1/7)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january7.html#kickoff">Kickoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january7.html#admin">Admin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january7.html#assembly">Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january7.html#cad">CAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january7.html#claw-intake">Claw Intake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january7.html#lift-mechanism">Lift Mechanism</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january7.html#arm">Arm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january7.html#manufacturing">Manufacturing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january7.html#programming">Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january7.html#vision-arm-and-elevator">Vision, Arm, and Elevator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january7.html#swerve-drive">Swerve Drive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january7.html#autonomous-pathing">Autonomous Pathing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ri3d/january8.html">Day 2 (1/8)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january8.html#admin">Admin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january8.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#field-elements">Field elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#electrical-on-prototype-bot">Electrical on Prototype Bot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january8.html#cad">CAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#linear-actuator-claw">Linear Actuator Claw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#rotational-claw-cad-assembly">Rotational Claw CAD/Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#scissor-claw-cad-assembly">Scissor Claw CAD/Assembly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#elevator">Elevator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#arm">Arm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january8.html#manufacturing">Manufacturing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#swerve">Swerve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#claw">Claw</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january8.html#programming">Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#vision-arm-claw">Vision, Arm, Claw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#autonomous-pathing">Autonomous Pathing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january8.html#id1">Swerve</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ri3d/january9.html">Day 3 (1/9)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january9.html#admin">Admin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january9.html#asssembly">Asssembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#field-elements">Field Elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#claw-prototypes">Claw Prototypes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#electrical-on-prototype-bot">Electrical on Prototype Bot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#pneumatics-on-prototype-bot">Pneumatics on Prototype Bot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january9.html#cad">CAD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january9.html#manufacturing">Manufacturing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#swerve">Swerve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#elevator-claw">Elevator &amp; Claw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ri3d/january9.html#programming">Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#vision">Vision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#radio-configuration">Radio Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#id1">Swerve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#autonomous-code">Autonomous Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ri3d/january9.html#claw">Claw</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Build Season</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../build/week2.html">Week 2 (1/13 to 1/20)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../build/week2.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#training">Training</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#claw">Claw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#arm">Arm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#elevator">Elevator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#cone-runner">Cone Runner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#field-elements">Field Elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#robot-repairs-maintenance">Robot Repairs/Maintenance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#robot-cart">Robot Cart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#driver-station">Driver Station</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week2.html#cad">CAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#telescope-arm">Telescope Arm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#id1">Elevator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#rotational-claw">Rotational Claw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#buddy-climb">Buddy Climb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#id2">Cone Runner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#swerve-bumpers">Swerve Bumpers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#west-coast-bumpers">West Coast Bumpers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week2.html#manufacturing">Manufacturing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#tm-1-cleaning">TM-1 Cleaning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week2.html#programming">Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#vision-group">Vision Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#auto-group">Auto Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week2.html#swerve-group">Swerve Group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../build/week3.html">Week 3 (1/21 to 1/28)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../build/week3.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week3.html#saturday">1/21 - Saturday</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week3.html#monday">1/23 - Monday</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week3.html#cad">CAD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week3.html#manufacturing">Manufacturing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week3.html#programming">Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week3.html#vision-group">Vision Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week3.html#swerve-drive-group">Swerve Drive Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week3.html#tank-drive-group">Tank Drive Group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../build/week4.html">Week 4 (1/30 to 2/4)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../build/week4.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#monday">1/30 - Monday</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#friday">2/3-Friday</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#saturday">2/4-Saturday</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week4.html#cad">CAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#elevator-group">Elevator Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#navx-covers">NavX Covers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#buddy-climb">Buddy Climb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#battery-plate-group">Battery Plate Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#side-notes">Side Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week4.html#manufacturing">Manufacturing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#id3">1/30</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#id4">2/2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#id5">2/3</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week4.html#programming">Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#vision-group">Vision Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#subsystems-group">Subsystems Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week4.html#swerve-group">Swerve Group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../build/week5.html">Week 5 (2/6 to 2/11)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../build/week5.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week5.html#monday">2/6/23 - Monday</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week5.html#friday">2/10 - Friday</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week5.html#cad">CAD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week5.html#manufacturing">Manufacturing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week5.html#programming">Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../build/week6.html">Week 6 (2/12 to 2/18)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../build/week6.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week6.html#saturday">2/11 Saturday</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week6.html#monday">2/13 Monday</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week6.html#friday">2/17 Friday</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week6.html#cad">CAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week6.html#id1">2/13/2023</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week6.html#id2">2/17/2023</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week6.html#id3">2/18/2023</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week6.html#manufacturing">Manufacturing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week6.html#id4">2/13</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week6.html#id5">2/15</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week6.html#id6">2/17</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week6.html#id7">2/18</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week6.html#programming">Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../build/week7.html">Week 7 (2/19 to 2/25)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../build/week7.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week7.html#monday">2/20 Monday</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week7.html#friday">2/24 Friday</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week7.html#cad">CAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week7.html#id1">2/20</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week7.html#id2">2/24</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week7.html#manufacturing">Manufacturing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week7.html#id3">2/20</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week7.html#id4">2/21</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week7.html#id5">2/24</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week7.html#id6">2/27 - 2/28</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build/week7.html#id7">3/1</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../build/week7.html#programming">Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../build/week7.html#vision-group">Vision Group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../comp.html">Competition Season</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../comp/compWeek1.html">Week 8 (2/26 - 3/4)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek1.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek1.html#monday">2/27 Monday</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek1.html#cad">CAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek1.html#id1">2/27</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek1.html#manufacturing">Manufacturing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek1.html#programming">Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek1.html#vision">Vision</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comp/portHueneme.html">Port Hueneme Regional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comp/portHueneme.html#match-playlist">Match Playlist</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comp/compWeek2.html">Week 9 (3/5 - 3/11)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek2.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek2.html#tuesday">03/07 Tuesday</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek2.html#friday">03/10 Friday</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek2.html#saturday">03/11 Saturday</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek2.html#cad">CAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek2.html#id1">3/7</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek2.html#id2">3/10</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek2.html#manufacturing">Manufacturing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek2.html#programming">Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek2.html#vision-group">Vision Group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comp/compWeek3.html">Week 10 (3/12 - 3/18)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek3.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek3.html#monday">3/13 Monday</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek3.html#cad">CAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek3.html#id1">3/13</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek3.html#manufacturing">Manufacturing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek3.html#programming">Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek3.html#vision-group">Vision Group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comp/lar.html">Los Angeles Regional (3/16 - 3/19)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comp/lar.html#match-playlist">Match Playlist</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comp/compWeek4.html">Week 11 (3/19 - 3/25)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek4.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek4.html#monday">3/20 Monday</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek4.html#friday">3/24 Friday</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek4.html#cad">CAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek4.html#id1">3/20</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek4.html#manufacturing">Manufacturing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek4.html#programming">Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comp/compWeek5.html">Week 12 (3/26 - 4/1)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek5.html#assembly">Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek5.html#cad">CAD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek5.html#manufacturing">Manufacturing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek5.html#programming">Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comp/aerospaceValley.html">Aerospace Valley Regional (3/29 - 4/1)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comp/aerospaceValley.html#match-playlist">Match Playlist</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comp/compWeek6.html">Week 13 (4/2 - 4/8)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek6.html#assembly">Assembly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek6.html#monday">04/3 Monday</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek6.html#friday">04/7 Friday</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek6.html#cad">CAD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek6.html#id1">4/3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../comp/compWeek6.html#id2">4/8</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek6.html#manufacturing">Manufacturing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek6.html#programming">Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comp/compWeek7.html">Week 14 (4/9 - 4/15)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek7.html#assembly">Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek7.html#cad">CAD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek7.html#manufacturing">Manufacturing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/compWeek7.html#programming">Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../comp/worldsRecap.html">World Championship (4/19 - 4/22)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../comp/worldsRecap.html#archimedes-division-4-19-4-21">Archimedes Division (4/19 - 4/21)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/worldsRecap.html#match-playlist">Match Playlist</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comp/worldsRecap.html#einstein-4-22">Einstein (4/22)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comp/worldsRecap.html#id1">Match Playlist</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../offseason.html">Offseason</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="subteams.html">Subteam Updates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subteams/admin.html">Administration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subteams/design.html">Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subteams/mfg.html">Manufacturing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subteams/asm.html">Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subteams/prog.html">Programming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subteams/ftc.html">FTC</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Offseason Robot Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="robot_groups/rl.html">Rotational Linear Robot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_groups/lr.html">Linear Rotational Robot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="robot_groups/shooter.html">Cube Shooter Robot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Nerd Herd Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../offseason.html">Offseason</a></li>
+      <li class="breadcrumb-item active">Offseason Robots</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/ChargedUp2023/offseason/offseason_robots.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="offseason-robots">
+<h1>Offseason Robots<a class="headerlink" href="#offseason-robots" title="Permalink to this heading"></a></h1>
+<p>This year, we will be developing three offseason robots, each with different designs:</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Rotational-Linear Robot</dt><dd><ul class="simple">
+<li><p>Based on 1678, 2910, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Linear-Rotational Robot</dt><dd><ul class="simple">
+<li><p>Based on 973, 972, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Cube Shooter Robot</dt><dd><ul class="simple">
+<li><p>Based on 5414, 1561, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Offseason Robots</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="robot_groups/rl.html">Rotational Linear Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot_groups/lr.html">Linear Rotational Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot_groups/shooter.html">Cube Shooter Robot</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="subteams/ftc.html" class="btn btn-neutral float-left" title="FTC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="robot_groups/rl.html" class="btn btn-neutral float-right" title="Rotational-Linear Robot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, FRC Team 687.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
