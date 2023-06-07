@@ -12,6 +12,8 @@ Welcome to the Nerd Herd's Documentation!
    :maxdepth: 2
    :caption: Charged Up 2023:
    
-   Charged Up 2023 <./ChargedUp2023/chargedUp.rst>
+   Robot in 3 Days <./ChargedUp2023/ri3d.rst>
+   Build Season <./ChargedUp2023/build.rst>
+   Competition Season <./ChargedUp2023/comp.rst>
 
 * :ref:`search`
