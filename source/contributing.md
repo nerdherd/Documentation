@@ -127,15 +127,7 @@ Then, to embed the image in a document, add:
 
 or
 
-:::md
-
-```{image} ./images/IMAGE_NAME
-
-```
-
-*Add a caption here*
-
-:::
+![Adding Images](./images/Contributing/Images.png)
 
 You can change the image's size and other properties by doing:
 
