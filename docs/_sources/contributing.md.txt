@@ -131,15 +131,7 @@ or
 
 You can change the image's size and other properties by doing:
 
-:::md
-
-```{image} ./images/IMAGE_NAME
-:alt: ALTERNATE IMAGE TEXT
-:width: 200px
-:align: left
-```
-
-:::
+![Adding Images With Properties](./images/Contributing/ImagesWithProperties.png)
 
 For more information, see the [MyST Parser](https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#html-images) documentation.
 
