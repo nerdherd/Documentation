@@ -80,25 +80,20 @@ To ***bold and italicize*** text, do:
 ### Code Blocks
 
 To format text as `monospace` (code, filenames, etc.) do: 
-:::
-`code text`
-:::
+
+![Monospace](./images/Contributing/CodeBlock2.png)
+
 
 To format an entire section as code, do:
-:::
-```language name
-```
-:::
+
+![Code Block](./images/Contributing/CodeBlock1.png)
+
 
 If you want the code to be highlighted, replace `language name` with the language name.
 
 For example, this code block
 
-:::
-```java
-System.out.println("Hello world!");
-```
-:::
+![Monospace](./images/Contributing/CodeBlock3.png)
 
 outputs
 
