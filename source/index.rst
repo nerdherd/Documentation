@@ -7,6 +7,7 @@ Welcome to the Nerd Herd's Documentation!
 
    Home <./home.md>
    Contributing <./contributing.md>
+   Social Media <./social-media.md>
 
 .. toctree::
    :maxdepth: 2
