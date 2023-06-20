@@ -1,2 +1,4 @@
 # Ignore VSCode Config
 *.vscode
+
+/build
