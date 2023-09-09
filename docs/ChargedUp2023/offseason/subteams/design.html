@@ -409,7 +409,12 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../offseason.html">Offseason</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../subteams.html">Subteam Updates</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="admin.html">Administration</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Design</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Design</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cube-shooter">Cube Shooter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rotation-linear-rl">Rotation Linear (RL)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linear-rotation-lr">Linear Rotation (LR)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="mfg.html">Manufacturing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="asm.html">Assembly</a></li>
 <li class="toctree-l3"><a class="reference internal" href="prog.html">Programming</a></li>
@@ -506,9 +511,64 @@
              
   <div class="section" id="design">
 <h1>Design<a class="headerlink" href="#design" title="Permalink to this heading"></a></h1>
-<div class="admonition-under-construction admonition">
-<p class="admonition-title">Under Construction</p>
-<p>This page is currently under construction. Please return later for more updates.</p>
+<p>Use the links below to explore our 3 offseason robots:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cube-shooter">Cube Shooter</a></p></li>
+<li><p><a class="reference internal" href="#rotation-linear-rl">Rotation Linear (RL)</a></p></li>
+<li><p><a class="reference internal" href="#linear-rotation-lr">Linear Rotation (LR)</a></p></li>
+</ul>
+<div class="section" id="cube-shooter">
+<h2>Cube Shooter<a class="headerlink" href="#cube-shooter" title="Permalink to this heading"></a></h2>
+<div class="section" id="id1">
+<h3>8/21/2023<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p><img alt="Image" src="../../../_images/Picture2.png" /></p>
+<p><img alt="Image" src="../../../_images/Picture3.png" /></p>
+<div class="section" id="drive-base">
+<h4>Drive Base:<a class="headerlink" href="#drive-base" title="Permalink to this heading"></a></h4>
+<p>We chose a swerve drive base because it is essential for a cube spammer to be able to quickly maneuver around the arena. A swerve drive base would enable our drivers to quickly pick up cubes anywhere on the arena. Compared to a west coast drive base, which is slow and hard to maneuver, it was clear that a swerve drive base would be a better option.</p>
+</div>
+<div class="section" id="intake">
+<h4>Intake:<a class="headerlink" href="#intake" title="Permalink to this heading"></a></h4>
+<p>We wanted an intake that could</p>
+<ol class="arabic simple">
+<li><p>Easily pick up cubes</p></li>
+<li><p>Quickly drop cubes into the bottom row</p></li>
+<li><p>Shoot cubes into the mid and high rows</p></li>
+</ol>
+</div>
+<div class="section" id="hard-stop">
+<h4>Hard Stop:<a class="headerlink" href="#hard-stop" title="Permalink to this heading"></a></h4>
+<p>We designed our hard stop to hold the intake in a stowed position. The hard stop made programming the pivot a lot easier.</p>
+</div>
+</div>
+</div>
+<div class="section" id="rotation-linear-rl">
+<h2>Rotation Linear (RL)<a class="headerlink" href="#rotation-linear-rl" title="Permalink to this heading"></a></h2>
+<div class="section" id="pivot">
+<h3>Pivot:<a class="headerlink" href="#pivot" title="Permalink to this heading"></a></h3>
+<p>Pivot Idea for RL Bot:</p>
+<ol class="arabic simple">
+<li><p>Design a pivot that can rotate and be able to rotate to reach all 3 rows, the top, middle, and bottom rows.</p></li>
+<li><p>Pivot can rotate to reach both substations and ground to be able to pick up game pieces.</p></li>
+<li><p>Offset pivot for more extension</p></li>
+<li><p>Able to have elevator resting down</p></li>
+<li><p>Able to fit in robot and fit both the elevator and electrical.
+Inspiration we used for our pivot included robots:
+•	Team 1678 (Citrus Circuit)</p></li>
+</ol>
+<p><img alt="Image" src="../../../_images/Picture4.png" /></p>
+<p>(1678 Citrus Circuit’s Pivot)
+(When using 1678’s pivot as reference, avoid bent plate as we are unable to make that)
+First Iteration:
+For the first iteration of the pivot, we based our design on 1678 just without the bent base plate as said. Dimensions that we used were 15 inches for the vertical bar and 15 inches for the horizontal bar, the horizontal bar was raised 2.5 inches. The bars were this long so that it is long enough to clear the swerve modules and it was raised to be over the swerve modules without hitting it.</p>
+<p><img alt="Image" src="../../../_images/Picture6.png" />
+First Iteration CAD of Pivot</p>
+<p>Second Iteration:
+For our second iteration of the pivot, we shortened the horizontal bars by 3 inches as it gives more space for electrical instead of having 15 inches, now it is 12 inches. Due to the change in length, the motors more to the front instead of the back so that the swerves had enough space. The vertical bars are raised higher to allow more room for the elevator to rotate up and it creates the ability to attach the elevator to the pivot without hitting anything above or below. There’s also a new horizontal bar at the top which is a stoppage point so the elevator doesn’t over rotate. There is an extra plate there to add stiffness.  With the new horizontal bar, it serves as a mounting point for the limelight.</p>
+</div>
+</div>
+<div class="section" id="linear-rotation-lr">
+<h2>Linear Rotation (LR)<a class="headerlink" href="#linear-rotation-lr" title="Permalink to this heading"></a></h2>
 </div>
 </div>
 
