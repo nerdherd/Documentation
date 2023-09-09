@@ -8,6 +8,118 @@ Use the links below to explore our 3 offseason robots:
 
 ## Cube Shooter
 
+### Swerve Bumper Guide
+
+1. Find parameter of swerve drive using the inspect tool. (27X27) 
+
+![Alt text](image.png)
+![Alt text](image-1.png)
+
+2. Create a component named 687-22-A000-BUMPER (Left click top of design tree in browser)
+
+![Alt text](image-2.png)
+![Alt text](image-3.png)
+
+3.	Begin bumper profile by creating a SKETCH on the front plane. Create two 2.5 Diameter circles for the pool noodles. 
+
+![Alt text](image-5.png)
+
+Use the tangent tool and select the circles (pool noodle profile).
+ 
+![Alt text](image-6.png)
+
+Use the horizontal tool and select circles.
+ 
+![Alt text](image-7.png)
+
+Create a 5 in line on the right side and make that TANGENT to the circles. Then make lines that represent the fabric. Use HORIZONTAL/VERTICAL tool on lines. 
+ 
+![Alt text](image-8.png)
+
+Left click 687-22-A000-BUMPER component and isolate.
+
+Unhide the origin. Create an offset for the XZ plane to the upper right corner point. Use” To Object” Extent. 
+ 
+![Alt text](image-9.png)
+
+The wood is ¾ thick, so we must figure out the dimensions of the outer wood since we are only making the pool noodle and fabric part. Math – 27(rail) + ¾(wood) + 2(1/16) Rivets +2(1/16) Gussets 
+
+![Alt text](image-10.png)
+
+Make sure the profile is coincident to the trail. 
+ 
+![Alt text](image-11.png)
+
+Now, go to SURFACE and use the SWEEP tool.
+ 
+![Alt text](image-12.png)
+
+Now, select the profile and path (30.625 by 30.625)
+
+![Alt text](image-13.png)
+
+ 
+Un isolate the bumper component and align it with the swerve drive. Bottom View. 
+
+![Alt text](image-14.png)
+ 
+Then align so that there is 1.375 in between each side. Use move tool. 
+ 
+![Alt text](image-15.png)
+
+4.	Now, we will begin making the interlocking wood. 
+Create a component for the 28.5X5 plank of wood inside of the bumper component. Name it. Wood-28.5X5
+ 
+ ![Alt text](image-16.png)
+
+Create the teeth for the one plank. Using these dimensions on each side.
+ 
+![Alt text](image-17.png)
+
+Then extrude by .75
+ 
+![Alt text](image-18.png)
+
+Then do the same but for three teeth instead, matching the two teeth. 
+ 
+![Alt text](image-19.png)
+
+Extrude .75 and copy one of each. The wood from the rail should be .25 in
+ 
+![Alt text](image-20.png)
+
+
+The final product with only wood should look like this. With .25 in on each side. 
+  
+![Alt text](image-21.png)
+
+![Alt text](image-22.png)
+
+Make sure that the wood is interlocking on each corner. 
+Finally, you align the bumper using the MOVE tool then, use point to point.   
+
+![Alt text](image-23.png)
+![Alt text](image-24.png)
+
+5. Next, latch placement.
+
+### Design Review One
+
+[Notes](https://docs.google.com/document/d/1JF0oZ7z5IDKm8TFPCI-trVOI4S57zp7x1CbPB3fqOe4/edit?usp=sharing
+)
+
+## Intake Design
+
+![Alt text](image-25.png)
+
+ASSEMBLY- 
+2X 3:1 gear boxes w/ bag motors
+10X bearings 
+20X 8-32 screws w/ nuts 
+2X 180T GT2 
+2X 100:1 gear boxes 
+4X 48T 9mm pulleys double f
+
 ### 8/21/2023
 
 ![Image](../../../images/Offseason/Design/Picture2.png)
