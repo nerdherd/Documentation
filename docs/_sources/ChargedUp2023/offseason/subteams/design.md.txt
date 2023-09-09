@@ -108,7 +108,7 @@ Finally, you align the bumper using the MOVE tool then, use point to point.
 [Notes](https://docs.google.com/document/d/1JF0oZ7z5IDKm8TFPCI-trVOI4S57zp7x1CbPB3fqOe4/edit?usp=sharing
 )
 
-## Intake Design
+### Intake Design
 
 ![Alt text](image-25.png)
 
