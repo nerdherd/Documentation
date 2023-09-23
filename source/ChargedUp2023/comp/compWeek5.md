@@ -1,16 +1,6 @@
 # Competition Week 5
 *Week 12 (3/26 - 4/1)*
 
-```{admonition} Under Construction
-This page is currently under construction. Please return later for more updates.
-```
-
-## Assembly
-
-## CAD
-
-## Manufacturing
-
 ## Programming
 
 We went to DaVinci Schools. Upon arriving, we tested both our preload pickup score pickup auto and preload taxi charge auto.
