@@ -565,13 +565,25 @@
 <span class="w">        </span><span class="p">}</span>
 </pre></div>
 </div>
-<p>As seen in those code segment we added logging to the cube shooter code. We added a new tab on Shuffleboard called “Wrist” then proceeded to add certain cases to appear on Shuffleboard depending on the switch level.</p>
+<p>As seen in this code segment we added logging to the cube shooter code. We created a new tab in Shuffleboard called “Wrist” then used the loggingLevel contsant we created to seperate the logs into different sections for the wrist. Depending on if the loggingLevel is OFF, ALL, MEDIUM, or MINIMAL, Shuffleboard will only show the tabs listed under each case, this way we reduce the amount of logs we used depending on what is needed.</p>
 </div>
-<div class="section" id="creating-the-shooter">
-<h2>Creating the Shooter<a class="headerlink" href="#creating-the-shooter" title="Permalink to this heading"></a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>
+<div class="section" id="creating-shooter">
+<h2>Creating Shooter<a class="headerlink" href="#creating-shooter" title="Permalink to this heading"></a></h2>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="nf">Shooter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">TalonFX</span><span class="w"> </span><span class="n">leftMotor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TalonFX</span><span class="p">(</span><span class="n">ShooterConstants</span><span class="p">.</span><span class="na">kLeftMotorID</span><span class="p">);</span>
+<span class="w">        </span><span class="n">TalonFX</span><span class="w"> </span><span class="n">rightMotor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TalonFX</span><span class="p">(</span><span class="n">ShooterConstants</span><span class="p">.</span><span class="na">kRightMotorID</span><span class="p">);</span>
+<span class="w">        </span><span class="n">leftMotor</span><span class="p">.</span><span class="na">setInverted</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="w">        </span><span class="n">rightMotor</span><span class="p">.</span><span class="na">setInverted</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="w">        </span><span class="n">leftMotor</span><span class="p">.</span><span class="na">setNeutralMode</span><span class="p">(</span><span class="n">NeutralMode</span><span class="p">.</span><span class="na">Brake</span><span class="p">);</span>
+<span class="w">        </span><span class="n">rightMotor</span><span class="p">.</span><span class="na">setNeutralMode</span><span class="p">(</span><span class="n">NeutralMode</span><span class="p">.</span><span class="na">Brake</span><span class="p">);</span>
+<span class="w">        </span><span class="n">leftMotor</span><span class="p">.</span><span class="na">configVoltageCompSaturation</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span>
+<span class="w">        </span><span class="n">rightMotor</span><span class="p">.</span><span class="na">configVoltageCompSaturation</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span>
+<span class="w">        </span><span class="n">leftMotor</span><span class="p">.</span><span class="na">enableVoltageCompensation</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="w">        </span><span class="n">rightMotor</span><span class="p">.</span><span class="na">enableVoltageCompensation</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 </pre></div>
 </div>
+<p>We created the shooter for the cube spammer in code, which works by creating a left and right TalonFX motor. The motors are both put into neutral mode upon initializing</p>
 </div>
 </div>
 
