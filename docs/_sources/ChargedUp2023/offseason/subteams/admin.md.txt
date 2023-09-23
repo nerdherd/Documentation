@@ -2,27 +2,27 @@
 
 Use the links below to explore our 3 titles:
 
-- [Title 1](#title-1)
-- [Title 2](#title-2)
-- [Title 3](#title-3)
-- [Title 4](#title-4)
+- [SoCal Showdown](#SoCal-Showdown)
+- [Chezy Champs](#Chezy-Champs)
+- [FTC](#FTC)
+- [Documentations and Presentations](#Documentations-and-Presentations)
 
-## Title 1
+## SoCal Showdown
 
-```{include} ./BUS/Title1.md
+```{include} ./BUS/SoCalShowdown.md
 ```
 
-## Title 2
+## Chezy Champs
 
-```{include} ./BUS/Title2.md
+```{include} ./BUS/ChezyChamps.md
 ```
 
-## Title 3
+## FTC
 
-```{include} ./BUS/Title3.md
+```{include} ./BUS/FTC.md
 ```
 
-## Title 4
+## Documentations and Presentations
 
-```{include} ./BUS/Title4.md
+```{include} ./BUS/DocumentationsAndPresentations.md
 ```

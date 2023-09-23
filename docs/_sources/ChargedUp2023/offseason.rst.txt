@@ -9,4 +9,4 @@ Meeting logs, photos, and recaps from the 2023 offseason.
 
     Subteam Updates <./offseason/subteams.rst>
     Offseason Robot Development <./offseason/offseason_robots.rst>
-    Practice Updates <./offseason/practice_updates.rst>
+    Competition Updates <./offseason/competition_updates.rst>
