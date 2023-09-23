@@ -5,7 +5,7 @@ Use the links below to explore our 3 titles:
 - [SoCal Showdown](#SoCal-Showdown)
 - [Chezy Champs](#Chezy-Champs)
 - [FTC](#FTC)
-- [Title 4](#title-4)
+- [Documentations and Presentations](#Documentations-and-Presentations)
 
 ## SoCal Showdown
 
@@ -24,5 +24,5 @@ Use the links below to explore our 3 titles:
 
 ## Title 4
 
-```{include} ./BUS/Title4.md
+```{include} ./BUS/DocumentationsAndPresentations.md
 ```
