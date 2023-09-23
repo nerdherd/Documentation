@@ -13,9 +13,9 @@ The 3PieceShort auto involves scoring a preloaded cube onto the high node on the
 
 The 3PieceLong auto is essentially the same auto as 3PieceShort, but it occurs on the cable side of the field. The 3PieceLong auto involves scoring a preloaded cube onto the high node on the cable side, followed by two cubes onto the low nodes. This auto also includes mobility (taxi) as the two low cubes were picked up from the field.
 
-![3PieceLong Auto](../../Documentation/source/images/Offseason/Prog/3PieceLongPathPlannerAuto.PNG)​
+![3PieceLong Auto](https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/3PieceLongPathPlannerAuto.PNG)​
 
-### 3. DirectBalance AUto
+### 3. DirectBalance Auto
 
 The DirectBalance auto involves scoring a preloaded cube onto the high node in the middle of the grid. The robot then engages on the charge station.
 
