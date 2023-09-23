@@ -36,10 +36,21 @@ The cube-shooter is the robot we plan on using at the upcoming off-season compet
         }
 ```
 
-As seen in those code segment we added logging to the cube shooter code. We added a new tab on Shuffleboard called "Wrist" then proceeded to add certain cases to appear on Shuffleboard depending on the switch level. 
+As seen in this code segment we added logging to the cube shooter code. We created a new tab in Shuffleboard called "Wrist" then used the loggingLevel contsant we created to seperate the logs into different sections for the wrist. Depending on if the loggingLevel is OFF, ALL, MEDIUM, or MINIMAL, Shuffleboard will only show the tabs listed under each case, this way we reduce the amount of logs we used depending on what is needed. 
 
-### Creating the Shooter
-
+### Creating Shooter
 ```java
-
+public Shooter() {
+        TalonFX leftMotor = new TalonFX(ShooterConstants.kLeftMotorID);
+        TalonFX rightMotor = new TalonFX(ShooterConstants.kRightMotorID);
+        leftMotor.setInverted(false);
+        rightMotor.setInverted(true);
+        leftMotor.setNeutralMode(NeutralMode.Brake);
+        rightMotor.setNeutralMode(NeutralMode.Brake);
+        leftMotor.configVoltageCompSaturation(11);
+        rightMotor.configVoltageCompSaturation(11);
+        leftMotor.enableVoltageCompensation(true);
+        rightMotor.enableVoltageCompensation(true);
+    }
 ```
+We created the shooter for the cube spammer in code, which works by creating a left and right TalonFX motor. The motors are both put into neutral mode upon initializing 
