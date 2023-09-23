@@ -7,6 +7,7 @@ Use the links below to explore our 3 titles:
 - [Cube Shooter Robot](#cube-shooter-robot)
 - [Autos](#autos)
 - [Rotational-Linear Robot](#rotational-linear-robot)
+- [Miscellaneous]
 
 ## Vision
 
@@ -35,5 +36,6 @@ Use the links below to explore our 3 titles:
 ```{include} ./PRG/RL-bot.md
 ```
 
-
-
+## Miscellaneous
+```{include} ./PRG/Misc.md
+```
