@@ -2,21 +2,38 @@
 
 Use the links below to explore our 3 titles:
 
-- [Vision](#Vision-Changes)
-- [Title 2](#title-2)
-- [Title 3](#title-3)
+- [Vision](#Vision)
+- [Swerve](#swerve-updates)
+- [Cube Shooter Robot](#cube-shooter-robot)
+- [Autos](#autos)
+- [Rotational-Linear Robot](#rotational-linear-robot)
 
-## Vision Changes
+## Vision
 
 ```{include} ./PRG/Vision.md
 ```
 
-## Title 2
 
-```{include} ./PRG/Title2.md
+## Swerve Updates
+```{include} ./PRG/Swerve.md
 ```
 
-## Title 3
 
-```{include} ./PRG/Title3.md
+## Cube Shooter Robot
+```{include} ./PRG/Cube-Shooter.md
 ```
+
+
+
+
+## Autos
+```{include} ./PRG/Autos.md
+```
+
+
+## Rotational-Linear Robot
+```{include} ./PRG/RL-bot.md
+```
+
+
+
