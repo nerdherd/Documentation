@@ -441,6 +441,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#alex-duan-s-vision-group">Alex Duan’s Vision Group!</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#swerve-updates">Swerve Updates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cube-shooter-robot">Cube Shooter Robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-review">Code Review</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#autos">Autos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rotational-linear-robot">Rotational-Linear Robot</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
@@ -591,6 +592,52 @@
 </div>
 <div class="section" id="cube-shooter-robot">
 <h2>Cube Shooter Robot<a class="headerlink" href="#cube-shooter-robot" title="Permalink to this heading"></a></h2>
+<div class="section" id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h3>
+<p>The cube-shooter is the robot we plan on using at the upcoming off-season competition Chezy-Champs. The purpose of it is to pick up cubes as the robot drives into them, allowing for quick intake, and then shooting the cube back out into either the low, mid, or high shelves.</p>
+</div>
+</div>
+<div class="section" id="code-review">
+<h2>Code Review<a class="headerlink" href="#code-review" title="Permalink to this heading"></a></h2>
+<div class="section" id="adding-logging-to-the-wrist">
+<h3>Adding Logging to the Wrist<a class="headerlink" href="#adding-logging-to-the-wrist" title="Permalink to this heading"></a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initShuffleboard</span><span class="p">(</span><span class="n">LOG_LEVEL</span><span class="w"> </span><span class="n">level</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">level</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOG_LEVEL</span><span class="p">.</span><span class="na">OFF</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOG_LEVEL</span><span class="p">.</span><span class="na">MINIMAL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">ShuffleboardTab</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Shuffleboard</span><span class="p">.</span><span class="na">getTab</span><span class="p">(</span><span class="s">&quot;Wrist&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">level</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">OFF</span><span class="p">:</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">ALL</span><span class="p">:</span>
+<span class="w">                </span><span class="n">tab</span><span class="p">.</span><span class="na">addNumber</span><span class="p">(</span><span class="s">&quot;Motor Output&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">::</span><span class="n">getMotorOutputPercent</span><span class="p">);</span>
+<span class="w">                </span><span class="n">tab</span><span class="p">.</span><span class="na">addString</span><span class="p">(</span><span class="s">&quot;Control Mode&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">.</span><span class="na">getControlMode</span><span class="p">()::</span><span class="n">toString</span><span class="p">);</span>
+<span class="w">                </span><span class="n">tab</span><span class="p">.</span><span class="na">addNumber</span><span class="p">(</span><span class="s">&quot;Wrist Target Velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">::</span><span class="n">getActiveTrajectoryVelocity</span><span class="p">);</span><span class="w"> </span>
+<span class="w">                </span><span class="n">tab</span><span class="p">.</span><span class="na">addNumber</span><span class="p">(</span><span class="s">&quot;Closed loop error&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">::</span><span class="n">getClosedLoopError</span><span class="p">);</span>
+
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">MEDIUM</span><span class="p">:</span>
+<span class="w">                </span><span class="n">tab</span><span class="p">.</span><span class="na">addNumber</span><span class="p">(</span><span class="s">&quot;Wrist Current&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">::</span><span class="n">getStatorCurrent</span><span class="p">);</span>
+<span class="w">                </span><span class="n">tab</span><span class="p">.</span><span class="na">addNumber</span><span class="p">(</span><span class="s">&quot;Wrist Velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">::</span><span class="n">getSelectedSensorVelocity</span><span class="p">);</span>
+<span class="w">                </span><span class="n">tab</span><span class="p">.</span><span class="na">addNumber</span><span class="p">(</span><span class="s">&quot;Wrist Voltage&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">::</span><span class="n">getMotorOutputVoltage</span><span class="p">);</span>
+<span class="w">                </span><span class="n">tab</span><span class="p">.</span><span class="na">addNumber</span><span class="p">(</span><span class="s">&quot;Wrist Percent Output&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">::</span><span class="n">getMotorOutputPercent</span><span class="p">);</span>
+
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">MINIMAL</span><span class="p">:</span>
+<span class="w">                </span><span class="n">tab</span><span class="p">.</span><span class="na">addNumber</span><span class="p">(</span><span class="s">&quot;Current Wrist Ticks&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">::</span><span class="n">getSelectedSensorPosition</span><span class="p">);</span>
+<span class="w">                </span><span class="n">tab</span><span class="p">.</span><span class="na">addNumber</span><span class="p">(</span><span class="s">&quot;Target Wrist Ticks&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">targetTicks</span><span class="p">);</span>
+<span class="w">                </span><span class="n">tab</span><span class="p">.</span><span class="na">addBoolean</span><span class="p">(</span><span class="s">&quot;At target position&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">atTargetPosition</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>As seen in those code segment we added logging to the cube shooter code. We added a new tab on Shuffleboard called “Wrist” then proceeded to add certain cases to appear on Shuffleboard depending on the switch level.</p>
+</div>
+<div class="section" id="creating-the-shooter">
+<h3>Creating the Shooter<a class="headerlink" href="#creating-the-shooter" title="Permalink to this heading"></a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="autos">
 <h2>Autos<a class="headerlink" href="#autos" title="Permalink to this heading"></a></h2>
