@@ -2,12 +2,12 @@
 
 Use the links below to explore our 3 titles:
 
-- [Vision](#Vision)
+- [Vision](#vision)
 - [Swerve](#swerve-updates)
 - [Cube Shooter Robot](#cube-shooter-robot)
 - [Autos](#autos)
 - [Rotational-Linear Robot](#rotational-linear-robot)
-- [Miscellaneous]
+- [Miscellaneous](#miscellaneous)
 
 ## Vision
 

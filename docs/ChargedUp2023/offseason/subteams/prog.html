@@ -542,12 +542,12 @@
 <h1>Programming<a class="headerlink" href="#programming" title="Permalink to this heading"></a></h1>
 <p>Use the links below to explore our 3 titles:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Vision"><span class="xref myst">Vision</span></a></p></li>
+<li><p><a class="reference internal" href="#vision">Vision</a></p></li>
 <li><p><a class="reference internal" href="#swerve-updates">Swerve</a></p></li>
 <li><p><a class="reference internal" href="#cube-shooter-robot">Cube Shooter Robot</a></p></li>
 <li><p><a class="reference internal" href="#autos">Autos</a></p></li>
 <li><p><a class="reference internal" href="#rotational-linear-robot">Rotational-Linear Robot</a></p></li>
-<li><p>[Miscellaneous]</p></li>
+<li><p><a class="reference internal" href="#miscellaneous">Miscellaneous</a></p></li>
 </ul>
 <div class="section" id="vision">
 <h2>Vision<a class="headerlink" href="#vision" title="Permalink to this heading"></a></h2>
@@ -590,11 +590,158 @@
 </div>
 <div class="section" id="swerve-updates">
 <h2>Swerve Updates<a class="headerlink" href="#swerve-updates" title="Permalink to this heading"></a></h2>
+<div class="section" id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h3>
+<p>Last year, our swerve drive code was written really badly, and had lots of issues.</p>
+<p>One of the largest issues that prevented us from making proper autos was the orientation of our swerve drive.
+Our old swerve drive code followed the North, East, Up convention, which can be seen below:</p>
+<p><img alt="Old Swerve Orientation" src="../../../_images/Swerve-NEU.png" /></p>
+<p>This can be seen in our code:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">SwerveDriveKinematics</span><span class="w"> </span><span class="n">kDriveKinematics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SwerveDriveKinematics</span><span class="p">(</span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">Translation2d</span><span class="p">(</span><span class="n">kWheelBase</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">kTrackWidth</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w">  </span><span class="c1">// Front Left (x, -y)</span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">Translation2d</span><span class="p">(</span><span class="n">kWheelBase</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">kTrackWidth</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w">   </span><span class="c1">// Front Right (x, y)</span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">Translation2d</span><span class="p">(</span><span class="o">-</span><span class="n">kWheelBase</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">kTrackWidth</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="c1">// Back Left (-x, -y)</span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">Translation2d</span><span class="p">(</span><span class="o">-</span><span class="n">kWheelBase</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">kTrackWidth</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// Back Right (-x, y)</span>
+</pre></div>
+</div>
+<p>However, the <a class="reference external" href="https://docs.wpilib.org/en/stable/docs/software/kinematics-and-odometry/swerve-drive-kinematics.html">swerve drive kinematics</a> class in WPILib actually follows the North, West, Up convention:</p>
+<p><img alt="Real Swerve Orientation" src="../../../_images/Swerve-NWU.png" /></p>
+<p>This should have caused all of our wheels to become flipped horizontally (across the x-axis), as the front right module was being treated like the back right module and vice versa. This would make the swerve drive undrivable, as when rotating, it would cause the modules to get stuck in an “X” shape.</p>
+<p>However, we made another mistake that perfectly cancelled this out.</p>
+<p>Because of the way Falcon 500 motors are mounted in Mk4i Swerve Modules, a clockwise rotation in the falcon 500 results in a clockwise rotation of the entire swerve module:</p>
+<p><img alt="Swerve Module Orientation" src="../../../_images/SwerveModule.png" /></p>
+<p>Because we didn’t invert our Falcons, this “un-flipped” the reversed module rotations.</p>
+<p>However, this would cause the CANCoders in our modules to read different angles due to reading as Counter-Clockwise positive, causing us to invert our CANCoders.</p>
+<p>We can see the impact of these messed-up coordinate conventions in our code. For example, our module “tow” states, which is where all of the swerve modules turn inwards to lock the entire drivetrain in place, has clockwise-positive angles, instead of counterclockwise-positive angles.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">SwerveModuleState</span><span class="o">[]</span><span class="w"> </span><span class="n">towModuleStates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">SwerveModuleState</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">SwerveModuleState</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="n">Rotation2d</span><span class="p">.</span><span class="na">fromDegrees</span><span class="p">(</span><span class="mi">45</span><span class="p">)),</span><span class="w">  </span><span class="c1">// Front Left</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">SwerveModuleState</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="n">Rotation2d</span><span class="p">.</span><span class="na">fromDegrees</span><span class="p">(</span><span class="mi">135</span><span class="p">)),</span><span class="w"> </span><span class="c1">// Front Right</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">SwerveModuleState</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="n">Rotation2d</span><span class="p">.</span><span class="na">fromDegrees</span><span class="p">(</span><span class="o">-</span><span class="mi">45</span><span class="p">)),</span><span class="w"> </span><span class="c1">// Back Left</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">SwerveModuleState</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="n">Rotation2d</span><span class="p">.</span><span class="na">fromDegrees</span><span class="p">(</span><span class="o">-</span><span class="mi">135</span><span class="p">))</span><span class="w"> </span><span class="c1">// Back Right</span>
+<span class="w">    </span><span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fixing-the-problem">
+<h3>Fixing the Problem<a class="headerlink" href="#fixing-the-problem" title="Permalink to this heading"></a></h3>
+<p>By the time we realized this problem during the 2023 season, it was too late for us to change our swerve drive code, as we were already mid-season and didn’t want to spend our testing time fixing this problem. This ended up being a bad decision, as it stopped us from making any complex autos, and caused weird behavior when moving backwards in autos.</p>
+<p>As a result, as soon as offseason started, the very first thing we did was create a fork of our ChargedUp2023 code called <a class="reference external" href="https://github.com/nerdherd/SwerveDrive2023">SwerveDrive2023</a>, where we would fix these issues and make a reusable swerve drive template for ourselves.</p>
+<p>To fix our issues, we implemented the following changes:</p>
+<ol class="arabic simple">
+<li><p>Switch to North-West-Up conventions in our Swerve Drive Kinematics class</p></li>
+<li><p>Invert our Falcon 500s</p></li>
+<li><p>Un-invert our CANCoders</p></li>
+<li><p>Modify hard-coded states</p></li>
+</ol>
+<p>Implementing these changes solved our issues with a flipped drivebase, and allowed us to properly use autonomous trajectory libraries such as PathPlanner. You can read more about how we used PathPlanner in the <a class="reference internal" href="#autos">Autos</a> section.</p>
+</div>
+<div class="section" id="state-control">
+<h3>State Control<a class="headerlink" href="#state-control" title="Permalink to this heading"></a></h3>
+<p>One issue with our past implementation of our Swerve Drive came from how the modules were controlled.</p>
+<p>In our original code, we set the desired state of each module and controlled the modules to move towards the state in the same method, setDesiredState:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Set the desired state of the Swerve Module and move towards it</span>
+<span class="cm"> * @param state The desired state for this Swerve Module</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDesiredState</span><span class="p">(</span><span class="n">SwerveModuleState</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="na">speedMetersPerSecond</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.001</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">stop</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SwerveModuleState</span><span class="p">.</span><span class="na">optimize</span><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="n">getState</span><span class="p">().</span><span class="na">angle</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">desiredAngle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="na">angle</span><span class="p">.</span><span class="na">getDegrees</span><span class="p">();</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">currentPercent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="na">speedMetersPerSecond</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">SwerveDriveConstants</span><span class="p">.</span><span class="na">kPhysicalMaxSpeedMetersPerSecond</span><span class="p">;</span>
+<span class="w">    </span><span class="n">driveMotor</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">ControlMode</span><span class="p">.</span><span class="na">PercentOutput</span><span class="p">,</span><span class="w"> </span><span class="n">currentPercent</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">turnPower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">turningController</span><span class="p">.</span><span class="na">calculate</span><span class="p">(</span><span class="n">getTurningPosition</span><span class="p">(),</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="na">angle</span><span class="p">.</span><span class="na">getRadians</span><span class="p">());</span>
+<span class="w">    </span><span class="n">turnMotor</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">ControlMode</span><span class="p">.</span><span class="na">PercentOutput</span><span class="p">,</span><span class="w"> </span><span class="n">turnPower</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Although this works for teleoperated input, as the drive command will constantly be sending new states to the swerve modules, one issue comes from autos.</p>
+<p>At the end of our dock and engage autos, we would “tow in” the modules, or put them in an X-shape so that the swerve drive does not slide off the charging station. For example, in our preload taxi dock and engage auto:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">CommandBase</span><span class="w"> </span><span class="nf">preloadTaxiChargeBackwardsSLOW</span><span class="p">(</span><span class="n">SwerveDrivetrain</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">,</span><span class="w"> </span><span class="n">MotorClaw</span><span class="w"> </span><span class="n">claw</span><span class="p">,</span><span class="w"> </span><span class="n">Arm</span><span class="w"> </span><span class="n">arm</span><span class="p">,</span><span class="w"> </span><span class="n">Elevator</span><span class="w"> </span><span class="n">elevator</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sequence</span><span class="p">(</span>
+<span class="w">        </span><span class="n">deadline</span><span class="p">(</span>
+<span class="w">            </span><span class="n">waitSeconds</span><span class="p">(</span><span class="mf">13.5</span><span class="p">),</span><span class="w"> </span>
+<span class="w">            </span><span class="n">sequence</span><span class="p">(</span>
+<span class="w">                </span><span class="n">ChargeAutos</span><span class="p">.</span><span class="na">preloadHigh</span><span class="p">(</span><span class="n">arm</span><span class="p">,</span><span class="w"> </span><span class="n">elevator</span><span class="p">,</span><span class="w"> </span><span class="n">claw</span><span class="p">),</span>
+<span class="w">                </span><span class="n">deadline</span><span class="p">(</span>
+<span class="w">                    </span><span class="n">taxiChargeBackwardsSLOW</span><span class="p">(</span><span class="n">swerveDrive</span><span class="p">),</span>
+<span class="w">                    </span><span class="n">run</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">arm</span><span class="p">.</span><span class="na">moveArmMotionMagic</span><span class="p">(</span><span class="n">elevator</span><span class="p">.</span><span class="na">percentExtended</span><span class="p">())),</span>
+<span class="w">                    </span><span class="n">run</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">elevator</span><span class="p">.</span><span class="na">moveMotionMagic</span><span class="p">(</span><span class="n">arm</span><span class="p">.</span><span class="na">getArmAngle</span><span class="p">()))</span>
+<span class="w">                </span><span class="p">)</span><span class="w">    </span>
+<span class="w">            </span><span class="p">)</span>
+<span class="w">        </span><span class="p">),</span>
+<span class="w">        </span><span class="n">runOnce</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">.</span><span class="na">towModules</span><span class="p">()),</span><span class="w"> </span><span class="c1">// Set the module states to towed in</span>
+<span class="w">        </span><span class="n">waitSeconds</span><span class="p">(</span><span class="mf">0.2</span><span class="p">),</span>
+<span class="w">        </span><span class="n">runOnce</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">.</span><span class="na">stopModules</span><span class="p">())</span>
+<span class="w">    </span><span class="p">).</span><span class="na">finallyDo</span><span class="p">((</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">.</span><span class="na">getImu</span><span class="p">().</span><span class="na">setOffset</span><span class="p">(</span><span class="mi">180</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The problem with this is that the PID controller for turning the modules to their target position is only running once. This causes the wheels to all start spinning to start going towards the tow position, but not slow down.</p>
+<p>To fix this issue, we separated setDesiredState into two different methods:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">desiredState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SwerveModuleState</span><span class="p">.</span><span class="na">optimize</span><span class="p">(</span><span class="n">desiredState</span><span class="p">,</span><span class="w"> </span><span class="n">Rotation2d</span><span class="p">.</span><span class="na">fromRadians</span><span class="p">(</span><span class="n">getTurningPosition</span><span class="p">()));</span>
+
+<span class="w">    </span><span class="n">desiredAngle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">desiredState</span><span class="p">.</span><span class="na">angle</span><span class="p">.</span><span class="na">getDegrees</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">desiredState</span><span class="p">.</span><span class="na">speedMetersPerSecond</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ModuleConstants</span><span class="p">.</span><span class="na">kDriveTicksPer100MsToMetersPerSec</span><span class="w"> </span>
+<span class="w">                                                        </span><span class="o">/</span><span class="w"> </span><span class="n">ModuleConstants</span><span class="p">.</span><span class="na">kDriveMotorGearRatio</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">desiredVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velocity</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">velocityControl</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">driveMotor</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">ControlMode</span><span class="p">.</span><span class="na">Velocity</span><span class="p">,</span><span class="w"> </span><span class="n">velocity</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">currentPercent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">currentPercent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">desiredState</span><span class="p">.</span><span class="na">speedMetersPerSecond</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">SwerveDriveConstants</span><span class="p">.</span><span class="na">kPhysicalMaxSpeedMetersPerSecond</span><span class="p">;</span>
+<span class="w">        </span><span class="n">driveMotor</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">ControlMode</span><span class="p">.</span><span class="na">PercentOutput</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">currentPercent</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">turnPower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">turningController</span><span class="p">.</span><span class="na">calculate</span><span class="p">(</span><span class="n">getTurningPosition</span><span class="p">(),</span><span class="w"> </span><span class="n">desiredState</span><span class="p">.</span><span class="na">angle</span><span class="p">.</span><span class="na">getRadians</span><span class="p">());</span>
+<span class="w">    </span><span class="n">currentTurnPercent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">turnPower</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">turnMotor</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">ControlMode</span><span class="p">.</span><span class="na">PercentOutput</span><span class="p">,</span><span class="w"> </span><span class="n">turnPower</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDesiredState</span><span class="p">(</span><span class="n">SwerveModuleState</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="na">speedMetersPerSecond</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.001</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">state</span><span class="p">.</span><span class="na">speedMetersPerSecond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">desiredState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>By separating setDesiredState() into run() and setDesiredState(), we avoid issues with the swerve modules not properly moving towards the desired state, as run() will always be run in the periodic method of SwerveDrivetrain.java, except when in test mode:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Have modules move towards states and update odometry</span>
+<span class="cm"> */</span>
+<span class="nd">@Override</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">periodic</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">DriverStation</span><span class="p">.</span><span class="na">isTest</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">runModules</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">poseEstimator</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">gyro</span><span class="p">.</span><span class="na">getRotation2d</span><span class="p">(),</span><span class="w"> </span><span class="n">getModulePositions</span><span class="p">());</span>
+
+<span class="w">    </span><span class="c1">// Vision pose estimation</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sunflower</span><span class="p">.</span><span class="na">getPose3d</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">poseEstimator</span><span class="p">.</span><span class="na">addVisionMeasurement</span><span class="p">(</span><span class="n">sunflower</span><span class="p">.</span><span class="na">getPose3d</span><span class="p">().</span><span class="na">toPose2d</span><span class="p">(),</span><span class="w"> </span><span class="n">Timer</span><span class="p">.</span><span class="na">getFPGATimestamp</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="cube-shooter-robot">
 <h2>Cube Shooter Robot<a class="headerlink" href="#cube-shooter-robot" title="Permalink to this heading"></a></h2>
-<div class="section" id="overview">
-<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h3>
+<div class="section" id="id1">
+<h3>Overview<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
 <p>The cube-shooter is the robot we plan on using at the upcoming off-season competition Chezy-Champs. The purpose of it is to pick up cubes as the robot drives into them, allowing for quick intake, and then shooting the cube back out into either the low, mid, or high shelves.</p>
 </div>
 </div>
