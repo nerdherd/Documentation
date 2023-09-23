@@ -443,10 +443,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#vision">Vision</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#swerve-updates">Swerve Updates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cube-shooter-robot">Cube Shooter Robot</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#code-review">Code Review</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#autos">Autos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cube-shooter-autos">Cube Shooter Autos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rotational-linear-robot">Rotational-Linear Robot</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
 </ul>
@@ -735,15 +732,14 @@ Our old swerve drive code followed the North, East, Up convention, which can be 
 </div>
 <div class="section" id="cube-shooter-robot">
 <h2>Cube Shooter Robot<a class="headerlink" href="#cube-shooter-robot" title="Permalink to this heading"></a></h2>
-</div>
 <div class="section" id="id1">
-<h2>Overview<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<h3>Overview<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
 <p>The cube-shooter is the robot we plan on using at the upcoming off-season competition Chezy-Champs. The purpose of it is to pick up cubes as the robot drives into them, allowing for quick intake, and then shooting the cube back out into either the low, mid, or high shelves.</p>
 </div>
 <div class="section" id="code-review">
-<h2>Code Review<a class="headerlink" href="#code-review" title="Permalink to this heading"></a></h2>
+<h3>Code Review<a class="headerlink" href="#code-review" title="Permalink to this heading"></a></h3>
 <div class="section" id="adding-logging-to-the-wrist">
-<h3>Adding Logging to the Wrist<a class="headerlink" href="#adding-logging-to-the-wrist" title="Permalink to this heading"></a></h3>
+<h4>Adding Logging to the Wrist<a class="headerlink" href="#adding-logging-to-the-wrist" title="Permalink to this heading"></a></h4>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initShuffleboard</span><span class="p">(</span><span class="n">LOG_LEVEL</span><span class="w"> </span><span class="n">level</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">level</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOG_LEVEL</span><span class="p">.</span><span class="na">OFF</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOG_LEVEL</span><span class="p">.</span><span class="na">MINIMAL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="p">;</span>
@@ -776,7 +772,7 @@ Our old swerve drive code followed the North, East, Up convention, which can be 
 <p>As seen in this code segment we added logging to the cube shooter code. We created a new tab in Shuffleboard called “Wrist” then used the loggingLevel contsant we created to seperate the logs into different sections for the wrist. Depending on if the loggingLevel is OFF, ALL, MEDIUM, or MINIMAL, Shuffleboard will only show the tabs listed under each case, this way we reduce the amount of logs we used depending on what is needed.</p>
 </div>
 <div class="section" id="creating-shooter">
-<h3>Creating Shooter<a class="headerlink" href="#creating-shooter" title="Permalink to this heading"></a></h3>
+<h4>Creating Shooter<a class="headerlink" href="#creating-shooter" title="Permalink to this heading"></a></h4>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="nf">Shooter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">TalonFX</span><span class="w"> </span><span class="n">leftMotor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TalonFX</span><span class="p">(</span><span class="n">ShooterConstants</span><span class="p">.</span><span class="na">kLeftMotorID</span><span class="p">);</span>
 <span class="w">        </span><span class="n">TalonFX</span><span class="w"> </span><span class="n">rightMotor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TalonFX</span><span class="p">(</span><span class="n">ShooterConstants</span><span class="p">.</span><span class="na">kRightMotorID</span><span class="p">);</span>
@@ -809,7 +805,7 @@ Our old swerve drive code followed the North, East, Up convention, which can be 
 <p>We created the shooter for the cube spammer in code, and then created an outtake command that waits 0.25 seconds to shoot before setting the power back to 0 so the cube-spammer is no longer outtaking. We also created an intake command which also waits 0.25 seconds before intaking the cube and then setting the power to neutral power, that way it is no longer intaking or outtaking.</p>
 </div>
 <div class="section" id="added-button-bindings">
-<h3>Added Button Bindings<a class="headerlink" href="#added-button-bindings" title="Permalink to this heading"></a></h3>
+<h4>Added Button Bindings<a class="headerlink" href="#added-button-bindings" title="Permalink to this heading"></a></h4>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="n">commandDriverController</span><span class="p">.</span><span class="na">share</span><span class="p">().</span><span class="na">onTrue</span><span class="p">(</span><span class="n">Commands</span><span class="p">.</span><span class="na">runOnce</span><span class="p">(</span><span class="n">imu</span><span class="p">::</span><span class="n">zeroHeading</span><span class="p">));</span>
 <span class="w">    </span><span class="n">commandDriverController</span><span class="p">.</span><span class="na">options</span><span class="p">().</span><span class="na">onTrue</span><span class="p">(</span><span class="n">Commands</span><span class="p">.</span><span class="na">runOnce</span><span class="p">(</span><span class="n">swerveDrive</span><span class="p">::</span><span class="n">resetEncoders</span><span class="p">));</span>
 <span class="w">    </span><span class="n">commandDriverController</span><span class="p">.</span><span class="na">triangle</span><span class="p">().</span><span class="na">whileTrue</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">TheGreatBalancingAct</span><span class="p">(</span><span class="n">swerveDrive</span><span class="p">));</span>
@@ -824,37 +820,36 @@ Our old swerve drive code followed the North, East, Up convention, which can be 
 </pre></div>
 </div>
 <p>We added button bindings to our cube-spammer code. We binded multiple commands to the buttons on the controller, including a low, mid, and high option for scoring, a ground button for intaking, a button for stowing the robot arm, a resetEncoder button, and a button for TheGreatBalancingAct, a command that balances the swerve drive on the charging station.</p>
-<p>########################################################################################################################################################################################################################################################################################################################################################################################################################################################################## Add Wrist Position Constants</p>
+</div>
 </div>
 </div>
 <div class="section" id="autos">
 <h2>Autos<a class="headerlink" href="#autos" title="Permalink to this heading"></a></h2>
-</div>
 <div class="section" id="cube-shooter-autos">
-<h2>Cube Shooter Autos<a class="headerlink" href="#cube-shooter-autos" title="Permalink to this heading"></a></h2>
+<h3>Cube Shooter Autos<a class="headerlink" href="#cube-shooter-autos" title="Permalink to this heading"></a></h3>
 <p>During the offseason, we created 4 different autos for the cube shooter robot. To create these autos, we made an auto path using pathplanner and then created commands within RobotContainer.java to integrate the path planner autos into our program. Our four autos were 3PieceShort, 3PieceLong, DirectBalance, and Balance. They will each be explained in detail below. We also made a ShuffleBoard tab with a dropdown menu with which we can change the auto currently being used. Finally, to get rid of the lag that occurred at the beginning of each auto, we used hashmap to initialize the paths so that they built before the auto was run.</p>
 <div class="section" id="pieceshort-auto">
-<h3>1. 3PieceShort Auto<a class="headerlink" href="#pieceshort-auto" title="Permalink to this heading"></a></h3>
+<h4>1. 3PieceShort Auto<a class="headerlink" href="#pieceshort-auto" title="Permalink to this heading"></a></h4>
 <p>The 3PieceShort auto involves scoring a preloaded cube onto the high node on the non-cable side, followed by two cubes onto the low nodes. This auto also includes mobility (taxi) as the two low cubes were picked up from the field.</p>
 <p><img alt="3PieceShort Auto" src="https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/3PieceShortPathPlannerAuto.PNG" />​</p>
 </div>
 <div class="section" id="piecelong-auto">
-<h3>2. 3PieceLong Auto<a class="headerlink" href="#piecelong-auto" title="Permalink to this heading"></a></h3>
+<h4>2. 3PieceLong Auto<a class="headerlink" href="#piecelong-auto" title="Permalink to this heading"></a></h4>
 <p>The 3PieceLong auto is essentially the same auto as 3PieceShort, but it occurs on the cable side of the field. The 3PieceLong auto involves scoring a preloaded cube onto the high node on the cable side, followed by two cubes onto the low nodes. This auto also includes mobility (taxi) as the two low cubes were picked up from the field.</p>
 <p><img alt="3PieceLong Auto" src="https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/3PieceLongPathPlannerAuto.PNG" />​</p>
 </div>
 <div class="section" id="directbalance-auto">
-<h3>3. DirectBalance Auto<a class="headerlink" href="#directbalance-auto" title="Permalink to this heading"></a></h3>
+<h4>3. DirectBalance Auto<a class="headerlink" href="#directbalance-auto" title="Permalink to this heading"></a></h4>
 <p>The DirectBalance auto involves scoring a preloaded cube onto the high node in the middle of the grid. The robot then engages on the charge station.</p>
 <p><img alt="DirectBalance Auto" src="https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/DirectBalancePathPlannerAuto.PNG" />​</p>
 </div>
 <div class="section" id="balance-auto">
-<h3>4. Balance Auto<a class="headerlink" href="#balance-auto" title="Permalink to this heading"></a></h3>
+<h4>4. Balance Auto<a class="headerlink" href="#balance-auto" title="Permalink to this heading"></a></h4>
 <p>The Balance auto is similar to the DirectBalance auto, except that it taxis before engaging on the charge station. The Balance auto involves scoring a preloaded cube onto the high node in the middle of the grid. The robot then taxis and engages on the charge station.</p>
 <p><img alt="Balance Auto" src="https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/BalancePathPlannerAuto.PNG" />​</p>
 </div>
 <div class="section" id="code-segments">
-<h3>Code Segments<a class="headerlink" href="#code-segments" title="Permalink to this heading"></a></h3>
+<h4>Code Segments<a class="headerlink" href="#code-segments" title="Permalink to this heading"></a></h4>
 <p>The code block shown below turns each auto path into a command that can be accessed and chosen within Shuffleboard.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initAutoChoosers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">paths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -974,6 +969,7 @@ Our old swerve drive code followed the North, East, Up convention, which can be 
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
