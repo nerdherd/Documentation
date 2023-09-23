@@ -389,6 +389,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#saturday">4/15 Saturday</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#programming">Programming</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#autos">Autos</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="worldsRecap.html">World Championship (4/19 - 4/22)</a><ul>
@@ -560,26 +564,61 @@
 <li><p>Test batteries</p></li>
 <li><p>Scouting battery connections</p></li>
 <li><p>Elevator assembly</p></li>
-<li><p>Spare claw assembly
-<img alt="image" src="https://github.com/nerdherd/Documentation/assets/72529534/407f3b9f-fb0d-4713-8075-fde20c13bd3d" /></p></li>
-<li><p>Continued making bumpers</p></li>
-<li><p>Painted battery cart
-<img alt="image" src="https://github.com/nerdherd/Documentation/assets/72529534/ae3390a6-5212-4df3-a783-dd811ed0b1e3" /></p></li>
+<li><p>Spare claw assembly</p></li>
 </ul>
+<p><img alt="image" src="https://github.com/nerdherd/Documentation/assets/72529534/407f3b9f-fb0d-4713-8075-fde20c13bd3d" /></p>
+<ul class="simple">
+<li><p>Continued making bumpers</p></li>
+<li><p>Painted battery cart</p></li>
+</ul>
+<p><img alt="image" src="https://github.com/nerdherd/Documentation/assets/72529534/ae3390a6-5212-4df3-a783-dd811ed0b1e3" /></p>
 </div>
 <div class="section" id="saturday">
 <h3>4/15 Saturday<a class="headerlink" href="#saturday" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Tested 775 motors</p></li>
 <li><p>Finished testing batteries</p></li>
-<li><p>Finished assembling elevator
-<img alt="image" src="https://github.com/nerdherd/Documentation/assets/72529534/8e64897f-a7ad-41a3-ae03-17ec905d08bf" /></p></li>
+<li><p>Finished assembling elevator</p></li>
+</ul>
+<p><img alt="image" src="https://github.com/nerdherd/Documentation/assets/72529534/8e64897f-a7ad-41a3-ae03-17ec905d08bf" /></p>
+<ul class="simple">
 <li><p>Finished replacing threads</p></li>
 <li><p>Finished spare claw assembly</p></li>
-<li><p>Finished bumpers
-<img alt="image" src="https://github.com/nerdherd/Documentation/assets/72529534/53b3bb89-a0cd-40c5-a8fb-cbdfbc178d84" /></p></li>
+<li><p>Finished bumpers</p></li>
+</ul>
+<p><img alt="image" src="https://github.com/nerdherd/Documentation/assets/72529534/53b3bb89-a0cd-40c5-a8fb-cbdfbc178d84" /></p>
+<ul class="simple">
 <li><p>Finalized packing</p></li>
 </ul>
+</div>
+</div>
+<div class="section" id="programming">
+<h2>Programming<a class="headerlink" href="#programming" title="Permalink to this heading"></a></h2>
+<div class="section" id="autos">
+<h3>Autos<a class="headerlink" href="#autos" title="Permalink to this heading"></a></h3>
+<p>This week, we finalized our taxi charge auto. This auto scores a preloaded cone onto the high node, then drives over the charge station and back on to engage.</p>
+<p>We added a deadline of 13.5 seconds to the auto, which allows the swerve to tow its modules in and lock them, stopping it from falling off of the charge station.</p>
+<p>Additionally, we found that decreasing the speed of our auto made it more precise. We were able to decrease the speed because of mechanical changes that smoothed out our belly pan, stopping it from colliding with the charge station.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">CommandBase</span><span class="w"> </span><span class="nf">preloadTaxiChargeBackwardsSLOW</span><span class="p">(</span><span class="n">SwerveDrivetrain</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">,</span><span class="w"> </span><span class="n">MotorClaw</span><span class="w"> </span><span class="n">claw</span><span class="p">,</span><span class="w"> </span><span class="n">Arm</span><span class="w"> </span><span class="n">arm</span><span class="p">,</span><span class="w"> </span><span class="n">Elevator</span><span class="w"> </span><span class="n">elevator</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">sequence</span><span class="p">(</span>
+<span class="w">          </span><span class="n">deadline</span><span class="p">(</span>
+<span class="w">              </span><span class="n">waitSeconds</span><span class="p">(</span><span class="mf">13.5</span><span class="p">),</span><span class="w"> </span>
+<span class="w">              </span><span class="n">sequence</span><span class="p">(</span>
+<span class="w">                  </span><span class="n">ChargeAutos</span><span class="p">.</span><span class="na">preloadHigh</span><span class="p">(</span><span class="n">arm</span><span class="p">,</span><span class="w"> </span><span class="n">elevator</span><span class="p">,</span><span class="w"> </span><span class="n">claw</span><span class="p">),</span>
+<span class="w">                  </span><span class="n">deadline</span><span class="p">(</span>
+<span class="w">                      </span><span class="n">taxiChargeBackwardsSLOW</span><span class="p">(</span><span class="n">swerveDrive</span><span class="p">),</span>
+<span class="w">                      </span><span class="n">run</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">arm</span><span class="p">.</span><span class="na">moveArmMotionMagic</span><span class="p">(</span><span class="n">elevator</span><span class="p">.</span><span class="na">percentExtended</span><span class="p">())),</span>
+<span class="w">                      </span><span class="n">run</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">elevator</span><span class="p">.</span><span class="na">moveMotionMagic</span><span class="p">(</span><span class="n">arm</span><span class="p">.</span><span class="na">getArmAngle</span><span class="p">()))</span>
+<span class="w">                  </span><span class="p">)</span><span class="w">    </span>
+<span class="w">              </span><span class="p">)</span>
+<span class="w">          </span><span class="p">),</span>
+<span class="w">          </span><span class="n">runOnce</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">.</span><span class="na">towModules</span><span class="p">()),</span>
+<span class="w">          </span><span class="n">waitSeconds</span><span class="p">(</span><span class="mf">0.2</span><span class="p">),</span>
+<span class="w">          </span><span class="n">runOnce</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">.</span><span class="na">stopModules</span><span class="p">())</span>
+<span class="w">      </span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
