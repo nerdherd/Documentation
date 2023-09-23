@@ -1,3 +1,3 @@
-### Subtitle 
+### Sponsorship
 
 Insert information here.
