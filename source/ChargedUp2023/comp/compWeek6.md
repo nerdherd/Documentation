@@ -69,3 +69,32 @@ Since we have finished Cadding our robot, we have focused on meching the robot (
 ### 4/8 
 
 After finishing the updates to our robot, we went to a practice field in order to test our robot with other teams. 
+
+## Programming
+
+This week, we switched to using velocity control on our swerve drive during autos. This allows our auto timings to be more accurate.
+```java
+public void setDesiredState(SwerveModuleState state) {
+    if (Math.abs(state.speedMetersPerSecond) < 0.001) {
+        stop();
+        return;
+    }
+    state = SwerveModuleState.optimize(state, getState().angle);
+    
+    desiredAngle = state.angle.getDegrees();
+    
+    double velocity = state.speedMetersPerSecond / ModuleConstants.kDriveTicksPer100MsToMetersPerSec / ModuleConstants.kDriveMotorGearRatio;
+    this.desiredVelocity = velocity;
+    
+    // Toggle between velocity control and percent output
+    if (this.velocityControl) {
+        driveMotor.set(ControlMode.Velocity, velocity);
+    } else {
+        double currentPercent = state.speedMetersPerSecond / SwerveDriveConstants.kPhysicalMaxSpeedMetersPerSecond;
+        driveMotor.set(ControlMode.PercentOutput, currentPercent);
+    }
+    double turnPower = turningController.calculate(getTurningPosition(), state.angle.getRadians());
+    
+    turnMotor.set(ControlMode.PercentOutput, turnPower);
+}
+```
