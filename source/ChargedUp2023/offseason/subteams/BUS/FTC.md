@@ -1,3 +1,1 @@
-### Subtitle 
-
-Insert information here.
+New FTC members applied for the 2023-2024 year. They went through an application process and sorted into the different types of FTC teams (48,49,50, and 51). Administration works with both FRC and FTC on food order forms and outreach to collaborate together. 
