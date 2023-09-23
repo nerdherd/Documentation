@@ -1,4 +1,4 @@
-# Drive Practice #1
+# SoCal Showdown Day 3
 
 ```{admonition} Under Construction
 This page is currently under construction. Please return later for more updates.
@@ -10,7 +10,7 @@ This page is currently under construction. Please return later for more updates.
 ## Assembly
 
 
-## Drivers
+## Programming
 
 
 ## Technician

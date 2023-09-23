@@ -1,4 +1,4 @@
-# Programming Practice #1
+# Chezy Champs Day 2
 
 ```{admonition} Under Construction
 This page is currently under construction. Please return later for more updates.
@@ -10,7 +10,7 @@ This page is currently under construction. Please return later for more updates.
 ## Assembly
 
 
-## Programming
+## Drivers
 
 
 ## Technician
