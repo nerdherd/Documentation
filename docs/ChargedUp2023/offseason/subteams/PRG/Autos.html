@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; Nerd Herd Documentation</title>
+  <title>Cube Shooter Autos &mdash; Nerd Herd Documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -441,6 +441,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../prog.html#cube-shooter-robot">Cube Shooter Robot</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../prog.html#code-review">Code Review</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../prog.html#autos">Autos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../prog.html#cube-shooter-autos">Cube Shooter Autos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../prog.html#rotational-linear-robot">Rotational-Linear Robot</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../prog.html#miscellaneous">Miscellaneous</a></li>
 </ul>
@@ -523,7 +524,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">&lt;no title&gt;</li>
+      <li class="breadcrumb-item active">Cube Shooter Autos</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../_sources/ChargedUp2023/offseason/subteams/PRG/Autos.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -533,7 +534,154 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
+  <div class="section" id="cube-shooter-autos">
+<h1>Cube Shooter Autos<a class="headerlink" href="#cube-shooter-autos" title="Permalink to this heading"></a></h1>
+<p>During the offseason, we created 4 different autos for the cube shooter robot. To create these autos, we made an auto path using pathplanner and then created commands within RobotContainer.java to integrate the path planner autos into our program. Our four autos were 3PieceShort, 3PieceLong, DirectBalance, and Balance. They will each be explained in detail below. We also made a ShuffleBoard tab with a dropdown menu with which we can change the auto currently being used. Finally, to get rid of the lag that occurred at the beginning of each auto, we used hashmap to initialize the paths so that they built before the auto was run.</p>
+<div class="section" id="pieceshort-auto">
+<h2>1. 3PieceShort Auto<a class="headerlink" href="#pieceshort-auto" title="Permalink to this heading"></a></h2>
+<p>The 3PieceShort auto involves scoring a preloaded cube onto the high node on the non-cable side, followed by two cubes onto the low nodes. This auto also includes mobility (taxi) as the two low cubes were picked up from the field.</p>
+<p><img alt="3PieceShort Auto" src="ChargedUp2023/offseason/images/Offseason/Prog/3PieceShortPathPlannerAuto.png" />​</p>
+</div>
+<div class="section" id="piecelong-auto">
+<h2>2. 3PieceLong Auto<a class="headerlink" href="#piecelong-auto" title="Permalink to this heading"></a></h2>
+<p>The 3PieceLong auto is essentially the same auto as 3PieceShort, but it occurs on the cable side of the field. The 3PieceLong auto involves scoring a preloaded cube onto the high node on the cable side, followed by two cubes onto the low nodes. This auto also includes mobility (taxi) as the two low cubes were picked up from the field.</p>
+<p><img alt="3PieceLong Auto" src="ChargedUp2023/offseason/images/Offseason/Prog/3PieceyLongPathPlannerAuto.png" />​</p>
+</div>
+<div class="section" id="directbalance-auto">
+<h2>3. DirectBalance AUto<a class="headerlink" href="#directbalance-auto" title="Permalink to this heading"></a></h2>
+<p>The DirectBalance auto involves scoring a preloaded cube onto the high node in the middle of the grid. The robot then engages on the charge station.</p>
+<p><img alt="DirectBalance Auto" src="ChargedUp2023/offseason/images/Offseason/Prog/DirectBalancePathPlannerAuto.png" />​</p>
+</div>
+<div class="section" id="balance-auto">
+<h2>4. Balance Auto<a class="headerlink" href="#balance-auto" title="Permalink to this heading"></a></h2>
+<p>The Balance auto is similar to the DirectBalance auto, except that it taxis before engaging on the charge station. The Balance auto involves scoring a preloaded cube onto the high node in the middle of the grid. The robot then taxis and engages on the charge station.</p>
+<p><img alt="Balance Auto" src="ChargedUp2023/offseason/images/Offseason/Prog/BalancePathPlannerAuto.png" />​</p>
+</div>
+<div class="section" id="code-segments">
+<h2>Code Segments<a class="headerlink" href="#code-segments" title="Permalink to this heading"></a></h2>
+<p>The code block shown below turns each auto path into a command that can be accessed and chosen within Shuffleboard.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initAutoChoosers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">paths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="s">&quot;3Piece Short&quot;</span><span class="p">,</span><span class="s">&quot;3Piece Long&quot;</span><span class="p">,</span><span class="s">&quot;Balance&quot;</span><span class="p">,</span><span class="s">&quot;DirectBalance&quot;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">PathPlannerAutos</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">swerveDrive</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">paths</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">PathPlannerAutos</span><span class="p">.</span><span class="na">initPath</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+<span class="w">      </span><span class="n">PathPlannerAutos</span><span class="p">.</span><span class="na">initPathGroup</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">autoChooser</span><span class="p">.</span><span class="na">addOption</span><span class="p">(</span><span class="s">&quot;Do Nothing&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Commands</span><span class="p">::</span><span class="n">none</span><span class="p">);</span>
+<span class="w">    </span><span class="n">autoChooser</span><span class="p">.</span><span class="na">addOption</span><span class="p">(</span><span class="s">&quot;Path Planner Balance&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Balance</span><span class="p">(</span><span class="n">PathPlannerAutos</span><span class="p">.</span><span class="na">autoBuilder</span><span class="p">,</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">,</span><span class="w"> </span><span class="n">shooter</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">));</span>
+<span class="w">    </span><span class="n">autoChooser</span><span class="p">.</span><span class="na">addOption</span><span class="p">(</span><span class="s">&quot;Path Planner 3PieceShort&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Auto3PieceShort</span><span class="p">(</span><span class="n">PathPlannerAutos</span><span class="p">.</span><span class="na">autoBuilder</span><span class="p">,</span><span class="n">swerveDrive</span><span class="p">,</span><span class="w"> </span><span class="n">shooter</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">));</span>
+<span class="w">    </span><span class="n">autoChooser</span><span class="p">.</span><span class="na">addOption</span><span class="p">(</span><span class="s">&quot;Path Planner 3PieceLong&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Auto3PieceLong</span><span class="p">(</span><span class="n">PathPlannerAutos</span><span class="p">.</span><span class="na">autoBuilder</span><span class="p">,</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">,</span><span class="w"> </span><span class="n">shooter</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">));</span>
+<span class="w">    </span><span class="n">autoChooser</span><span class="p">.</span><span class="na">addOption</span><span class="p">(</span><span class="s">&quot;Path Planner DirectBalance&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DirectBalance</span><span class="p">(</span><span class="n">PathPlannerAutos</span><span class="p">.</span><span class="na">autoBuilder</span><span class="p">,</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">,</span><span class="w"> </span><span class="n">shooter</span><span class="p">,</span><span class="w"> </span><span class="n">wrist</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">ShuffleboardTab</span><span class="w"> </span><span class="n">autosTab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Shuffleboard</span><span class="p">.</span><span class="na">getTab</span><span class="p">(</span><span class="s">&quot;Autos&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">autosTab</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Selected Auto&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">autoChooser</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The code block shown below includes the hashmap initialization that allows us to build autos before they are run to prevent lag.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PathPlannerAutos</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">PathPlannerTrajectory</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cachedPaths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">PathPlannerTrajectory</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">cachedPathGroups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Command</span><span class="o">&gt;</span><span class="w"> </span><span class="n">events</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">SwerveAutoBuilder</span><span class="w"> </span><span class="n">autoBuilder</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Load the selected path from storage.</span>
+<span class="cm">     * @param pathName</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initPath</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">pathName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cachedPaths</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">pathName</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DriverStation</span><span class="p">.</span><span class="na">reportWarning</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Path &#39;%s&#39; has been loaded more than once.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pathName</span><span class="p">),</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">PathPlannerTrajectory</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PathPlanner</span><span class="p">.</span><span class="na">loadPath</span><span class="p">(</span><span class="n">pathName</span><span class="p">,</span><span class="w"> </span><span class="n">kPPPathConstraints</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DriverStation</span><span class="p">.</span><span class="na">reportWarning</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Path &#39;%s&#39; could not be loaded!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pathName</span><span class="p">),</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">cachedPaths</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">pathName</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initPathGroup</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">pathName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cachedPathGroups</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">pathName</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DriverStation</span><span class="p">.</span><span class="na">reportWarning</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Path group &#39;%s&#39; has been loaded more than once.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pathName</span><span class="p">),</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">PathPlannerTrajectory</span><span class="o">&gt;</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PathPlanner</span><span class="p">.</span><span class="na">loadPathGroup</span><span class="p">(</span><span class="n">pathName</span><span class="p">,</span><span class="w"> </span><span class="n">kPPPathConstraints</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">path</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DriverStation</span><span class="p">.</span><span class="na">reportWarning</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Path &#39;%s&#39; could not be loaded!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pathName</span><span class="p">),</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">cachedPathGroups</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">pathName</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">PathPlannerTrajectory</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getPathGroup</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">pathNameString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">cachedPathGroups</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">pathNameString</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DriverStation</span><span class="p">.</span><span class="na">reportWarning</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Path &#39;%s&#39; was not pre-loaded into memory, which may cause lag during the Autonomous Period.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pathNameString</span><span class="p">),</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="w">            </span><span class="n">initPathGroup</span><span class="p">(</span><span class="n">pathNameString</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">cachedPathGroups</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">pathNameString</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">PathPlannerTrajectory</span><span class="w"> </span><span class="nf">getPath</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">pathNameString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">cachedPaths</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">pathNameString</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DriverStation</span><span class="p">.</span><span class="na">reportWarning</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Path &#39;%s&#39; was not pre-loaded into memory, which may cause lag during the Autonomous Period.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pathNameString</span><span class="p">),</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="w">            </span><span class="n">initPath</span><span class="p">(</span><span class="n">pathNameString</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">cachedPaths</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">pathNameString</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="n">SwerveDrivetrain</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">autoBuilder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SwerveAutoBuilder</span><span class="p">(</span>
+<span class="w">            </span><span class="n">swerveDrive</span><span class="p">::</span><span class="n">getPose</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">swerveDrive</span><span class="p">::</span><span class="n">resetOdometry</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">PathPlannerConstants</span><span class="p">.</span><span class="na">kPPTranslationPIDConstants</span><span class="p">,</span>
+<span class="w">            </span><span class="n">PathPlannerConstants</span><span class="p">.</span><span class="na">kPPRotationPIDConstants</span><span class="p">,</span>
+<span class="w">            </span><span class="n">swerveDrive</span><span class="p">::</span><span class="n">setChassisSpeeds</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="n">events</span><span class="p">,</span>
+<span class="w">            </span><span class="n">swerveDrive</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Create an auto with the selected PathPlanner path.</span>
+<span class="cm">     * @param pathName</span>
+<span class="cm">     * @param swerveDrive</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">CommandBase</span><span class="w"> </span><span class="nf">pathplannerAuto</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">pathName</span><span class="p">,</span><span class="w"> </span><span class="n">SwerveDrivetrain</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">cachedPaths</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">pathName</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DriverStation</span><span class="p">.</span><span class="na">reportWarning</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Path &#39;%s&#39; was not pre-loaded into memory, which may cause lag during the Autonomous Period.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pathName</span><span class="p">),</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="w">            </span><span class="n">initPath</span><span class="p">(</span><span class="n">pathName</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">PathPlannerTrajectory</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cachedPaths</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">pathName</span><span class="p">);</span>
+
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Commands</span><span class="p">.</span><span class="na">sequence</span><span class="p">(</span>
+<span class="w">            </span><span class="n">Commands</span><span class="p">.</span><span class="na">runOnce</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">swerveDrive</span><span class="p">.</span><span class="na">getImu</span><span class="p">().</span><span class="na">zeroAll</span><span class="p">()),</span>
+<span class="w">            </span><span class="n">autoBuilder</span><span class="p">.</span><span class="na">resetPose</span><span class="p">(</span><span class="n">path</span><span class="p">),</span>
+<span class="w">            </span><span class="n">autoBuilder</span><span class="p">.</span><span class="na">followPathWithEvents</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="w">        </span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Command</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getEvents</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">events</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
 
            </div>
           </div>
