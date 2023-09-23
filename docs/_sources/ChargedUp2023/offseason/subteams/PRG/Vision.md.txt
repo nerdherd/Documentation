@@ -1,4 +1,6 @@
-## Alex Duan's Vision Group!
+```{admonition}
+Jonathan loves ChatGPT!
+```
 
 Target tracking with systems like Limelight enhances a robotics team's performance, consistency, and strategic capabilities in competitions while providing valuable learning opportunities for team members. It's a crucial tool for success in the world of competitive robotics. Tracking a target using a system like Limelight can be incredibly beneficial for a robotics team in various ways:
 
