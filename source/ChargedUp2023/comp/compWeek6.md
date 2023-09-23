@@ -51,6 +51,15 @@
 
 ![Drilling Wood](../../images/2023/Comp4/ASMDrillingWood.png)
 
+### 04/08 Saturday
+
+- Went to Da Vinci
+- Assemble (spare) elevator
+- Clean machine shop
+- Continue testing batteries 
+
+![image](https://github.com/nerdherd/Documentation/assets/72529534/14d09993-fc0f-401b-b5cf-430d307bc481)
+
 ## CAD
 
 ### 4/3 
