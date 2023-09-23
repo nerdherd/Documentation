@@ -2,13 +2,13 @@
 
 Use the links below to explore our 3 titles:
 
-- [Title 1](#title-1)
+- [Vision](#Vision-Changes)
 - [Title 2](#title-2)
 - [Title 3](#title-3)
 
-## Title 1
+## Vision Changes
 
-```{include} ./PRG/Title1.md
+```{include} ./PRG/Vision.md
 ```
 
 ## Title 2
