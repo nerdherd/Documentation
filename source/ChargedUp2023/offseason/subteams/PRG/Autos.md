@@ -7,7 +7,7 @@ During the offseason, we created 4 different autos for the cube shooter robot. T
 
 The 3PieceShort auto involves scoring a preloaded cube onto the high node on the non-cable side, followed by two cubes onto the low nodes. This auto also includes mobility (taxi) as the two low cubes were picked up from the field.
 
-![3PieceShort Auto](../../ocumentation/source/images/Offseason/Prog/3PieceShortPathPlannerAuto.png)​
+![3PieceShort Auto](https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/3PieceShortPathPlannerAuto.png)​
 
 ### 2. 3PieceLong Auto
 
@@ -19,13 +19,13 @@ The 3PieceLong auto is essentially the same auto as 3PieceShort, but it occurs o
 
 The DirectBalance auto involves scoring a preloaded cube onto the high node in the middle of the grid. The robot then engages on the charge station.
 
-![DirectBalance Auto](../../Documentation/source/images/Offseason/Prog/DirectBalancePathPlannerAuto.png)​
+![DirectBalance Auto](https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/DirectBalancePathPlannerAuto.png)​
 
 ### 4. Balance Auto
 
 The Balance auto is similar to the DirectBalance auto, except that it taxis before engaging on the charge station. The Balance auto involves scoring a preloaded cube onto the high node in the middle of the grid. The robot then taxis and engages on the charge station.
 
-![Balance Auto](../../images/Offseason/Prog/BalancePathPlannerAuto.PNG)​
+![Balance Auto](https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/BalancePathPlannerAuto.PNG)​
 
 ### Code Segments
 
