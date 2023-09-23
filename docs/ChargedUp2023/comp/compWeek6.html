@@ -624,6 +624,52 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>We also added offsets to all of our gyro axes, allowing us to zero all axes at the start of autonomous init. This should make our balancing autos more reliable.</p>
+<p>We implemented this in <a class="reference external" href="https://github.com/nerdherd/ChargedUp2023/pull/70">Pull Request #70</a>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Gyro</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Reportable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/** Soft reset all axes */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">zeroAll</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">zeroHeading</span><span class="p">();</span>
+<span class="w">    </span><span class="cm">/** Soft reset the pitch */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">zeroPitch</span><span class="p">();</span>
+<span class="w">    </span><span class="cm">/** Soft reset the roll */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">zeroRoll</span><span class="p">();</span>
+<span class="w">    </span><span class="cm">/** Soft reset the heading */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">resetHeading</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">headingDegrees</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/** Soft reset the pitch */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">resetPitch</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">pitchDegrees</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/** Soft reset the roll */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">resetRoll</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">rollDegrees</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/** Set the yaw offset */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setOffset</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">offset</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/** Set the pitch offset */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPitchOffset</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">offset</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/** Set the roll offset */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setRollOffset</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">offset</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Get the heading in degrees. (CW = positive)</span>
+<span class="cm">     * @return  IMU Heading in degrees.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getHeading</span><span class="p">();</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Get the pitch in degrees. (CW = positive)</span>
+<span class="cm">     * @return  IMU Heading in degrees.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getPitch</span><span class="p">();</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Get the roll in degrees. (CW = positive)</span>
+<span class="cm">     * @return  IMU Heading in degrees.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getRoll</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getHeadingOffset</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getRollOffset</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getPitchOffset</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Rotation2d</span><span class="w"> </span><span class="nf">getRotation2d</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Rotation3d</span><span class="w"> </span><span class="nf">getRotation3d</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><em>Our updated Gyro interface, implemented in both NavX.java and Pigeon.java</em></p>
 </div>
 </div>
 
