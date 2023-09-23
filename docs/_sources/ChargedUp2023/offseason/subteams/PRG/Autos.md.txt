@@ -7,25 +7,27 @@ During the offseason, we created 4 different autos for the cube shooter robot. T
 
 The 3PieceShort auto involves scoring a preloaded cube onto the high node on the non-cable side, followed by two cubes onto the low nodes. This auto also includes mobility (taxi) as the two low cubes were picked up from the field.
 
-![3PieceShort Auto](https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/3PieceShortPathPlannerAuto.PNG)​
+![3PieceShortPathPlannerAuto](https://github.com/nerdherd/Documentation/assets/72529534/0d1d710b-b0ee-4cda-8089-b2559cce2803)
 
 #### 2. 3PieceLong Auto
 
 The 3PieceLong auto is essentially the same auto as 3PieceShort, but it occurs on the cable side of the field. The 3PieceLong auto involves scoring a preloaded cube onto the high node on the cable side, followed by two cubes onto the low nodes. This auto also includes mobility (taxi) as the two low cubes were picked up from the field.
 
-![3PieceLong Auto](https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/3PieceLongPathPlannerAuto.PNG)​
+![3PieceLongPathPlannerAuto](https://github.com/nerdherd/Documentation/assets/72529534/48f08707-f7f3-4714-ac61-35a0b4119978)
 
 #### 3. DirectBalance Auto
 
 The DirectBalance auto involves scoring a preloaded cube onto the high node in the middle of the grid. The robot then engages on the charge station.
 
-![DirectBalance Auto](https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/DirectBalancePathPlannerAuto.PNG)​
+![DirectBalancePathPlannerAuto](https://github.com/nerdherd/Documentation/assets/72529534/452805fb-f95d-4ab6-ad05-b36ed330e77a)
+
 
 #### 4. Balance Auto
 
 The Balance auto is similar to the DirectBalance auto, except that it taxis before engaging on the charge station. The Balance auto involves scoring a preloaded cube onto the high node in the middle of the grid. The robot then taxis and engages on the charge station.
 
-![Balance Auto](https://github.com/nerdherd/Documentation/blob/main/source/images/Offseason/Prog/BalancePathPlannerAuto.PNG)​
+![BalancePathPlannerAuto](https://github.com/nerdherd/Documentation/assets/72529534/ef8b1535-f6b8-4265-9454-c565bd08b247)
+
 
 #### Code Segments
 
