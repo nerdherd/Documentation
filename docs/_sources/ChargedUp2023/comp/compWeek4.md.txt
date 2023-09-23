@@ -1,10 +1,6 @@
 # Competition Week 4
 *Week 11 (3/19 - 3/25)*
 
-```{admonition} Under Construction
-This page is currently under construction. Please return later for more updates.
-```
-
 ## Assembly
 
 ### 3/20 Monday
