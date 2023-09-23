@@ -2,7 +2,7 @@
 
 Use the links below to explore our 3 titles:
 
-- [Title 1](#title-1)
+- [SoCal Showdown](#SoCal-Showdown)
 - [Title 2](#title-2)
 - [Title 3](#title-3)
 - [Title 4](#title-4)
