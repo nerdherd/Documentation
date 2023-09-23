@@ -380,6 +380,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#id2">4/8</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#programming">Programming</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="compWeek7.html">Week 14 (4/9 - 4/15)</a><ul>
@@ -593,6 +594,35 @@
 <div class="section" id="id2">
 <h3>4/8<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
 <p>After finishing the updates to our robot, we went to a practice field in order to test our robot with other teams.</p>
+</div>
+</div>
+<div class="section" id="programming">
+<h2>Programming<a class="headerlink" href="#programming" title="Permalink to this heading"></a></h2>
+<p>This week, we switched to using velocity control on our swerve drive during autos. This allows our auto timings to be more accurate.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDesiredState</span><span class="p">(</span><span class="n">SwerveModuleState</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="na">speedMetersPerSecond</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.001</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">stop</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SwerveModuleState</span><span class="p">.</span><span class="na">optimize</span><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="n">getState</span><span class="p">().</span><span class="na">angle</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">desiredAngle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="na">angle</span><span class="p">.</span><span class="na">getDegrees</span><span class="p">();</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="na">speedMetersPerSecond</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ModuleConstants</span><span class="p">.</span><span class="na">kDriveTicksPer100MsToMetersPerSec</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ModuleConstants</span><span class="p">.</span><span class="na">kDriveMotorGearRatio</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">desiredVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velocity</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Toggle between velocity control and percent output</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">velocityControl</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">driveMotor</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">ControlMode</span><span class="p">.</span><span class="na">Velocity</span><span class="p">,</span><span class="w"> </span><span class="n">velocity</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">currentPercent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="na">speedMetersPerSecond</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">SwerveDriveConstants</span><span class="p">.</span><span class="na">kPhysicalMaxSpeedMetersPerSecond</span><span class="p">;</span>
+<span class="w">        </span><span class="n">driveMotor</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">ControlMode</span><span class="p">.</span><span class="na">PercentOutput</span><span class="p">,</span><span class="w"> </span><span class="n">currentPercent</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">turnPower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">turningController</span><span class="p">.</span><span class="na">calculate</span><span class="p">(</span><span class="n">getTurningPosition</span><span class="p">(),</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="na">angle</span><span class="p">.</span><span class="na">getRadians</span><span class="p">());</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">turnMotor</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">ControlMode</span><span class="p">.</span><span class="na">PercentOutput</span><span class="p">,</span><span class="w"> </span><span class="n">turnPower</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 </div>
 </div>
