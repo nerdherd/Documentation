@@ -63,10 +63,6 @@ The code block shown below includes the hashmap initialization that allows us to
 
 public class PathPlannerAutos {
     private static HashMap<String, PathPlannerTrajectory> cachedPaths = new HashMap<>();
-    private static HashMap<String, List<PathPlannerTrajectory>> cachedPathGroups = new HashMap<>();
-    private static HashMap<String, Command> events = new HashMap<>();
-
-    public static SwerveAutoBuilder autoBuilder;
 
     /**
      * Load the selected path from storage.
@@ -84,28 +80,6 @@ public class PathPlannerAutos {
         }
         cachedPaths.put(pathName, path);
     }
-
-    public static void initPathGroup(String pathName) {
-        if (cachedPathGroups.containsKey(pathName)) {
-            DriverStation.reportWarning(String.format("Path group '%s' has been loaded more than once.", pathName), true);
-        }
-
-        List<PathPlannerTrajectory> path = PathPlanner.loadPathGroup(pathName, kPPPathConstraints);
-
-        if (path == null || path.size() == 0) {
-            DriverStation.reportWarning(String.format("Path '%s' could not be loaded!", pathName), true);
-        }
-        cachedPathGroups.put(pathName, path);
-    }
-
-    public static List<PathPlannerTrajectory> getPathGroup(String pathNameString) {
-        if (!cachedPathGroups.containsKey(pathNameString)) {
-            DriverStation.reportWarning(String.format("Path '%s' was not pre-loaded into memory, which may cause lag during the Autonomous Period.", pathNameString), true);
-            initPathGroup(pathNameString);
-        }
-        return cachedPathGroups.get(pathNameString);
-        
-    }
     
     public static PathPlannerTrajectory getPath(String pathNameString) {
         if (!cachedPaths.containsKey(pathNameString)) {
@@ -114,43 +88,6 @@ public class PathPlannerAutos {
         }
         return cachedPaths.get(pathNameString);
         
-    }
-
-    public static void init(SwerveDrivetrain swerveDrive) {
-        autoBuilder = new SwerveAutoBuilder(
-            swerveDrive::getPose, 
-            swerveDrive::resetOdometry, 
-            PathPlannerConstants.kPPTranslationPIDConstants,
-            PathPlannerConstants.kPPRotationPIDConstants,
-            swerveDrive::setChassisSpeeds, 
-            events,
-            swerveDrive);
-    }
-
-    /**
-     * Create an auto with the selected PathPlanner path.
-     * @param pathName
-     * @param swerveDrive
-     * @return
-     */
-    public static CommandBase pathplannerAuto(String pathName, SwerveDrivetrain swerveDrive) {
-        if (!cachedPaths.containsKey(pathName)) {
-            DriverStation.reportWarning(String.format("Path '%s' was not pre-loaded into memory, which may cause lag during the Autonomous Period.", pathName), true);
-            initPath(pathName);
-        }
-
-        PathPlannerTrajectory path = cachedPaths.get(pathName);
-
-
-        return Commands.sequence(
-            Commands.runOnce(() -> swerveDrive.getImu().zeroAll()),
-            autoBuilder.resetPose(path),
-            autoBuilder.followPathWithEvents(path)
-        );
-    }
-
-    public static HashMap<String, Command> getEvents() {
-        return events;
     }
 }
 ```
