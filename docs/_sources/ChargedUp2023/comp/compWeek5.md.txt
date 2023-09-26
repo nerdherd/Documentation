@@ -1,16 +1,6 @@
 # Competition Week 5
 *Week 12 (3/26 - 4/1)*
 
-```{admonition} Under Construction
-This page is currently under construction. Please return later for more updates.
-```
-
-## Assembly
-
-## CAD
-
-## Manufacturing
-
 ## Programming
 
 We went to DaVinci Schools. Upon arriving, we tested both our preload pickup score pickup auto and preload taxi charge auto.
@@ -23,6 +13,8 @@ Vision programming process:
 - Our ventures were quite successful that day, we got like around 8 full videos of the working auto to put on teams and impress Mr. Harder and the rest of the NerdHerd
 
 [Working Vision Auto](https://lbschools.sharepoint.com/sites/FRC6872023/_layouts/15/stream.aspx?id=%2Fsites%2FFRC6872023%2FShared%20Documents%2FGeneral%2FRobot%20Videos%2F4201%20Practice%2020230408%2F20230408%5F181825%2Emp4&referrer=Teams%2ETEAMS%2DELECTRON&referrerScenario=teamsSdk%2DopenFilePreview)
+
+![20230408_181825](https://github.com/nerdherd/Documentation/assets/72529534/d08ed235-3c3c-461b-93b6-1fec4002aeae)
 
 Signing off,
 Alexander Duan

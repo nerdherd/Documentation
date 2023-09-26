@@ -208,6 +208,14 @@ Inspiration we used for our elevator:
 
 ![Image](../../../images/Offseason/Design/Picture13.png)
 
+First Iteration 
+
+![Image](../../../images/Offseason/Design/Picture44.png)
+
+Second Iteration
+
+![Image](../../images/Offseason/Design/Picture45.png)
+
 ### Intake
 
 Inspiration:
