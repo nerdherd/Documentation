@@ -443,7 +443,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../prog.html#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../prog.html#limelight">Limelight</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../prog.html#vision-odometry">Vision Odometry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../prog.html#vision-odometry">Vision Odometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../prog.html#drive-to-object">Drive to Object</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../prog.html#swerve-updates">Swerve Updates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../prog.html#cube-shooter-robot">Cube Shooter Robot</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../prog.html#autos">Autos</a></li>
@@ -546,29 +547,30 @@ https://github.com/SterlingHS/ChargedUP2023/blob/main/src/main/java/frc/robot/Li
 <div class="section" id="vision-odometry">
 <h1>Vision Odometry<a class="headerlink" href="#vision-odometry" title="Permalink to this heading"></a></h1>
 <p>Using our limelights, we could track our robot’s position based on the april tags around it. We implemented the position estimator so that we could add vision to our odometry, which estimates the position of the robot on the field. It is important that the limelight is higher or below the april tags, because being head-on causes “tag-flipping”. Also, when practicing with the april tags, it is important to make them as flat as possible. One of the problems were how our robot kept showing on the botton left corner. We had to change the x and y field offsets for the vision coordinate system to work with the field 2d coordinate system. The field 2d coordinate system has bottom left as the origin, while the limelight helpers.java uses the middle of the field as the origin.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>     /**
-     * Have modules move towards states and update odometry
-     */
-    @Override
-    public void periodic() {
-        if (!DriverStation.isTest()) {
-            runModules();
-        }
-        // odometer.update(gyro.getRotation2d(), getModulePositions());
-        poseEstimator.update(gyro.getRotation2d(), getModulePositions());
-        Pose3d sunflowerPose3d = sunflower.getPose3d();
-        if (sunflowerPose3d != null) {
-            poseEstimator.addVisionMeasurement(sunflowerPose3d.toPose2d(), Timer.getFPGATimestamp());
-        }
-        field.setRobotPose(poseEstimator.getEstimatedPosition());
-    }
-``` Above is a picture of how we implement the vision readings to the swerve odometry. Sunflower is the class we use to create a Pose3d of our robot&#39;s location. 
-
-# Drive to Object
-Cube to move the robot is going to move to cube. So, use this to move is good. I think that we upgrade the robot.
-Drive to object uses the limelights to detect the color of the cube. We haven&#39;t made our robot move to the target yet, but we have the x and y values
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="cm">/**</span>
+<span class="cm">     * Have modules move towards states and update odometry</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">periodic</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">DriverStation</span><span class="p">.</span><span class="na">isTest</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">runModules</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// odometer.update(gyro.getRotation2d(), getModulePositions());</span>
+<span class="w">        </span><span class="n">poseEstimator</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">gyro</span><span class="p">.</span><span class="na">getRotation2d</span><span class="p">(),</span><span class="w"> </span><span class="n">getModulePositions</span><span class="p">());</span>
+<span class="w">        </span><span class="n">Pose3d</span><span class="w"> </span><span class="n">sunflowerPose3d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sunflower</span><span class="p">.</span><span class="na">getPose3d</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sunflowerPose3d</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">poseEstimator</span><span class="p">.</span><span class="na">addVisionMeasurement</span><span class="p">(</span><span class="n">sunflowerPose3d</span><span class="p">.</span><span class="na">toPose2d</span><span class="p">(),</span><span class="w"> </span><span class="n">Timer</span><span class="p">.</span><span class="na">getFPGATimestamp</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">field</span><span class="p">.</span><span class="na">setRobotPose</span><span class="p">(</span><span class="n">poseEstimator</span><span class="p">.</span><span class="na">getEstimatedPosition</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
 </pre></div>
 </div>
+<p>Above is a picture of how we implement the vision readings to the swerve odometry. Sunflower is the class we use to create a Pose3d of our robot’s location.</p>
+</div>
+<div class="section" id="drive-to-object">
+<h1>Drive to Object<a class="headerlink" href="#drive-to-object" title="Permalink to this heading"></a></h1>
+<p>Cube to move the robot is going to move to cube. So, use this to move is good. I think that we upgrade the robot.
+Drive to object uses the limelights to detect the color of the cube. We haven’t made our robot move to the target yet, but we have the x and y values</p>
 </div>
 
 
