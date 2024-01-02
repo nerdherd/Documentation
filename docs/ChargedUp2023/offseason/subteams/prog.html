@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programming &mdash; Nerd Herd Documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -411,7 +413,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../offseason.html">Offseason</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../subteams.html">Subteam Updates</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="admin.html">Administration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="admin.html">Business</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="admin.html#socal-showdown">SoCal Showdown</a></li>
 <li class="toctree-l4"><a class="reference internal" href="admin.html#chezy-champs">Chezy Champs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="admin.html#ftc">FTC</a></li>
@@ -441,12 +443,10 @@
 </li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Programming</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#vision">Vision</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#limelight">Limelight</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#vision-odometry">Vision Odometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#drive-to-object">Drive to Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#limelight">Limelight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vision-odometry">Vision Odometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#drive-to-object">Drive to Object</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#swerve-updates">Swerve Updates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cube-shooter-robot">Cube Shooter Robot</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#autos">Autos</a></li>
@@ -553,17 +553,16 @@
 <div class="section" id="vision">
 <h2>Vision<a class="headerlink" href="#vision" title="Permalink to this heading"></a></h2>
 </div>
-</div>
 <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h1>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>We use limelights for object detection for cubes and cones as well as odometry.</p>
 </div>
 <div class="section" id="limelight">
-<h1>Limelight<a class="headerlink" href="#limelight" title="Permalink to this heading"></a></h1>
+<h2>Limelight<a class="headerlink" href="#limelight" title="Permalink to this heading"></a></h2>
 <p>The limelight is how our robot gets vision. It allows pose estimation and movement based on the position of our robot. We use multiple pipelines to track different things, for example, our pipeline 2 allows us to track cubes while our pipeline 4 tracks april tags. It is important to tweak variables on the limelight dashboard to optimize tracking and recognition. When tracking the cube, turning up the exposure allows the limelight to detect its color. Yet, when tracking apriltags, we turn down the exposure to improve our motion-blur resilience.</p>
 </div>
 <div class="section" id="vision-odometry">
-<h1>Vision Odometry<a class="headerlink" href="#vision-odometry" title="Permalink to this heading"></a></h1>
+<h2>Vision Odometry<a class="headerlink" href="#vision-odometry" title="Permalink to this heading"></a></h2>
 <p>Using our limelights, we could track our robot’s position based on the april tags around it. We implemented the position estimator so that we could add vision to our odometry, which estimates the position of the robot on the field. It is important that the limelight is higher or below the april tags, because being head-on causes “tag-flipping”. Also, when practicing with the april tags, it is important to make them as flat as possible. One of the problems were how our robot kept showing on the botton left corner. To implement field2d, we had to change the x and y field offsets for the vision coordinate system to work with the field2d coordinate system. The field2d coordinate system has bottom left as the origin, while the limelight helpers.java uses the middle of the field as the origin. We used limelight helpers, link below, for our limelight apriltag odometry.
 https://github.com/SterlingHS/ChargedUP2023/blob/main/src/main/java/frc/robot/LimelightHelpers.java</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="cm">/**</span>
@@ -587,9 +586,10 @@ https://github.com/SterlingHS/ChargedUP2023/blob/main/src/main/java/frc/robot/Li
 <p>Above is a picture of how we implement the vision readings to the swerve odometry. Sunflower is the class we use to create a Pose3d of our robot’s location based on the LimelightHelpers.java file.</p>
 </div>
 <div class="section" id="drive-to-object">
-<h1>Drive to Object<a class="headerlink" href="#drive-to-object" title="Permalink to this heading"></a></h1>
+<h2>Drive to Object<a class="headerlink" href="#drive-to-object" title="Permalink to this heading"></a></h2>
 <p>Cube to move the robot is going to move to cube. So, use this to move is good. I think that we upgrade the robot.
 Drive to object uses the limelights to detect the color of the cube. We haven’t made our robot move to the target yet, but we have the x and y values for speed.</p>
+</div>
 <div class="section" id="swerve-updates">
 <h2>Swerve Updates<a class="headerlink" href="#swerve-updates" title="Permalink to this heading"></a></h2>
 <div class="section" id="id1">

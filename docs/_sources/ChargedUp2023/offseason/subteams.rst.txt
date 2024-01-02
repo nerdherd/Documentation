@@ -5,7 +5,7 @@
     :maxdepth: 2
     :caption: Subteam Recaps
 
-    Administration <./subteams/admin.md>
+    Business <./subteams/admin.md>
     Design <./subteams/design.md>
     Manufacturing <./subteams/mfg.md>
     Assembly <./subteams/asm.md>
